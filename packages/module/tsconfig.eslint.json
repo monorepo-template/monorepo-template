@@ -1,0 +1,21 @@
+{
+  "exclude": ["dist"],
+  "extends": "./tsconfig.json",
+
+  "compilerOptions": {
+    "noEmit": true,
+    "sourceMap": false
+  },
+
+  "include": [
+    "**/*.cjs",
+    "**/*.d.ts",
+    "**/*.js",
+    "**/*.json",
+    "**/*.jsx",
+    "**/*.mjs",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.yml"
+  ]
+}

@@ -1,0 +1,125 @@
+name: Application pull request
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          cache: yarn
+          check-latest: true
+          node-version: 'lts/*'
+      - name: Install dependencies
+        run: yarn install
+
+  build:
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          cache: yarn
+          check-latest: true
+          node-version: 'lts/*'
+      - name: Install dependencies
+        run: yarn install
+      - name: Build
+        run: yarn build
+        env:
+          REACT_APP_VERSION: ${{ github.sha }}
+      - name: Upload build
+        uses: actions/upload-artifact@v2
+        with:
+          if-no-files-found: error
+          name: build
+          path: build
+
+  cypress:
+    needs: install
+    runs-on: ${{ matrix.os }}-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          cache: yarn
+          check-latest: true
+          node-version: 'lts/*'
+      - name: End-to-end test
+        uses: cypress-io/github-action@v2
+        env:
+          CHOKIDAR_USEPOLLING: true
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REACT_VERSION: ${{ github.sha }}
+        with:
+          browser: ${{ matrix.browser }}
+          ci-build-id: ${{ github.event_name }}-${{ github.sha }}
+          command-prefix: yarn dlx
+          group: ${{ matrix.os }}-${{ matrix.browser }}
+          install-command: yarn install
+          parallel: true
+          record: true
+          start: yarn application:start
+          tag: ${{ github.event_name }}
+          wait-on: 'http://localhost:3000'
+          wait-on-timeout: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [edge, firefox, chrome]
+        os: [ubuntu, windows]
+        parallel: [1, 2, 3]
+        exclude:
+          - browser: edge
+            os: ubuntu
+
+  eslint:
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          cache: yarn
+          check-latest: true
+          node-version: 'lts/*'
+      - name: Install dependencies
+        run: yarn install
+      - name: Lint
+        run: yarn application:eslint
+
+  jest:
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          cache: yarn
+          check-latest: true
+          node-version: 'lts/*'
+      - name: Install dependencies
+        run: yarn install
+      - name: Unit test
+        run: yarn application:jest
+        env:
+          DD_ENV: ci
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'packages/application/**/*'
+      - 'packages/module/**/*'

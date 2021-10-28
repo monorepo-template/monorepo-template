@@ -1,0 +1,14 @@
+/.storybook/
+/jest/
+/src/
+/.env
+/.eslintrc.json
+/.gitignore
+/.npmignore
+/.tsbuildinfo
+/jest.config.mjs
+/rollup.config.js
+/tsconfig.development.json
+/tsconfig.eslint.json
+/tsconfig.json
+.DS_Store

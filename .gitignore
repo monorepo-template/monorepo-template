@@ -1,0 +1,16 @@
+/.git/
+/.idea/
+/.vscode/
+/.yarn/cache/
+/.yarn/sdks/
+/.yarn/unplugged/
+/.yarn/build-state.yml
+/.yarn/install-state.gz
+/*.iml
+/.eslintcache
+/.pnp.cjs
+/.pnp.loader.mjs
+/.tsbuildinfo
+/yarn-error.log
+node_modules/
+.DS_Store
