@@ -1,0 +1,59 @@
+{
+  "name": "@monorepo-template/cypress-coverage-config-override",
+  "version": "0.1.0",
+  "author": "Charles Stover <monorepo-template-coverage-config-override@charlesstover.com>",
+  "description": "react-app-rewired override for Cypress test coverage",
+  "homepage": "https://www.npmjs.com/package/@monorepo-template/coverage-config-override",
+  "license": "MIT",
+  "main": "./index.cjs",
+  "packageManager": "yarn@3.0.2",
+  "type": "commonjs",
+  "types": "./index.d.ts",
+  "bugs": {
+    "email": "monorepo-template-coverage-config-override@charlesstover.com",
+    "url": "https://github.com/CharlesStover/monorepo-template/issues"
+  },
+  "directories": {
+    "lib": "src"
+  },
+  "files": [
+    "dist"
+  ],
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/CharlesStover"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "./index.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CharlesStover/monorepo-template.git"
+  },
+  "scripts": {
+    "eslint": "eslint src",
+    "jest": "jest",
+    "jest:watch": "jest --coverage=false --watch",
+    "rollup": "rollup --config",
+    "rollup:watch": "rollup --config --watch"
+  },
+  "dependencies": {
+    "babel-plugin-istanbul": "^6.1.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.6",
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
+    "eslint": "^8.1.0",
+    "jest": "^27.3.1",
+    "rollup": "^2.58.3",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "ts-jest": "^27.0.7",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.4"
+  }
+}

@@ -15,7 +15,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-  build:
+  eslint:
     needs: install
     runs-on: ubuntu-latest
     steps:
@@ -29,8 +29,54 @@ jobs:
           node-version: 'lts/*'
       - name: Install dependencies
         run: yarn install
+      - name: Lint
+        run: yarn application:eslint
+
+  module:
+    needs: install
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          cache: yarn
+          check-latest: true
+          node-version: 'lts/*'
+      - name: Install dependencies
+        run: yarn install
+      - name: Build module
+        run: yarn module:build
+      - name: Upload module
+        uses: actions/upload-artifact@v2
+        with:
+          if-no-files-found: error
+          name: module
+          path: packages/module/dist
+
+  build:
+    needs: module
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Download module
+        uses: actions/download-artifact@v2
+        with:
+          if-no-files-found: error
+          name: module
+          path: packages/module/dist
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          cache: yarn
+          check-latest: true
+          node-version: 'lts/*'
+      - name: Install dependencies
+        run: yarn install
       - name: Build
-        run: yarn build
+        run: yarn application:build
         env:
           REACT_APP_VERSION: ${{ github.sha }}
       - name: Upload build
@@ -41,11 +87,17 @@ jobs:
           path: build
 
   cypress:
-    needs: install
+    needs: module
     runs-on: ${{ matrix.os }}-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Download module
+        uses: actions/download-artifact@v2
+        with:
+          if-no-files-found: error
+          name: module
+          path: packages/module/dist
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
@@ -76,43 +128,32 @@ jobs:
       matrix:
         browser: [edge, firefox, chrome]
         os: [ubuntu, windows]
-        parallel: [1, 2, 3]
+        parallel: [1]
         exclude:
           - browser: edge
             os: ubuntu
 
-  eslint:
-    needs: install
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Setup Node
-        uses: actions/setup-node@v2
-        with:
-          cache: yarn
-          check-latest: true
-          node-version: 'lts/*'
-      - name: Install dependencies
-        run: yarn install
-      - name: Lint
-        run: yarn application:eslint
-
   jest:
-    needs: install
+    needs: module
     runs-on: ubuntu-latest
-    services:
-      datadog-agent:
-        image: datadog/agent:latest
-        env:
-          DD_API_KEY: ${{ secrets.DATADOG_API_KEY }}
-          DD_HOSTNAME: none
-          DD_INSIDE_CI: true
-        ports:
-          - 8126:8126
+    # services:
+    #   datadog-agent:
+    #     image: datadog/agent:latest
+    #     env:
+    #       DD_API_KEY: ${{ secrets.DATADOG_API_KEY }}
+    #       DD_HOSTNAME: none
+    #       DD_INSIDE_CI: true
+    #     ports:
+    #       - 8126:8126
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Download module
+        uses: actions/download-artifact@v2
+        with:
+          if-no-files-found: error
+          name: module
+          path: packages/module/dist
       - name: Setup Node
         uses: actions/setup-node@v2
         with:

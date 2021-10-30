@@ -2,10 +2,8 @@
   "baseUrl": "http://localhost:3000/",
   "fixturesFolder": false,
   "integrationFolder": "src",
-  "pluginsFile": false,
   "projectId": "4akrvv",
   "redirectionLimit": 2,
-  "supportFile": false,
   "testFiles": "**/*.e2e.ts",
   "env": {
     "NODE_ENV": "development"

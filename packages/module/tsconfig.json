@@ -24,6 +24,7 @@
     "lib": ["DOM", "ESNext"],
     "module": "ESNext",
     "moduleResolution": "node",
+    "noEmit": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
@@ -43,7 +44,6 @@
     "strictPropertyInitialization": true,
     "suppressImplicitAnyIndexErrors": false,
     "target": "ES5",
-    "useUnknownInCatchVariables": true,
-    "noEmit": true
+    "useUnknownInCatchVariables": true
   }
 }

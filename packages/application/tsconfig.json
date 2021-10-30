@@ -1,11 +1,7 @@
 {
-  "exclude": [
-    "build",
-    "node_modules"
-  ],
-  "include": [
-    "src/**/*"
-  ],
+  "exclude": ["build", "node_modules", "**/*.e2e.ts"],
+  "include": ["src/**/*"],
+
   "compilerOptions": {
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
@@ -25,12 +21,10 @@
     "inlineSourceMap": false,
     "isolatedModules": true,
     "jsx": "react-jsx",
-    "lib": [
-      "DOM",
-      "ESNext"
-    ],
+    "lib": ["DOM", "ESNext"],
     "module": "ESNext",
     "moduleResolution": "node",
+    "noEmit": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
@@ -50,7 +44,6 @@
     "strictPropertyInitialization": true,
     "suppressImplicitAnyIndexErrors": false,
     "target": "ES5",
-    "useUnknownInCatchVariables": true,
-    "noEmit": true
+    "useUnknownInCatchVariables": true
   }
 }

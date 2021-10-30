@@ -1,3 +1,6 @@
+/.nyc_output
 /build/
-/cypress/
+/cypress/coverage
+/cypress/screenshots/
+/cypress/videos/
 /jest/

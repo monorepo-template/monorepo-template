@@ -1,5 +1,5 @@
 import { render } from 'react-dom';
-import App from './components/app';
 import ROOT from './constants/root';
+import App from './features/app';
 
 render(<App />, ROOT);

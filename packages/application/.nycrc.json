@@ -1,0 +1,14 @@
+{
+  "all": true,
+  "include": "src/**",
+  "report-dir": "cypress/coverage",
+  "reporter": ["clover", "json", "lcov", "text"],
+  "skip-full": true,
+  "exclude": [
+    "src/**/*.d.ts",
+    "src/**/*.e2e.ts",
+    "src/**/*.stories.{ts,tsx}",
+    "src/**/*.test.{ts,tsx}",
+    "src/test-utils/**"
+  ]
+}

@@ -88,6 +88,9 @@ To contribute to this repository, start by running the following commands.
 ### Application
 
 - To build the application, run `yarn application:build`.
+- To end-to-end test your application, run `yarn:cypress:start` to first run the
+  development server with code coverage reporting enabled, then run
+  `yarn:cypress`.
 - To lint your changes to the application, run `yarn application:eslint`.
 - To unit test your changes to the application, run `yarn application:jest`.
 - To unit test your changes to the application in watch mode, run

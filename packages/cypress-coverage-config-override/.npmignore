@@ -1,0 +1,8 @@
+/jest/
+/.env
+/.eslintrc.json
+/.gitignore
+/.npmignore
+/.tsbuildinfo
+/jest.config.mjs
+.DS_Store
