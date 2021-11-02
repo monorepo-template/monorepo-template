@@ -4,6 +4,7 @@
   "homepage": ".",
   "scripts": {
     "build": "react-scripts build",
+    "coverage": "merge-coverage",
     "cypress": "cypress run",
     "cypress:start": "react-app-rewired start",
     "eslint": "eslint src",
@@ -14,6 +15,7 @@
   "devDependencies": {
     "@cypress/code-coverage": "^3.9.11",
     "@monorepo-template/cypress-coverage-config-override": "workspace:^",
+    "@monorepo-template/merge-coverage": "workspace:^",
     "@monorepo-template/module": "workspace:^",
     "@testing-library/react": "^12.1.2",
     "@testing-library/react-hooks": "^7.0.2",
@@ -29,6 +31,7 @@
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "jest": "^27.3.1",
+    "nyc": "^15.1.0",
     "react": "^17.0.2",
     "react-app-rewired": "^2.1.8",
     "react-dom": "^17.0.2",

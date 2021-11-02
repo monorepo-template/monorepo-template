@@ -13,6 +13,7 @@
   },
   "scripts": {
     "application:build": "yarn workspace @monorepo-template/application run build",
+    "application:coverage": "yarn workspace @monorepo-template/application run coverage",
     "application:cypress": "yarn workspace @monorepo-template/application run cypress",
     "application:cypress:start": "yarn workspace @monorepo-template/application run cypress:start",
     "application:eslint": "yarn workspace @monorepo-template/application run eslint",

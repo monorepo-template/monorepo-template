@@ -88,6 +88,9 @@ To contribute to this repository, start by running the following commands.
 ### Application
 
 - To build the application, run `yarn application:build`.
+- To report Cypress's and Jest's combined test coverage, run
+  `yarn application:coverage`. The combined report will be located in
+  `/packages/application/.nyc_output/`.
 - To end-to-end test your application, run `yarn:cypress:start` to first run the
   development server with code coverage reporting enabled, then run
   `yarn:cypress`.

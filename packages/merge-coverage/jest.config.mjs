@@ -1,13 +1,17 @@
 export default {
   cacheDirectory: './jest/cache',
   collectCoverage: true,
-  collectCoverageFrom: ['<rootDir>/**/*.cjs', '!<rootDir>/**/*.test.cjs'],
   coverageDirectory: './jest/coverage',
   coverageReporters: ['json', 'lcov', ['text', { skipFull: true }], 'clover'],
   resetMocks: true,
   resetModules: true,
   restoreMocks: true,
-  roots: ['<rootDir>'],
+  roots: ['<rootDir>/bin'],
+  testEnvironment: 'jsdom',
+  collectCoverageFrom: [
+    '<rootDir>/bin/**/*.cjs',
+    '!<rootDir>/bin/**/*.test.cjs',
+  ],
   coverageThreshold: {
     global: {
       branches: 100,
