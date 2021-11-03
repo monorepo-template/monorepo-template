@@ -7,7 +7,11 @@ import { join, resolve } from 'path';
 import pMap from 'p-map';
 
 const CWD = process.cwd();
-const nyc = new NYC({});
+const nyc = new NYC({
+  reporter: ['clover', 'json', 'lcov', 'text'],
+  skipEmpty: true,
+  skipFull: true,
+});
 
 process.env.NYC_CWD = CWD;
 
@@ -63,4 +67,4 @@ const THRESHOLDS = {
 };
 
 await nyc.report();
-await nyc.checkCoverage(THRESHOLDS, true);
+await nyc.checkCoverage(THRESHOLDS, false);
