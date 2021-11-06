@@ -1,1 +1,0 @@
-import './merge-coverage.mjs';

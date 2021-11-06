@@ -1,1 +1,9 @@
-{}
+{
+  "exclude": ["build", "node_modules"],
+  "extends": "./tsconfig.json",
+
+  "compilerOptions": {
+    "importHelpers": true,
+    "types": ["cypress"]
+  }
+}

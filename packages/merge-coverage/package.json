@@ -1,18 +1,21 @@
 {
   "name": "@monorepo-template/merge-coverage",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Charles Stover <monorepo-template-merge-coverage@charlesstover.com>",
   "description": "merges Cypress and Jest coverage",
   "homepage": "https://www.npmjs.com/package/@monorepo-template/merge-coverage",
   "license": "MIT",
+  "module": "./index.mjs",
   "type": "module",
-  "bin": "./bin/merge-coverage/index.mjs",
+  "bin": "./bin/merge-coverage.mjs",
   "bugs": {
     "email": "monorepo-template-merge-coverage@charlesstover.com",
     "url": "https://github.com/CharlesStover/monorepo-template/issues"
   },
   "files": [
-    "bin"
+    "bin",
+    "src",
+    "index.mjs"
   ],
   "funding": {
     "type": "individual",

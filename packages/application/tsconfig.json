@@ -1,5 +1,6 @@
 {
-  "exclude": ["build", "node_modules", "**/*.e2e.ts"],
+  "compileOnSave": false,
+  "exclude": ["build", "node_modules", "src/**/*.e2e.ts"],
   "include": ["src/**/*"],
 
   "compilerOptions": {
@@ -32,6 +33,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": "dist",
+    "preserveConstEnums": true,
     "removeComments": true,
     "resolveJsonModule": true,
     "rootDir": "src",
