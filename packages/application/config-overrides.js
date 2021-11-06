@@ -1,7 +1,9 @@
 const cypressConfigOverride = require('@monorepo-template/cypress-coverage-config-override');
 
-module.exports = function override(config, env) {
-  if (env !== 'development') {
+const isCypressEnvironment = process.argv.includes('--cypress');
+
+module.exports = function override(config) {
+  if (!isCypressEnvironment) {
     return config;
   }
 

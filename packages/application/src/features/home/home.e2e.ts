@@ -1,4 +1,4 @@
-/// <reference types="cypress" />
+import { cy, describe, it } from 'local-cypress';
 
 describe('App', (): void => {
   it('should display "Hello world"', (): void => {

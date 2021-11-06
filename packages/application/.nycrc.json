@@ -1,9 +1,8 @@
 {
-  "all": false,
-  "cache": false,
+  "all": true,
+  "cache": true,
   "check-coverage": false,
-  "es-module": false,
-  "extension": [".ts", ".tsx"],
+  "extension": [".js", ".jsx", ".ts", ".tsx"],
   "include": "src/**",
   "report-dir": "cypress/coverage",
   "reporter": ["clover", "json", "lcov", "text"],

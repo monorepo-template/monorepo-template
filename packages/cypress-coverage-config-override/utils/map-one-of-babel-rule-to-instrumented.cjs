@@ -2,7 +2,7 @@ const MISSING_BABEL_LOADER_ERROR = require('../constants/missing-babel-loader-er
 const findBabelRule = require('../utils/find-babel-rule.cjs');
 const mapBabelRuleToInstrumented = require('../utils/map-babel-rule-to-instrumented.cjs');
 
-module.exports = function mapOneOfRuleToInstrumented(rule) {
+module.exports = function mapOneOfBabelRuleToInstrumented(rule) {
   const babelRuleIndex = rule.oneOf.findIndex(findBabelRule);
   if (babelRuleIndex === -1) {
     throw MISSING_BABEL_LOADER_ERROR;

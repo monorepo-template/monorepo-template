@@ -1,9 +1,11 @@
 {
+  "compileOnSave": false,
   "exclude": ["build", "node_modules"],
   "extends": "./tsconfig.json",
 
   "compilerOptions": {
     "importHelpers": true,
-    "types": ["cypress"]
+    "inlineSourceMap": true,
+    "sourceMap": true
   }
 }
