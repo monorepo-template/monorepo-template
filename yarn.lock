@@ -2490,7 +2490,6 @@ __metadata:
     eslint-plugin-react: ^7.26.1
     eslint-plugin-react-hooks: ^4.2.0
     jest: ^27.3.1
-    local-cypress: ^1.2.2
     react: ^17.0.2
     react-app-rewired: ^2.1.8
     react-dom: ^17.0.2
@@ -12344,15 +12343,6 @@ __metadata:
     emojis-list: ^3.0.0
     json5: ^1.0.1
   checksum: d150b15e7a42ac47d935c8b484b79e44ff6ab4c75df7cc4cb9093350cf014ec0b17bdb60c5d6f91a37b8b218bd63b973e263c65944f58ca2573e402b9a27e717
-  languageName: node
-  linkType: hard
-
-"local-cypress@npm:^1.2.2":
-  version: 1.2.2
-  resolution: "local-cypress@npm:1.2.2"
-  dependencies:
-    debug: 4.3.2
-  checksum: 45566fb7e558ca2b3d286f21aa664d13af1aa7dd2fc70dc08bbe4c794e027a57ac5a539574d60c9f096d75c0a4eed15822c224fbe1e9ff299658ddc782ee577a
   languageName: node
   linkType: hard
 

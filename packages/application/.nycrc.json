@@ -6,7 +6,7 @@
   "include": "src/**",
   "report-dir": "cypress/coverage",
   "reporter": ["clover", "json", "lcov", "text"],
-  "skip-empty": true,
+  "skip-empty": false,
   "skip-full": false,
   "exclude": [
     "src/**/*.d.ts",

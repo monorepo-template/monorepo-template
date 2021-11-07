@@ -76,6 +76,15 @@
 [![downloads](https://img.shields.io/npm/dt/react.svg)](https://www.npmjs.com/package/react)
 [![GitHub Action: Module push](https://github.com/CharlesStover/monorepo-template/actions/workflows/module-push.yml/badge.svg)](https://github.com/CharlesStover/monorepo-template/actions/workflows/module-push.yml)
 
+## Common pitfalls
+
+### Application coverage reports are inaccurate
+
+Your application's coverage report can be found on its `window.__coverage__`
+object when you run `yarn application:cypress:start`. If your generated LCOV
+coverage report does not match your `window.__coverage__` object, delete the
+coverage cache located at `/packages/application/.nyc_output`,
+
 ## Contributing
 
 To contribute to this repository, start by running the following commands.
