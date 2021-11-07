@@ -2489,6 +2489,7 @@ __metadata:
     eslint: ^8.1.0
     eslint-plugin-react: ^7.26.1
     eslint-plugin-react-hooks: ^4.2.0
+    expect: ^27.3.1
     jest: ^27.3.1
     react: ^17.0.2
     react-app-rewired: ^2.1.8

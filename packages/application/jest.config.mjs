@@ -1,15 +1,21 @@
-import COLLECT_COVERAGE_FROM from './src/test-utils/collect-coverage-from.cjs';
+import { exclude } from './.nycrc.json';
+
+const mapExcludeToJestCollectCoverageFrom = item => `!<rootDir>/${item}`;
 
 export default {
   cacheDirectory: './jest/cache',
   collectCoverage: true,
-  collectCoverageFrom: COLLECT_COVERAGE_FROM,
   coverageDirectory: './jest/coverage',
   resetMocks: true,
   resetModules: true,
   restoreMocks: true,
   roots: ['<rootDir>/src'],
   testEnvironment: 'jsdom',
+
+  collectCoverageFrom: [
+    '<rootDir>/src/**/*.{ts,tsx}',
+    ...exclude.map(mapExcludeToJestCollectCoverageFrom),
+  ],
 
   moduleNameMapper: {
     '\\.(?:css|gif|jpg|png|scss)$': '<rootDir>/src/test-utils/empty.ts',

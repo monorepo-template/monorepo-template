@@ -47,7 +47,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
       - name: Build module
-        run: yarn module:build
+        run: yarn module:rollup
       - name: Upload module
         uses: actions/upload-artifact@v2
         with:
