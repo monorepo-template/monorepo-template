@@ -78,7 +78,7 @@ jobs:
         with:
           if-no-files-found: error
           name: build
-          path: build
+          path: packages/application/build
 
   cypress:
     needs: module
@@ -106,8 +106,9 @@ jobs:
           group: ${{ matrix.os }}-${{ matrix.browser }}
           install-command: yarn install
           parallel: true
+          project: ./packages/application
           record: true
-          start: yarn application:start
+          start: yarn application:cypress:start
           tag: ${{ github.event_name }}
           wait-on: 'http://localhost:3000'
           wait-on-timeout: 120

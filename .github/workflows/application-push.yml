@@ -84,7 +84,7 @@ jobs:
         with:
           if-no-files-found: error
           name: build
-          path: build
+          path: packages/application/build
 
   cypress:
     needs: module
@@ -118,8 +118,9 @@ jobs:
           group: ${{ matrix.os }}-${{ matrix.browser }}
           install-command: yarn install
           parallel: true
+          project: ./packages/application
           record: true
-          start: yarn application:start
+          start: yarn application:cypress:start
           tag: ${{ github.event_name }}
           wait-on: 'http://localhost:3000'
           wait-on-timeout: 120
@@ -177,13 +178,13 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: build
-          path: build
+          path: packages/application/build
       - name: Deploy GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: gh-pages
           clean: true
-          folder: build
+          folder: packages/application/build
           single-commit: true
 
   sentry-release:
@@ -196,7 +197,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: build
-          path: build
+          path: packages/application/build
       - name: Release Sentry version
         uses: getsentry/action-release@v1
         env:
@@ -207,7 +208,7 @@ jobs:
           SENTRY_VERSION: ${{ github.sha }}
         with:
           environment: production
-          sourcemaps: build
+          sourcemaps: packages/application/build
           version: ${{ env.SENTRY_VERSION }}
 
   cloudflare-purge:

@@ -1,7 +1,3 @@
-import { exclude } from './.nycrc.json';
-
-const mapExcludeToJestCollectCoverageFrom = item => `!<rootDir>/${item}`;
-
 export default {
   cacheDirectory: './jest/cache',
   collectCoverage: true,
@@ -14,7 +10,11 @@ export default {
 
   collectCoverageFrom: [
     '<rootDir>/src/**/*.{ts,tsx}',
-    ...exclude.map(mapExcludeToJestCollectCoverageFrom),
+    '!<rootDir>/src/**/*.d.ts',
+    '!<rootDir>/src/**/*.e2e.ts',
+    '!<rootDir>/src/**/*.stories.{ts,tsx}',
+    '!<rootDir>/src/**/*.test.{ts,tsx}',
+    '!<rootDir>/src/test-utils/**',
   ],
 
   moduleNameMapper: {
