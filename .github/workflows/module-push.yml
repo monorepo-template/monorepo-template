@@ -142,4 +142,6 @@ jobs:
 on:
   push:
     branches: [main]
-    paths: 'packages/module/**/*'
+    paths:
+      - '.github/workflows/module-push.yml'
+      - 'packages/module/**/*'

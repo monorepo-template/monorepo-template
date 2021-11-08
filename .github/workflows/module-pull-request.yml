@@ -74,4 +74,6 @@ jobs:
 on:
   pull_request:
     branches: [main]
-    paths: 'packages/module/**/*'
+    paths:
+      - '.github/workflows/module-pull-request.yml'
+      - 'packages/module/**/*'
