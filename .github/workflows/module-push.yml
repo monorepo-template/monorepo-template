@@ -84,7 +84,7 @@ jobs:
         with:
           if-no-files-found: error
           name: rollup
-          path: dist
+          path: packages/module/dist
 
   github:
     needs: [eslint, jest, rollup]
@@ -107,8 +107,9 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: rollup
-          path: .
+          path: packages/module/dist
       - name: Publish
+        working-directory: packages/module
         env:
           NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: >
@@ -131,8 +132,9 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: rollup
-          path: .
+          path: packages/module/dist
       - name: Publish
+        working-directory: packages/module
         run: >
           yarn config set npmAuthToken $NPM_AUTH_TOKEN;
           yarn npm publish --tolerate-republish;
