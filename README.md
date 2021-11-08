@@ -53,14 +53,16 @@
 10. Edit your `package.json` file:
     1. Replace the package name with `@` followed by your repository name.
     2. Replace the description with your project description.
-    3. Add and remove scripts as needed for each intended application and module.
+    3. Add and remove scripts as needed for each intended application and
+       module.
 11. Edit the below README by making the following changes:
     1. Change the README title from `Monorepo template` to your project title.
     2. For each application, add a `GitHub Action: Application push` badge, then
        replace `CharlesStover/monorepo-template` with your repository.
     3. For each module, add the `version`, `minzipped size`, `downloads`, and
        `GitHub Action: Module push` badges, then replace
-       `CharlesStover/monorepo-template` with your repository and `@monorepo-template/module` with your module's package name.
+       `CharlesStover/monorepo-template` with your repository and
+       `@monorepo-template/module` with your module's package name.
     4. Under `Contributing`, change the `yarn` commands from `application:*` and
        `module:*` to match your workspace names.
 
