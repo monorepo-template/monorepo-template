@@ -55,13 +55,12 @@
     2. Replace the description with your project description.
     3. Add and remove scripts as needed for each intended application and module.
 11. Edit the below README by making the following changes:
-    1. Change the README title from `Monorepo Template` to your project title.
+    1. Change the README title from `Monorepo template` to your project title.
     2. For each application, add a `GitHub Action: Application push` badge, then
        replace `CharlesStover/monorepo-template` with your repository.
     3. For each module, add the `version`, `minzipped size`, `downloads`, and
        `GitHub Action: Module push` badges, then replace
-       `CharlesStover/monorepo-template` with your repository and `react` with
-       your module's package name.
+       `CharlesStover/monorepo-template` with your repository and `@monorepo-template/module` with your module's package name.
     4. Under `Contributing`, change the `yarn` commands from `application:*` and
        `module:*` to match your workspace names.
 
@@ -71,10 +70,10 @@
 
 [![GitHub Action: Application push](https://github.com/CharlesStover/monorepo-template/actions/workflows/application-push.yml/badge.svg)](https://github.com/CharlesStover/monorepo-template/actions/workflows/application-push.yml)
 
-[![version](https://img.shields.io/npm/v/react.svg?label=react)](https://www.npmjs.com/package/react)
-[![minzipped size](https://img.shields.io/bundlephobia/minzip/react.svg)](https://www.npmjs.com/package/react)
-[![downloads](https://img.shields.io/npm/dt/react.svg)](https://www.npmjs.com/package/react)
-[![GitHub Action: Module push](https://github.com/CharlesStover/monorepo-template/actions/workflows/module-push.yml/badge.svg)](https://github.com/CharlesStover/monorepo-template/actions/workflows/module-push.yml)
+[![version](https://img.shields.io/npm/v/@monorepo-template/module.svg?label=module)](https://www.npmjs.com/package/@monorepo-template/module)
+[![minzipped size](https://img.shields.io/bundlephobia/minzip/@monorepo-template/module.svg)](https://www.npmjs.com/package/@monorepo-template/module)
+[![downloads](https://img.shields.io/npm/dt/@monorepo-template/module.svg)](https://www.npmjs.com/package/@monorepo-template/module)
+[![GitHub Action: Module push](https://github.com/CharlesStover/monorepo-template/actions/workflows/module-push.yml/badge.svg?branch=main)](https://github.com/CharlesStover/monorepo-template/actions/workflows/module-push.yml)
 
 ## Common pitfalls
 
@@ -99,7 +98,7 @@ To contribute to this repository, start by running the following commands.
 - To build the application, run `yarn application:build`.
 - To report Cypress's and Jest's combined test coverage, run
   `yarn application:coverage`. The combined report will be located in
-  `/packages/application/.nyc_output/`.
+  `/packages/application/coverage/`.
 - To end-to-end test your application, run `yarn:cypress:start` to first run the
   development server with code coverage reporting enabled, then run
   `yarn:cypress`.
