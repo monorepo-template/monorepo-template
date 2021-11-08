@@ -66,7 +66,7 @@
 
 ---
 
-# Monorepo Template
+# Monorepo template
 
 [![GitHub Action: Application push](https://github.com/CharlesStover/monorepo-template/actions/workflows/application-push.yml/badge.svg)](https://github.com/CharlesStover/monorepo-template/actions/workflows/application-push.yml)
 
