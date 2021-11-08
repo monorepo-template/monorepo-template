@@ -86,36 +86,36 @@ jobs:
           name: rollup
           path: packages/module/dist
 
-  github:
-    needs: [eslint, jest, rollup]
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Setup Node
-        uses: actions/setup-node@v2
-        with:
-          cache: yarn
-          check-latest: true
-          node-version: 'lts/*'
-          registry-url: 'https://npm.pkg.github.com/'
-          scope: '@{{ github.repository_owner }}'
-      - name: Download build
-        uses: actions/download-artifact@v2
-        with:
-          name: rollup
-          path: packages/module/dist
-      - name: Publish
-        working-directory: packages/module
-        env:
-          NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: >
-          yarn config set npmAuthToken $NPM_AUTH_TOKEN;
-          yarn config set npmPublishRegistry https://npm.pkg.github.com/;
-          yarn npm publish --tolerate-republish;
+  # github:
+  #   needs: [eslint, jest, rollup]
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     contents: read
+  #     packages: write
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v2
+  #     - name: Setup Node
+  #       uses: actions/setup-node@v2
+  #       with:
+  #         cache: yarn
+  #         check-latest: true
+  #         node-version: 'lts/*'
+  #         registry-url: 'https://npm.pkg.github.com/'
+  #         scope: '@{{ github.repository_owner }}'
+  #     - name: Download build
+  #       uses: actions/download-artifact@v2
+  #       with:
+  #         name: rollup
+  #         path: packages/module/dist
+  #     - name: Publish
+  #       working-directory: packages/module
+  #       env:
+  #         NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #       run: >
+  #         yarn config set npmAuthToken $NPM_AUTH_TOKEN;
+  #         yarn config set npmPublishRegistry https://npm.pkg.github.com/;
+  #         yarn npm publish --tolerate-republish;
 
   npm:
     needs: [eslint, jest, rollup]
