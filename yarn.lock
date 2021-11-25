@@ -1809,6 +1809,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@charlesstover/monorepo-template@workspace:."
   dependencies:
+    "@types/node": ^16.11.10
     "@yarnpkg/sdks": ^2.5.0
     eslint: ^8.1.0
     eslint-config-prettier: ^8.3.0
@@ -2478,7 +2479,7 @@ __metadata:
     "@monorepo-template/module": "workspace:^"
     "@testing-library/react": ^12.1.2
     "@testing-library/react-hooks": ^7.0.2
-    "@types/jest": ^27.0.2
+    "@types/jest": ^26.0.14
     "@types/node": ^16.11.6
     "@types/react": ^17.0.33
     "@types/react-dom": ^17.0.10
@@ -2489,14 +2490,13 @@ __metadata:
     eslint: ^8.1.0
     eslint-plugin-react: ^7.26.1
     eslint-plugin-react-hooks: ^4.2.0
-    expect: ^27.3.1
-    jest: ^27.3.1
+    jest: ^26.6.3
     react: ^17.0.2
+    react-app-polyfill: ^2.0.0
     react-app-rewired: ^2.1.8
     react-dom: ^17.0.2
     react-router-dom: ^5.3.0
     react-scripts: ^4.0.3
-    ts-jest: ^27.0.7
     tslib: ^2.3.1
     typescript: ^4.4.4
   languageName: unknown
@@ -3134,6 +3134,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/jest@npm:^26.0.14":
+  version: 26.0.24
+  resolution: "@types/jest@npm:26.0.24"
+  dependencies:
+    jest-diff: ^26.0.0
+    pretty-format: ^26.0.0
+  checksum: ae39675412f08d884926254e9b12bfd2b5a4e4d204c94d3148cb942174a474930d0c60540133c968f22241d4712b7940c96cbc883096eb326a4d5b206fb78bd0
+  languageName: node
+  linkType: hard
+
 "@types/jest@npm:^27.0.2":
   version: 27.0.2
   resolution: "@types/jest@npm:27.0.2"
@@ -3192,6 +3202,13 @@ __metadata:
   version: 14.17.32
   resolution: "@types/node@npm:14.17.32"
   checksum: c3ec45db5d8ca6ed80bcc2fe3cd9f15c1518d43cf048dd5444d1fcbe308d302a42721cb3f19548ac2e7b8b7db4f7f6cd4bf9ed58ab1d30a0bf61758350edd9d5
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^16.11.10":
+  version: 16.11.10
+  resolution: "@types/node@npm:16.11.10"
+  checksum: 9c79419c5c3d92d5825bffa30f3668533f598d8b63a73ea7fc24e47f162bdbed92b0f8e4f4261cc3314b39cee050e303366d2aa154abc95c63a572a110b8c160
   languageName: node
   linkType: hard
 
@@ -10958,7 +10975,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-cli@npm:^26.6.0":
+"jest-cli@npm:^26.6.0, jest-cli@npm:^26.6.3":
   version: 26.6.3
   resolution: "jest-cli@npm:26.6.3"
   dependencies:
@@ -11073,7 +11090,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-diff@npm:^26.6.2":
+"jest-diff@npm:^26.0.0, jest-diff@npm:^26.6.2":
   version: 26.6.2
   resolution: "jest-diff@npm:26.6.2"
   dependencies:
@@ -11860,6 +11877,19 @@ __metadata:
   bin:
     jest: bin/jest.js
   checksum: e0d3efff0dc2a31c453a3f7d87586e5d6c0f008c9b827bb9204edde09288f922ddfb3a8917480bf68f4ac0298be28637daef98ebaaac65ea23d3cb754a6620c4
+  languageName: node
+  linkType: hard
+
+"jest@npm:^26.6.3":
+  version: 26.6.3
+  resolution: "jest@npm:26.6.3"
+  dependencies:
+    "@jest/core": ^26.6.3
+    import-local: ^3.0.2
+    jest-cli: ^26.6.3
+  bin:
+    jest: bin/jest.js
+  checksum: 3a9b4c70e9bd5391e7367a0036045c1d3545c2a39e1439a71fb4b59b1748bc34e2ccb324faa1046b99bffc8dc2ed7b3c59016c462255b2646f5fa9300351f914
   languageName: node
   linkType: hard
 
@@ -15148,7 +15178,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pretty-format@npm:^26.6.0, pretty-format@npm:^26.6.2":
+"pretty-format@npm:^26.0.0, pretty-format@npm:^26.6.0, pretty-format@npm:^26.6.2":
   version: 26.6.2
   resolution: "pretty-format@npm:26.6.2"
   dependencies:

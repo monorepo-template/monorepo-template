@@ -31,6 +31,7 @@
     "packages/*"
   ],
   "devDependencies": {
+    "@types/node": "^16.11.10",
     "@yarnpkg/sdks": "^2.5.0",
     "eslint": "^8.1.0",
     "eslint-config-prettier": "^8.3.0",

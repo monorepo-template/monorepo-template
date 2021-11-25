@@ -45,6 +45,7 @@
     "strictPropertyInitialization": true,
     "suppressImplicitAnyIndexErrors": false,
     "target": "ES5",
+    "types": ["jest", "node"],
     "useUnknownInCatchVariables": true
   }
 }

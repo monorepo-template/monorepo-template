@@ -122,12 +122,18 @@ jobs:
           cache: yarn
           check-latest: true
           node-version: 'lts/*'
+      - name: Download coverage
+        uses: actions/upload-artifact@v2
+        with:
+          name: application-cypress-coverage
+          path: packages/application/cypress/coverage
       - name: End-to-end test
         uses: cypress-io/github-action@v2
         env:
           CHOKIDAR_USEPOLLING: true
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NYC_REPORT_DIR: cypress/coverage/${{ matrix.os }}-${{ matrix.browser }}-${{ matrix._container }}
           REACT_APP_VERSION: ${{ github.sha }}
         with:
           browser: ${{ matrix.browser }}
@@ -145,14 +151,14 @@ jobs:
       - name: Upload coverage
         uses: actions/upload-artifact@v2
         with:
-          name: application-cypress-coverage-${{ matrix.os }}-${{ matrix.browser }}-${{ matrix._container }}
+          name: application-cypress-coverage
           path: packages/application/cypress/coverage
     strategy:
       fail-fast: false
       matrix:
-        browser: [edge, firefox, chrome]
         os: [ubuntu, windows]
-        _container: [1]
+        browser: [edge, firefox, chrome]
+        container: [1]
         exclude:
           - browser: edge
             os: ubuntu

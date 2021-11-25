@@ -1,4 +1,3 @@
-import expect from 'expect';
 import MISSING_ROOT_ERROR from '../constants/missing-root-error';
 import getRoot from './get-root';
 
