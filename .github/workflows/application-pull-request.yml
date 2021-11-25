@@ -11,7 +11,7 @@ jobs:
         with:
           cache: yarn
           check-latest: true
-          node-version: 'lts/*'
+          node-version: 14 # 'lts/*'
       - name: Install dependencies
         run: yarn install
 
@@ -26,7 +26,7 @@ jobs:
         with:
           cache: yarn
           check-latest: true
-          node-version: 'lts/*'
+          node-version: 14 # 'lts/*'
       - name: Install dependencies
         run: yarn install
       - name: Lint
@@ -43,7 +43,7 @@ jobs:
         with:
           cache: yarn
           check-latest: true
-          node-version: 'lts/*'
+          node-version: 14 # 'lts/*'
       - name: Install dependencies
         run: yarn install
       - name: Install Cypress
@@ -65,7 +65,7 @@ jobs:
         with:
           cache: yarn
           check-latest: true
-          node-version: 'lts/*'
+          node-version: 14 # 'lts/*'
       - name: Install dependencies
         run: yarn install
       - name: Build module
@@ -87,7 +87,7 @@ jobs:
         with:
           cache: yarn
           check-latest: true
-          node-version: 'lts/*'
+          node-version: 14 # 'lts/*'
       - name: Install dependencies
         run: yarn install
       - name: Build
@@ -111,7 +111,7 @@ jobs:
         with:
           cache: yarn
           check-latest: true
-          node-version: 'lts/*'
+          node-version: 14 # 'lts/*'
       - name: Download coverage
         uses: actions/upload-artifact@v2
         with:
@@ -164,7 +164,7 @@ jobs:
         with:
           cache: yarn
           check-latest: true
-          node-version: 'lts/*'
+          node-version: 14 # 'lts/*'
       - name: Install dependencies
         run: yarn install
       - name: Unit test
