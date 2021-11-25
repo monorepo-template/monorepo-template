@@ -5,4 +5,5 @@
 
 ## Contributing
 
-- To install the latest dependencies, run `yarn up "*" "@*/*" "jest@^27.0.0"`.
+- To install the latest dependencies, run
+  `yarn up "*" "@*/*" "jest@^26.6.3" "@jest/globals@^26.6.2"`.

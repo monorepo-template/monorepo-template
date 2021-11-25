@@ -2474,6 +2474,7 @@ __metadata:
   resolution: "@monorepo-template/application@workspace:packages/application"
   dependencies:
     "@cypress/code-coverage": ^3.9.11
+    "@jest/globals": ^26.6.2
     "@monorepo-template/coverage": "workspace:^"
     "@monorepo-template/cypress-coverage-config-override": "workspace:^"
     "@monorepo-template/module": "workspace:^"
