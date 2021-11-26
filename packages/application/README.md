@@ -6,4 +6,4 @@
 ## Contributing
 
 - To install the latest dependencies, run
-  `yarn up "@*/*" "*" "@jest/globals@^26.6.2" "cypress@^8.7.0" "jest@^26.6.3"`.
+  `yarn up "*" "@*/*" "jest@^26.6.3" "@jest/globals@^26.6.2"`.

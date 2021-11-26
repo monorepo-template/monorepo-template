@@ -11,7 +11,7 @@ jobs:
         with:
           cache: yarn
           check-latest: true
-          node-version: 14 # 'lts/*'
+          node-version: 'lts/*'
       - name: Install dependencies
         run: yarn install
 
@@ -26,7 +26,7 @@ jobs:
         with:
           cache: yarn
           check-latest: true
-          node-version: 14 # 'lts/*'
+          node-version: 'lts/*'
       - name: Install dependencies
         run: yarn install
       - name: Lint
@@ -52,7 +52,7 @@ jobs:
         with:
           cache: yarn
           check-latest: true
-          node-version: 14 # 'lts/*'
+          node-version: 'lts/*'
       - name: Install dependencies
         run: yarn install
       - name: Unit test
@@ -74,7 +74,7 @@ jobs:
         with:
           cache: yarn
           check-latest: true
-          node-version: 14 # 'lts/*'
+          node-version: 'lts/*'
       - name: Install dependencies
         run: yarn install
       - name: Build
@@ -99,7 +99,7 @@ jobs:
   #       with:
   #         cache: yarn
   #         check-latest: true
-  #         node-version: 14 # 'lts/*'
+  #         node-version: 'lts/*'
   #         registry-url: 'https://npm.pkg.github.com/'
   #         scope: '@{{ github.repository_owner }}'
   #     - name: Download build
@@ -127,7 +127,7 @@ jobs:
         with:
           cache: yarn
           check-latest: true
-          node-version: 14 # 'lts/*'
+          node-version: 'lts/*'
       - name: Download build
         uses: actions/download-artifact@v2
         with:
