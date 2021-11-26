@@ -141,7 +141,9 @@ jobs:
           ci-build-id: ${{ github.event_name }}-${{ github.sha }}
           command-prefix: yarn dlx
           group: ${{ matrix.os }}-${{ matrix.browser }}
-          install-command: yarn install
+          # We install during the Setup Node step so that we may use a
+          #   Node-dependent `start` command.
+          # install-command: yarn install
           parallel: true
           project: packages/application
           record: true
@@ -157,7 +159,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu, windows]
+        # Skip Windows while cypress-io/github-action doesn't support it.
+        # https://github.com/cypress-io/github-action/issues/459
+        os: [ubuntu] # , windows
         browser: [edge, firefox, chrome]
         container: [1]
         exclude:
