@@ -132,6 +132,7 @@ jobs:
         env:
           CHOKIDAR_USEPOLLING: true
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          DEBUG: 'cypress:*'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NYC_REPORT_DIR: cypress/coverage/${{ matrix.os }}-${{ matrix.browser }}-${{ matrix._container }}
           REACT_APP_VERSION: ${{ github.sha }}
