@@ -214,6 +214,16 @@ jobs:
           node-version: 'lts/*'
       - name: Install dependencies
         run: yarn install
+      - name: Download Cypress coverage
+        uses: actions/download-artifact@v2
+        with:
+          name: application-cypress-coverage
+          path: packages/application/cypress/coverage
+      - name: Download Jest coverage
+        uses: actions/download-artifact@v2
+        with:
+          name: application-jest-coverage
+          path: packages/application/jest/coverage
       - name: Report coverage
         run: yarn application:coverage
       - name: Upload coverage
