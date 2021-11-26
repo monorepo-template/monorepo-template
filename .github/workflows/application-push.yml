@@ -233,7 +233,7 @@ jobs:
           path: packages/application/coverage
 
   github-pages:
-    needs: [build, cypress, eslint, jest]
+    needs: [build, coverage, eslint]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -252,7 +252,7 @@ jobs:
           single-commit: true
 
   sentry-release:
-    needs: [build, cypress, eslint, jest]
+    needs: [build, coverage, eslint]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
