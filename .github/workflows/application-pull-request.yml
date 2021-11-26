@@ -118,7 +118,7 @@ jobs:
           CHOKIDAR_USEPOLLING: true
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NYC_REPORT_DIR: cypress/coverage/${{ matrix.os }}-${{ matrix.browser }}-${{ matrix._container }}
+          NYC_REPORT_DIR: cypress/coverage/${{ matrix.os }}-${{ matrix.browser }}-${{ matrix.container }}
           REACT_VERSION: ${{ github.sha }}
         with:
           browser: ${{ matrix.browser }}
@@ -175,6 +175,28 @@ jobs:
         with:
           name: application-jest-coverage
           path: packages/application/jest/coverage
+
+  coverage:
+    needs: [cypress, jest]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          cache: yarn
+          check-latest: true
+          node-version: 'lts/*'
+      - name: Install dependencies
+        run: yarn install
+      - name: Report coverage
+        run: yarn application:coverage
+      - name: Upload coverage
+        uses: actions/upload-artifact@v2
+        with:
+          name: application-coverage
+          path: packages/application/coverage
 
 on:
   pull_request:

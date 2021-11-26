@@ -4,9 +4,11 @@ import pMap from 'p-map';
 import { join } from 'path';
 import P_MAP_OPTIONS from '../constants/p-map-options.mjs';
 
-// Instead of getting coverage from all coverage files in a base directory, we
-//   get coverage from all coverage files across multiple directories.
-// https://github.com/istanbuljs/nyc/blob/ab7c53b2f340b458789a746dff2abd3e2e4790c3/index.js#L420-444
+/**
+ * Instead of getting coverage from all coverage files in a base directory, we
+ *   get coverage from all coverage files across multiple directories.
+ * https://github.com/istanbuljs/nyc/blob/ab7c53b2f340b458789a746dff2abd3e2e4790c3/index.js#L420-444
+ */
 export default async function getCoverageMap({
   enableLogging,
   paths,
@@ -24,13 +26,15 @@ export default async function getCoverageMap({
 
   const filterByShouldInstrument = filename => {
     const shouldInstrument = nyc.exclude.shouldInstrument(filename);
-    if (enableLogging && shouldInstrument) {
+    if (!shouldInstrument) {
+      return false;
+    }
+    if (enableLogging) {
       console.log(
         `Excluding coverage file after remap: ${join(path, filename)}`,
       );
-      return true;
     }
-    return false;
+    return true;
   };
 
   for (const path of paths) {
