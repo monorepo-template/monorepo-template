@@ -82,6 +82,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Download module
+        uses: actions/download-artifact@v2
+        with:
+          name: module-rollup
+          path: packages/module/dist
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
@@ -97,7 +102,7 @@ jobs:
       - name: Upload build
         uses: actions/upload-artifact@v2
         with:
-          name: application-build
+          name: build
           path: packages/application/build
 
   cypress:
@@ -106,6 +111,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Download module
+        uses: actions/download-artifact@v2
+        with:
+          name: module-rollup
+          path: packages/module/dist
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
@@ -138,7 +148,7 @@ jobs:
       - name: Upload coverage
         uses: actions/upload-artifact@v2
         with:
-          name: application-cypress-coverage
+          name: cypress-coverage
           path: packages/application/cypress/coverage
     strategy:
       fail-fast: false
@@ -158,6 +168,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Download module
+        uses: actions/download-artifact@v2
+        with:
+          name: module-rollup
+          path: packages/module/dist
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
@@ -173,7 +188,7 @@ jobs:
       - name: Upload coverage
         uses: actions/upload-artifact@v2
         with:
-          name: application-jest-coverage
+          name: jest-coverage
           path: packages/application/jest/coverage
 
   coverage:
@@ -193,19 +208,19 @@ jobs:
       - name: Download Cypress coverage
         uses: actions/download-artifact@v2
         with:
-          name: application-cypress-coverage
+          name: cypress-coverage
           path: packages/application/cypress/coverage
       - name: Download Jest coverage
         uses: actions/download-artifact@v2
         with:
-          name: application-jest-coverage
+          name: jest-coverage
           path: packages/application/jest/coverage
       - name: Report coverage
         run: yarn application:coverage
       - name: Upload coverage
         uses: actions/upload-artifact@v2
         with:
-          name: application-coverage
+          name: coverage
           path: packages/application/coverage
 
 on:

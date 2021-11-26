@@ -51,7 +51,7 @@ jobs:
       - name: Upload coverage
         uses: actions/upload-artifact@v2
         with:
-          name: module-jest-coverage
+          name: jest-coverage
           path: packages/module/jest/coverage
 
   rollup:
@@ -73,7 +73,7 @@ jobs:
       - name: Upload build
         uses: actions/upload-artifact@v2
         with:
-          name: module-rollup
+          name: rollup
           path: packages/module/dist
 
 on:
