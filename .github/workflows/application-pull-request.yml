@@ -112,11 +112,6 @@ jobs:
           cache: yarn
           check-latest: true
           node-version: 'lts/*'
-      - name: Download coverage
-        uses: actions/download-artifact@v2
-        with:
-          name: application-cypress-coverage
-          path: packages/application/cypress/coverage
       - name: End-to-end test
         uses: cypress-io/github-action@v2
         env:
