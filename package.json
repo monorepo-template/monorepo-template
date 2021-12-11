@@ -25,12 +25,14 @@
     "module:jest:watch": "yarn workspace @monorepo-template/module run jest:watch",
     "module:rollup": "yarn workspace @monorepo-template/module run rollup",
     "module:rollup:watch": "yarn workspace @monorepo-template/module run rollup:watch",
-    "module:start": "yarn workspace @monorepo-template/module run start"
+    "module:start": "yarn workspace @monorepo-template/module run start",
+    "test": "monorepo-template-test"
   },
   "workspaces": [
     "packages/*"
   ],
   "devDependencies": {
+    "@monorepo-template/test": "workspace:^",
     "@types/node": "^16.11.10",
     "@yarnpkg/sdks": "^2.5.0",
     "eslint": "^8.1.0",

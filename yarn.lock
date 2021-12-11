@@ -1809,6 +1809,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@charlesstover/monorepo-template@workspace:."
   dependencies:
+    "@monorepo-template/test": "workspace:^"
     "@types/node": ^16.11.10
     "@yarnpkg/sdks": ^2.5.0
     eslint: ^8.1.0
@@ -2568,6 +2569,16 @@ __metadata:
   peerDependencies:
     react: ^17.0.0
     react-dom: ^17.0.0
+  languageName: unknown
+  linkType: soft
+
+"@monorepo-template/test@workspace:^, @monorepo-template/test@workspace:packages/test":
+  version: 0.0.0-use.local
+  resolution: "@monorepo-template/test@workspace:packages/test"
+  dependencies:
+    js-yaml: ^4.1.0
+  bin:
+    monorepo-template-test: ./bin/test.mjs
   languageName: unknown
   linkType: soft
 
