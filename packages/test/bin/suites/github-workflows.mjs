@@ -1,11 +1,7 @@
-import { readFileSync } from 'fs';
-import { load as loadYaml } from 'js-yaml';
-import { join } from 'path';
-import CWD from '../constants/cwd.mjs';
 import GITHUB_WORKFLOW_FILE_NAMES from '../constants/github-workflow-file-names.mjs';
 import LOGGER from '../constants/logger.mjs';
-import filterPathByWorkspace from '../utils/filter-path-by-workspace.mjs';
 import mapGitHubWorkflowFileNameToJson from '../utils/map-github-workflow-file-name-to-json.mjs';
+import mapPathToWorkspace from '../utils/map-path-to-workspace.mjs';
 
 export default function testGitHubWorkflows() {
   LOGGER.addItem('GitHub workflows');
@@ -64,16 +60,19 @@ export default function testGitHubWorkflows() {
       // GitHub workflow event trigger paths
       LOGGER.indent();
       for (const path of sources.paths) {
-        if (!filterPathByWorkspace(path)) {
+        const workspacePath = mapPathToWorkspace(path);
+        if (typeof workspacePath === 'undefined') {
           LOGGER.addItem(`${path} (skipped; not a workspace)`);
           continue;
         }
 
         LOGGER.addItem(path);
 
-        // For each workspace found, check its dependencies + devDependencies +
-        //   peerDependencies for other workspaces, then require that other
-        //   workspace's path be present in this `paths` array.
+        // Recursively check the workspace's dependencies + devDependencies +
+        //   peerDependencies for other workspaces.
+        // const workspacesSet = mapWorkspacePathToWorkspacesSet(workspacePath);
+
+        // Require that each found workspace be present in `sources.paths`.
       }
 
       LOGGER.unindent();
