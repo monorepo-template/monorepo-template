@@ -312,4 +312,7 @@ on:
     paths:
       - '.github/workflows/application-push.yml'
       - 'packages/application/**/*'
+      - 'packages/coverage/**/*'
+      - 'packages/cypress-coverage-config-override/**/*'
+      - 'packages/merge-coverage/**/*'
       - 'packages/module/**/*'

@@ -1,7 +1,16 @@
 import GITHUB_WORKFLOW_FILE_NAMES from '../constants/github-workflow-file-names.mjs';
 import LOGGER from '../constants/logger.mjs';
 import mapGitHubWorkflowFileNameToJson from '../utils/map-github-workflow-file-name-to-json.mjs';
+import mapPathToPackageJson from '../utils/map-path-to-package-json.mjs';
 import mapPathToWorkspace from '../utils/map-path-to-workspace.mjs';
+
+const WORKSPACE_PACKAGE_VERSION = /^workspace:/;
+
+const DEPENDENCY_PROPERTIES = [
+  'dependencies',
+  'devDependencies',
+  'peerDependencies',
+];
 
 export default function testGitHubWorkflows() {
   LOGGER.addItem('GitHub workflows');
@@ -59,6 +68,7 @@ export default function testGitHubWorkflows() {
 
       // GitHub workflow event trigger paths
       LOGGER.indent();
+      const workspacePackageJsons = new Map();
       for (const path of sources.paths) {
         const workspacePath = mapPathToWorkspace(path);
         if (typeof workspacePath === 'undefined') {
@@ -66,13 +76,54 @@ export default function testGitHubWorkflows() {
           continue;
         }
 
+        if (workspacePackageJsons.has(workspacePath)) {
+          LOGGER.addItem(`${path} (skipped; already tested)`);
+          continue;
+        }
+
         LOGGER.addItem(path);
 
-        // Recursively check the workspace's dependencies + devDependencies +
-        //   peerDependencies for other workspaces.
-        // const workspacesSet = mapWorkspacePathToWorkspacesSet(workspacePath);
+        const packageJson = mapPathToPackageJson(workspacePath);
+        workspacePackageJsons.set(workspacePath, packageJson);
+      }
 
-        // Require that each found workspace be present in `sources.paths`.
+      const filterWorkspacePackageJsonsByPackageName = packageName => {
+        for (const packageJson of workspacePackageJsons.values()) {
+          if (packageJson.name === packageName) {
+            return true;
+          }
+        }
+        return false;
+      };
+
+      for (const [
+        workspacePath,
+        packageJson,
+      ] of workspacePackageJsons.entries()) {
+        // Check the workspace's `dependencies` + `devDependencies` +
+        //   `peerDependencies` for other workspaces.
+        for (const property of DEPENDENCY_PROPERTIES) {
+          if (!Object.prototype.hasOwnProperty.call(packageJson, property)) {
+            continue;
+          }
+
+          // For each dependency, check if it is a workspace package.
+          for (const [packageName, packageVersion] of Object.entries(
+            packageJson[property],
+          )) {
+            if (!WORKSPACE_PACKAGE_VERSION.test(packageVersion)) {
+              continue;
+            }
+
+            if (filterWorkspacePackageJsonsByPackageName(packageName)) {
+              continue;
+            }
+
+            throw new Error(
+              `Expected \`${gitHubWorkflowRelativePath}\`'s \`on.${event}.paths\` to include \`${packageName}\`'s workspace path, because it is a dependency of \`${workspacePath}\`.`,
+            );
+          }
+        }
       }
 
       LOGGER.unindent();

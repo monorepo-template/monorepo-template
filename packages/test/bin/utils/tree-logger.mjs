@@ -1,11 +1,14 @@
 export default class TreeLogger {
   _indent = 0;
+  _logged = false;
 
   constructor(value) {
     this._tree = {
       children: [],
       value,
     };
+
+    process.on('uncaughtException', this.handleUncaughtException);
   }
 
   addItem = value => {
@@ -24,6 +27,18 @@ export default class TreeLogger {
     return currentItem;
   }
 
+  handleUncaughtException = err => {
+    if (this._logged) {
+      return;
+    }
+    this.log();
+    console.log('');
+    console.error(err);
+    console.log('');
+    console.log('Failure');
+    process.exit(1);
+  };
+
   indent = () => {
     // This should throw an error if there is not a `currentItem` at this
     //   indentation level, i.e. `indent()` -> `indent()`
@@ -31,6 +46,8 @@ export default class TreeLogger {
   };
 
   log = () => {
+    this._logged = true;
+    console.log('');
     this.logItem();
   };
 

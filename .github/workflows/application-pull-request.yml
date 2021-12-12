@@ -229,4 +229,7 @@ on:
     paths:
       - '.github/workflows/application-pull-request.yml'
       - 'packages/application/**/*'
+      - 'packages/coverage/**/*'
+      - 'packages/cypress-coverage-config-override/**/*'
+      - 'packages/merge-coverage/**/*'
       - 'packages/module/**/*'
