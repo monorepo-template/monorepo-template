@@ -102,6 +102,8 @@ jobs:
           node-version: 'lts/*'
           registry-url: 'https://npm.pkg.github.com/'
           scope: '@${{ github.repository_owner }}'
+      - name: Install dependencies
+        run: yarn install
       - name: Download build
         uses: actions/download-artifact@v2
         with:
