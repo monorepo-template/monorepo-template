@@ -112,9 +112,7 @@ jobs:
       - name: Change scope
         env:
           REPOSITORY_OWNER: ${{ github.repository_owner }}
-        run: >
-          yarn module:change-scope;
-          yarn install;
+        run: yarn module:change-scope
       - name: Publish
         working-directory: packages/module
         env:
