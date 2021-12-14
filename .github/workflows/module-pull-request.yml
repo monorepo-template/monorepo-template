@@ -81,4 +81,5 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/module-pull-request.yml'
+      - 'packages/change-scope/**/*'
       - 'packages/module/**/*'
