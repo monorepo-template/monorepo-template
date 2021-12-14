@@ -110,9 +110,11 @@ jobs:
           name: module--dist
           path: packages/module/dist
       - name: Change scope
-        run: yarn module:change-scope
         env:
           REPOSITORY_OWNER: ${{ github.repository_owner }}
+        run: >
+          yarn module:change-scope;
+          yarn install;
       - name: Publish
         working-directory: packages/module
         env:
