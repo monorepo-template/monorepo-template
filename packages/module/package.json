@@ -33,6 +33,7 @@
     "url": "https://github.com/CharlesStover/monorepo-template.git"
   },
   "scripts": {
+    "change-scope": "monorepo-template-change-scope",
     "eslint": "eslint src",
     "jest": "jest",
     "jest:watch": "jest --coverage=false --watch",
@@ -40,6 +41,7 @@
     "rollup:watch": "rollup --config --watch"
   },
   "devDependencies": {
+    "@monorepo-template/change-scope": "workspace:^",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@testing-library/react": "^12.1.2",

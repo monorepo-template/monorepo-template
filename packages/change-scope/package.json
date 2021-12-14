@@ -1,0 +1,34 @@
+{
+  "name": "@monorepo-template/change-scope",
+  "version": "1.0.0",
+  "author": "Charles Stover <monorepo-template-change-scope@charlesstover.com>",
+  "description": "renames packages",
+  "homepage": "https://www.npmjs.com/package/@monorepo-template/change-scope",
+  "license": "MIT",
+  "module": "./index.mjs",
+  "type": "module",
+  "bin": {
+    "monorepo-template-change-scope": "./bin/change-scope.mjs"
+  },
+  "bugs": {
+    "email": "monorepo-template-change-scope@charlesstover.com",
+    "url": "https://github.com/CharlesStover/monorepo-template/issues"
+  },
+  "files": [
+    "bin"
+  ],
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/CharlesStover"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CharlesStover/monorepo-template.git"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

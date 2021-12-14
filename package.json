@@ -20,6 +20,7 @@
     "application:jest": "yarn workspace @monorepo-template/application run jest",
     "application:jest:watch": "yarn workspace @monorepo-template/application run jest:watch",
     "application:start": "yarn workspace @monorepo-template/application run start",
+    "module:change-scope": "yarn workspace @monorepo-template/module run change-scope",
     "module:eslint": "yarn workspace @monorepo-template/module run eslint",
     "module:jest": "yarn workspace @monorepo-template/module run jest",
     "module:jest:watch": "yarn workspace @monorepo-template/module run jest:watch",

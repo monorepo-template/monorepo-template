@@ -2504,6 +2504,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@monorepo-template/change-scope@workspace:^, @monorepo-template/change-scope@workspace:packages/change-scope":
+  version: 0.0.0-use.local
+  resolution: "@monorepo-template/change-scope@workspace:packages/change-scope"
+  dependencies:
+    js-yaml: ^4.1.0
+  bin:
+    monorepo-template-change-scope: ./bin/change-scope.mjs
+  languageName: unknown
+  linkType: soft
+
 "@monorepo-template/coverage@workspace:^, @monorepo-template/coverage@workspace:packages/coverage":
   version: 0.0.0-use.local
   resolution: "@monorepo-template/coverage@workspace:packages/coverage"
@@ -2544,6 +2554,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@monorepo-template/module@workspace:packages/module"
   dependencies:
+    "@monorepo-template/change-scope": "workspace:^"
     "@rollup/plugin-commonjs": ^21.0.1
     "@rollup/plugin-node-resolve": ^13.0.6
     "@testing-library/react": ^12.1.2

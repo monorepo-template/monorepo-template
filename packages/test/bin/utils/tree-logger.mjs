@@ -1,3 +1,6 @@
+// This should either be a third-party module from NPM that does this better, or
+//   it should be moved to a separate package in this monorepo.
+
 export default class TreeLogger {
   _indent = 0;
   _logged = false;
