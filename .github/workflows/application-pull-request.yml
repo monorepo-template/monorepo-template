@@ -13,7 +13,7 @@ jobs:
           check-latest: true
           node-version: 'lts/*'
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable
 
   eslint:
     needs: install-yarn
@@ -28,7 +28,7 @@ jobs:
           check-latest: true
           node-version: 'lts/*'
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable
       - name: Lint
         run: yarn application:eslint
 
@@ -45,7 +45,7 @@ jobs:
           check-latest: true
           node-version: 'lts/*'
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable
       - name: Install Cypress
         uses: cypress-io/github-action@v2
         with:
@@ -67,7 +67,7 @@ jobs:
           check-latest: true
           node-version: 'lts/*'
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable
       - name: Build module
         run: yarn module:rollup
       - name: Upload module
@@ -94,7 +94,7 @@ jobs:
           check-latest: true
           node-version: 'lts/*'
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable
       - name: Build
         run: yarn application:build
         env:
@@ -137,7 +137,7 @@ jobs:
           group: ${{ matrix.os }}-${{ matrix.browser }}
           # We install during the Setup Node step so that we may use a
           #   Node-dependent `start` command.
-          # install-command: yarn install
+          # install-command: yarn install --immutable
           parallel: true
           project: packages/application
           record: true
@@ -180,7 +180,7 @@ jobs:
           check-latest: true
           node-version: 'lts/*'
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable
       - name: Unit test
         run: yarn application:jest
         env:
@@ -204,7 +204,7 @@ jobs:
           check-latest: true
           node-version: 'lts/*'
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable
       - name: Download Cypress coverage
         uses: actions/download-artifact@v2
         with:

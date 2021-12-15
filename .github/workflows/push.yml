@@ -13,7 +13,7 @@ jobs:
           check-latest: true
           node-version: 'lts/*'
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable
 
   test:
     needs: install-yarn
@@ -28,7 +28,7 @@ jobs:
           check-latest: true
           node-version: 'lts/*'
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable
       - name: Test
         run: yarn test
 

@@ -13,7 +13,7 @@ jobs:
           check-latest: true
           node-version: 'lts/*'
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable
 
   eslint:
     needs: install
@@ -28,7 +28,7 @@ jobs:
           check-latest: true
           node-version: 'lts/*'
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable
       - name: Lint
         run: yarn module:eslint
 
@@ -54,7 +54,7 @@ jobs:
           check-latest: true
           node-version: 'lts/*'
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable
       - name: Unit test
         run: yarn module:jest
       - name: Upload coverage
@@ -76,7 +76,7 @@ jobs:
           check-latest: true
           node-version: 'lts/*'
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable
       - name: Build
         run: yarn module:rollup
       - name: Upload build
@@ -85,41 +85,41 @@ jobs:
           name: module--dist
           path: packages/module/dist
 
-  github:
-    needs: [eslint, jest, rollup]
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Setup Node
-        uses: actions/setup-node@v2
-        with:
-          cache: yarn
-          check-latest: true
-          node-version: 'lts/*'
-          registry-url: 'https://npm.pkg.github.com/'
-          scope: '@${{ github.repository_owner }}'
-      - name: Install dependencies
-        run: yarn install
-      - name: Download build
-        uses: actions/download-artifact@v2
-        with:
-          name: module--dist
-          path: packages/module/dist
-      - name: Change scope
-        env:
-          REPOSITORY_OWNER: ${{ github.repository_owner }}
-        run: yarn module:change-scope
-      - name: Publish
-        working-directory: packages/module
-        env:
-          NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: >
-          yarn config set npmAuthToken $NPM_AUTH_TOKEN;
-          yarn npm publish --tolerate-republish;
+  # github:
+  #   needs: [eslint, jest, rollup]
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     contents: read
+  #     packages: write
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v2
+  #     - name: Setup Node
+  #       uses: actions/setup-node@v2
+  #       with:
+  #         cache: yarn
+  #         check-latest: true
+  #         node-version: 'lts/*'
+  #         registry-url: 'https://npm.pkg.github.com/'
+  #         scope: '@${{ github.repository_owner }}'
+  #     - name: Install dependencies
+  #       run: yarn install --immutable
+  #     - name: Download build
+  #       uses: actions/download-artifact@v2
+  #       with:
+  #         name: module--dist
+  #         path: packages/module/dist
+  #     - name: Change scope
+  #       env:
+  #         REPOSITORY_OWNER: ${{ github.repository_owner }}
+  #       run: yarn module:change-scope
+  #     - name: Publish
+  #       working-directory: packages/module
+  #       env:
+  #         NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #       run: >
+  #         yarn config set npmAuthToken $NPM_AUTH_TOKEN;
+  #         yarn npm publish --tolerate-republish;
 
   npm:
     needs: [eslint, jest, rollup]

@@ -13,7 +13,7 @@ jobs:
           check-latest: true
           node-version: 'lts/*'
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable
 
   eslint:
     needs: install
@@ -28,7 +28,7 @@ jobs:
           check-latest: true
           node-version: 'lts/*'
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable
       - name: Lint
         run: yarn module:eslint
 
@@ -45,7 +45,7 @@ jobs:
           check-latest: true
           node-version: 'lts/*'
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable
       - name: Unit test
         run: yarn module:jest
       - name: Upload coverage
@@ -67,7 +67,7 @@ jobs:
           check-latest: true
           node-version: 'lts/*'
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable
       - name: Build
         run: yarn module:rollup
       - name: Upload build
