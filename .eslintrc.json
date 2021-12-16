@@ -16,7 +16,7 @@
 
   "overrides": [
     {
-      "files": ["*.cjs"],
+      "files": ["*.cjs", "*.js", "*.jsx"],
       "rules": {
         "@typescript-eslint/no-require-imports": "off",
         "@typescript-eslint/no-var-requires": "off"
