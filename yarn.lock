@@ -2347,8 +2347,8 @@ __metadata:
   linkType: hard
 
 "@monorepo-template/merge-coverage@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@monorepo-template/merge-coverage@npm:1.0.0"
+  version: 1.0.1
+  resolution: "@monorepo-template/merge-coverage@npm:1.0.1"
   dependencies:
     istanbul-lib-coverage: ^3.2.0
     make-dir: ^3.1.0
@@ -2356,7 +2356,7 @@ __metadata:
     p-map: ^5.2.0
   bin:
     merge-coverage: ./bin/merge-coverage.mjs
-  checksum: d5af375a21ed3ecce3b6e66f3eb5e7683e3ccac99cc538bd8d81ddb81bbf02827069a43950124d1969b23ac53d607fd262a24304abe5355cf12733c1254f9acd
+  checksum: c170074fbabe4cb8bfd0ea128fbc23bf7471131ad5df66285c59570b2c884539829bd020974ffbb6b32d628611fa959cada449e17828bff313d9636c521849a3
   languageName: node
   linkType: hard
 
@@ -5658,9 +5658,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30000981, caniuse-lite@npm:^1.0.30001109, caniuse-lite@npm:^1.0.30001125, caniuse-lite@npm:^1.0.30001271":
-  version: 1.0.30001272
-  resolution: "caniuse-lite@npm:1.0.30001272"
-  checksum: 5a08fc35ae298acef6846111634201bde7b4710fe0ccabb69ad5681115f77971265d9b6b5cd9bb976bc44d8d6ff0119cb28d9032753e063a2c70e1e30b630ad9
+  version: 1.0.30001286
+  resolution: "caniuse-lite@npm:1.0.30001286"
+  checksum: 04de4742552d4aeb713677b40693d9ac1fbd259573e0ff739565278bcecb6f398f3227546a4e930f4d5cf95b61458f4a53c9c1f90f5b0c4f6063b32e4c54b89e
   languageName: node
   linkType: hard
 
