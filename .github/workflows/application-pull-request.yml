@@ -95,6 +95,11 @@ jobs:
           node-version: 'lts/*'
       - name: Install dependencies
         run: yarn install --immutable
+      - name: Download module
+        uses: actions/download-artifact@v2
+        with:
+          name: module--dist
+          path: packages/module/dist
       - name: Build
         run: yarn application:build
         env:
