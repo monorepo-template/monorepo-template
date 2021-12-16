@@ -3,6 +3,8 @@
   "extends": "../../tsconfig.json",
   "include": [".eslintrc.cjs", "**/*"],
   "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "./dist/types",
     "jsx": "react-jsx",
     "types": ["jest"]
   }
