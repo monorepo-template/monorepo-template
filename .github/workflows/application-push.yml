@@ -164,7 +164,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu, windows]
-        browser: [edge, firefox, chrome]
+        browser: [chrome, edge, firefox]
         container: [1]
         exclude:
           - browser: edge
