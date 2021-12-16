@@ -1,7 +1,7 @@
 name: Pull request
 
 jobs:
-  install-yarn:
+  install:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -16,7 +16,7 @@ jobs:
         run: yarn install --immutable
 
   test:
-    needs: install-yarn
+    needs: install
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

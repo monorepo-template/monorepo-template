@@ -151,5 +151,4 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/module-push.yml'
-      - 'packages/change-scope/**/*'
       - 'packages/module/**/*'

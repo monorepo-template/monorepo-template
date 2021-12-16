@@ -12,8 +12,10 @@ const MODULE_DIR = path.parse(packageJson.module).dir;
 const TSCONFIG = IS_DEV ? './tsconfig.development.json' : './tsconfig.json';
 
 const EXTERNAL = new Set([
-  ...Object.keys(packageJson.dependencies || Object.create(null)),
-  ...Object.keys(packageJson.peerDependencies || Object.create(null)),
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+  ...Object.keys(packageJson.dependencies ?? Object.create(null)),
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+  ...Object.keys(packageJson.peerDependencies ?? Object.create(null)),
 ]);
 
 export default [

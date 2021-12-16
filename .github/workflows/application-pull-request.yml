@@ -150,6 +150,16 @@ jobs:
         with:
           name: application--cypress-coverage
           path: packages/application/cypress/coverage
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v2
+        with:
+          name: application--cypress-screenshots
+          path: packages/application/cypress/screenshots
+      - name: Upload videos
+        uses: actions/upload-artifact@v2
+        with:
+          name: application--cypress-videos
+          path: packages/application/cypress/videos
     strategy:
       fail-fast: false
       matrix:
@@ -229,8 +239,4 @@ on:
     paths:
       - '.github/workflows/application-pull-request.yml'
       - 'packages/application/**/*'
-      - 'packages/change-scope/**/*'
-      - 'packages/coverage/**/*'
-      - 'packages/cypress-coverage-config-override/**/*'
-      - 'packages/merge-coverage/**/*'
       - 'packages/module/**/*'

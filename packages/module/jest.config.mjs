@@ -2,7 +2,8 @@ export default {
   cacheDirectory: './jest/cache',
   collectCoverage: true,
   coverageDirectory: './jest/coverage',
-  coverageReporters: ['json', 'lcov', ['text', { skipFull: true }], 'clover'],
+  coverageReporters: ['json', 'lcov', 'text', 'clover'],
+  preset: 'ts-jest',
   resetMocks: true,
   resetModules: true,
   restoreMocks: true,
@@ -12,7 +13,6 @@ export default {
     '<rootDir>/src/**/*.{ts,tsx}',
     '!<rootDir>/src/**/*.d.ts',
     '!<rootDir>/src/**/*.stories.{ts,tsx}',
-    '!<rootDir>/src/**/*.test.{ts,tsx}',
   ],
   coverageThreshold: {
     global: {
@@ -21,8 +21,5 @@ export default {
       lines: 100,
       statements: 100,
     },
-  },
-  transform: {
-    '^.+\\.tsx?$': 'ts-jest',
   },
 };

@@ -2,7 +2,7 @@
   "name": "@charlesstover/monorepo-template",
   "version": "1.0.0",
   "license": "MIT",
-  "packageManager": "yarn@3.1.0",
+  "packageManager": "yarn@3.1.1",
   "private": true,
   "funding": {
     "type": "individual",
@@ -20,7 +20,6 @@
     "application:jest": "yarn workspace @monorepo-template/application run jest",
     "application:jest:watch": "yarn workspace @monorepo-template/application run jest:watch",
     "application:start": "yarn workspace @monorepo-template/application run start",
-    "module:change-scope": "yarn workspace @monorepo-template/module run change-scope",
     "module:eslint": "yarn workspace @monorepo-template/module run eslint",
     "module:jest": "yarn workspace @monorepo-template/module run jest",
     "module:jest:watch": "yarn workspace @monorepo-template/module run jest:watch",
@@ -33,10 +32,12 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@monorepo-template/test": "workspace:^",
-    "@types/node": "^16.11.10",
-    "@yarnpkg/sdks": "^2.5.0",
-    "eslint": "^8.1.0",
+    "@monorepo-template/test": "^1.0.0",
+    "@types/node": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "@yarnpkg/sdks": "^2.5.1-rc.6",
+    "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.4.1",

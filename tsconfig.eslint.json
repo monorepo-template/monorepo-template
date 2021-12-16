@@ -2,12 +2,11 @@
   "exclude": [".git", ".vscode", ".yarn"],
   "extends": "./tsconfig.json",
 
-  "compilerOptions": {
-    "noEmit": true,
-    "sourceMap": false
-  },
-
   "include": [
+    "**/.eslintrc.cjs",
+    "**/.eslintrc.json",
+    "**/.prettierrc.json",
+    "**/.yarnrc.yml",
     "**/*.cjs",
     "**/*.d.ts",
     "**/*.js",

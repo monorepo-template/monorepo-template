@@ -1,21 +1,18 @@
 {
-  "exclude": ["build"],
-  "extends": "./tsconfig.json",
+  "extends": "../../tsconfig.eslint.json",
+  "include": [".eslintrc.cjs", "**/*"],
 
   "compilerOptions": {
-    "noEmit": true,
-    "sourceMap": false
+    "jsx": "react-jsx",
+    "types": ["jest"]
   },
 
-  "include": [
-    "**/*.cjs",
-    "**/*.d.ts",
-    "**/*.js",
-    "**/*.json",
-    "**/*.jsx",
-    "**/*.mjs",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.yml"
+  "exclude": [
+    "build",
+    "cypress/coverage",
+    "cypress/screenshots",
+    "cypress/videos",
+    "jest",
+    "node_modules"
   ]
 }
