@@ -1809,7 +1809,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@charlesstover/monorepo-template@workspace:."
   dependencies:
-    "@monorepo-template/test": ^1.0.0
+    "@monorepo-template/test": ^1.0.1
     "@types/node": ^17.0.0
     "@typescript-eslint/eslint-plugin": ^5.7.0
     "@typescript-eslint/parser": ^5.7.0
@@ -2390,14 +2390,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@monorepo-template/test@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@monorepo-template/test@npm:1.0.0"
+"@monorepo-template/test@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@monorepo-template/test@npm:1.0.1"
   dependencies:
     js-yaml: ^4.1.0
   bin:
     monorepo-template-test: ./bin/test.mjs
-  checksum: d28682e97f2477b2960b8c09cd1810ccb5d8530977d18bf1875544b068cbe7e387863183a3ed1f4c4d1923dfbebbc8149a81e534a612bd0543ee075dea90df2c
+  checksum: 3cc70b3a57e59ff67e30c0cd31766ad225dcaaa4677b75f31c3d41d4d1fb150247025578449c55b4ca05d148e1d1481f114c1d85f84db661c71eada55ec453c5
   languageName: node
   linkType: hard
 
