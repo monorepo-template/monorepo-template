@@ -163,9 +163,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # Skip Windows while cypress-io/github-action doesn't support it.
-        # https://github.com/cypress-io/github-action/issues/459
-        os: [ubuntu] # , windows
+        os: [ubuntu, windows]
         browser: [edge, firefox, chrome]
         container: [1]
         exclude:
