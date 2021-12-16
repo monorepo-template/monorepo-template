@@ -95,6 +95,8 @@ To contribute to this repository, start by running the following commands.
 - If you use VIM, run `yarn sdks vim`.
 - If you use Visual Studio Code, run `yarn sdks vscode`.
 
+To test your changes to the repository, run `yarn test`.
+
 ### Application
 
 - To build the application, run `yarn application:build`.

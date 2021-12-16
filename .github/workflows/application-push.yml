@@ -82,11 +82,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Download module
-        uses: actions/download-artifact@v2
-        with:
-          name: module--dist
-          path: packages/module/dist
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
@@ -95,6 +90,11 @@ jobs:
           node-version: 'lts/*'
       - name: Install dependencies
         run: yarn install --immutable
+      - name: Download module
+        uses: actions/download-artifact@v2
+        with:
+          name: module--dist
+          path: packages/module/dist
       - name: Build
         run: yarn application:build
         env:
@@ -150,6 +150,16 @@ jobs:
         with:
           name: application--cypress-coverage
           path: packages/application/cypress/coverage
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v2
+        with:
+          name: application--cypress-screenshots
+          path: packages/application/cypress/screenshots
+      - name: Upload videos
+        uses: actions/upload-artifact@v2
+        with:
+          name: application--cypress-videos
+          path: packages/application/cypress/videos
     strategy:
       fail-fast: false
       matrix:
@@ -312,8 +322,4 @@ on:
     paths:
       - '.github/workflows/application-push.yml'
       - 'packages/application/**/*'
-      - 'packages/change-scope/**/*'
-      - 'packages/coverage/**/*'
-      - 'packages/cypress-coverage-config-override/**/*'
-      - 'packages/merge-coverage/**/*'
       - 'packages/module/**/*'

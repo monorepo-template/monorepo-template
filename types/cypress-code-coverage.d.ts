@@ -1,29 +1,32 @@
 // https://github.com/cypress-io/code-coverage/blob/master/task.js
 declare module '@cypress/code-coverage/task' {
   export interface Config {
-    env: Env;
+    readonly env: Env;
   }
 
   export interface Env {
-    codeCoverageTasksRegistered: boolean;
+    readonly codeCoverageTasksRegistered: boolean;
   }
 
   export interface Mode {
-    isInteractive: boolean;
+    readonly isInteractive: boolean;
   }
 
   export interface On {
     (event: 'task', tasks: Tasks): void;
+    (event: string): void;
   }
 
   export interface Tasks {
-    combineCoverage(sentCoverage: string): null;
-    coverageReport(): Promise<string> | null;
-    resetCoverage(mode: Mode): null;
+    readonly combineCoverage: (sentCoverage: string) => null;
+    readonly coverageReport: () => Promise<string> | null;
+    readonly resetCoverage: (mode: Mode) => null;
   }
 
   export default function registerCodeCoverageTasks(
     on: On,
+    // `config` is mutable.
+    // eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
     config: Config,
   ): Config;
 }
