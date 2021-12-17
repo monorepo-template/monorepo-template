@@ -160,9 +160,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # Windows is disabled until `cypress-io/github-action` supports it.
-        # https://github.com/cypress-io/github-action/pull/470
-        os: [ubuntu] # , windows
+        os: [ubuntu, windows]
         browser: [chrome, edge, firefox]
         container: [1]
         exclude:
