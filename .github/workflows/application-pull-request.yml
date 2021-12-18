@@ -143,16 +143,19 @@ jobs:
           wait-on: 'http://localhost:3000'
           wait-on-timeout: 120
       - name: Upload coverage
+        if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
           name: application--cypress-coverage
           path: packages/application/cypress/coverage
       - name: Upload screenshots
+        if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
           name: application--cypress-screenshots
           path: packages/application/cypress/screenshots
       - name: Upload videos
+        if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
           name: application--cypress-videos
@@ -193,6 +196,7 @@ jobs:
         env:
           DD_ENV: ci
       - name: Upload coverage
+        if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
           name: application--jest-coverage
@@ -225,6 +229,7 @@ jobs:
       - name: Report coverage
         run: yarn application:coverage
       - name: Upload coverage
+        if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
           name: application--coverage
