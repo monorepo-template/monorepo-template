@@ -49,6 +49,7 @@ jobs:
       - name: Unit test
         run: yarn module:jest
       - name: Upload coverage
+        if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
           name: module--jest-coverage
