@@ -1,4 +1,4 @@
-name: Application push
+name: Application
 
 jobs:
   install-yarn:
@@ -132,7 +132,7 @@ jobs:
           REACT_APP_VERSION: ${{ github.sha }}
         with:
           browser: ${{ matrix.browser }}
-          ci-build-id: ${{ github.event_name }}-${{ github.sha }}
+          ci-build-id: ${{ github.run_id }}-${{ github.run_attempt }}
           command-prefix: yarn dlx
           group: ${{ matrix.os }}-${{ matrix.browser }}
           parallel: true
@@ -140,13 +140,13 @@ jobs:
           record: true
           start: yarn application:cypress:start
           tag: ${{ github.event_name }}
-          wait-on: 'http://localhost:3000'
+          wait-on: 'http://localhost:3000/'
           wait-on-timeout: 120
       - name: Upload coverage
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: application--cypress-coverage
+          name: application--cypress--coverage
           path: packages/application/cypress/coverage
       - name: Upload screenshots
         if: ${{ always() }}
@@ -208,10 +208,11 @@ jobs:
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: application--jest-coverage
+          name: application--jest--coverage
           path: packages/application/jest/coverage
 
   coverage:
+    if: ${{ always() }}
     needs: [cypress, jest]
     runs-on: ubuntu-latest
     steps:
@@ -228,12 +229,12 @@ jobs:
       - name: Download Cypress coverage
         uses: actions/download-artifact@v2
         with:
-          name: application--cypress-coverage
+          name: application--cypress--coverage
           path: packages/application/cypress/coverage
       - name: Download Jest coverage
         uses: actions/download-artifact@v2
         with:
-          name: application--jest-coverage
+          name: application--jest--coverage
           path: packages/application/jest/coverage
       - name: Report coverage
         run: yarn application:coverage
@@ -245,35 +246,33 @@ jobs:
           path: packages/application/coverage
 
   github-pages:
-    needs: [build, coverage, eslint]
+    if: ${{ github.event_name == 'push' }}
+    needs: [build, coverage, cypress, eslint, jest]
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
       - name: Download build
         uses: actions/download-artifact@v2
         with:
           name: application--build
-          path: packages/application/build
+          path: build
       - name: Deploy GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: gh-pages
           clean: true
-          folder: packages/application/build
+          folder: build
           single-commit: true
 
   sentry-release:
-    needs: [build, coverage, eslint]
+    if: ${{ github.event_name == 'push' }}
+    needs: [build, coverage, cypress, eslint, jest]
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
       - name: Download build
         uses: actions/download-artifact@v2
         with:
           name: application--build
-          path: packages/application/build
+          path: build
       - name: Release Sentry version
         uses: getsentry/action-release@v1
         env:
@@ -284,23 +283,14 @@ jobs:
           SENTRY_VERSION: ${{ github.sha }}
         with:
           environment: production
-          sourcemaps: packages/application/build
+          sourcemaps: build
           version: ${{ env.SENTRY_VERSION }}
 
   # cloudflare-purge:
+  #   if: ${{ github.event_name == 'push' }}
   #   needs: github-pages
   #   runs-on: ubuntu-latest
   #   steps:
-  #     - name: Checkout
-  #       uses: actions/checkout@v2
-  #     - name: Setup Node
-  #       uses: actions/setup-node@v2
-  #       with:
-  #         cache: yarn
-  #         check-latest: true
-  #         node-version: 'lts/*'
-  #     - name: Install dependencies
-  #       run: yarn install --immutable
   #     - name: Purge Cloudflare cache
   #       env:
   #         CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -319,9 +309,15 @@ jobs:
   #           "https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE_ID/purge_cache"
 
 on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/application.yml'
+      - 'packages/application/**/*'
+      - 'packages/module/**/*'
   push:
     branches: [main]
     paths:
-      - '.github/workflows/application-push.yml'
+      - '.github/workflows/application.yml'
       - 'packages/application/**/*'
       - 'packages/module/**/*'
