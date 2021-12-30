@@ -1,4 +1,4 @@
-name: Module push
+name: Module
 
 jobs:
   install:
@@ -61,7 +61,7 @@ jobs:
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: module--jest-coverage
+          name: module--jest--coverage
           path: packages/module/jest/coverage
 
   rollup:
@@ -87,6 +87,7 @@ jobs:
           path: packages/module/dist
 
   # github:
+  #   if: ${{ github.event_name == 'push' }}
   #   needs: [eslint, jest, rollup]
   #   runs-on: ubuntu-latest
   #   permissions:
@@ -123,6 +124,7 @@ jobs:
   #         yarn npm publish --tolerate-republish;
 
   npm:
+    if: ${{ github.event_name == 'push' }}
     needs: [eslint, jest, rollup]
     runs-on: ubuntu-latest
     steps:
@@ -148,8 +150,13 @@ jobs:
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
 on:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/module.yml'
+      - 'packages/module/**/*'
   push:
     branches: [main]
     paths:
-      - '.github/workflows/module-push.yml'
+      - '.github/workflows/module.yml'
       - 'packages/module/**/*'

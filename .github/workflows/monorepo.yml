@@ -1,4 +1,4 @@
-name: Pull request
+name: Monorepo
 
 jobs:
   install:
@@ -34,4 +34,6 @@ jobs:
 
 on:
   pull_request:
+    branches: [main]
+  push:
     branches: [main]
