@@ -1,0 +1,42 @@
+{
+  "name": "@monorepo-template/jest-transformer",
+  "version": "0.0.1",
+  "author": "Charles Stover <monorepo-template-jest-transformer@charlesstover.com>",
+  "description": "Jest transformer for monorepo templates",
+  "homepage": "https://www.npmjs.com/package/@monorepo-template/jest-transformer",
+  "license": "MIT",
+  "main": "./src/jest-transformer.cjs",
+  "type": "module",
+  "bugs": {
+    "email": "monorepo-template-jest-transformer@charlesstover.com",
+    "url": "https://github.com/CharlesStover/monorepo-template-dependencies/issues"
+  },
+  "files": [
+    "src"
+  ],
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/CharlesStover"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CharlesStover/monorepo-template-dependencies.git"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.0.0",
+    "babel-jest": "^27.0.0"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.0.0",
+    "babel-jest": "^27.0.0"
+  }
+}

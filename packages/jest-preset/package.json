@@ -1,0 +1,39 @@
+{
+  "name": "@monorepo-template/jest-preset",
+  "version": "0.0.1",
+  "author": "Charles Stover <monorepo-template-jest-preset@charlesstover.com>",
+  "description": "Jest preset for monorepo templates",
+  "homepage": "https://www.npmjs.com/package/@monorepo-template/jest-preset",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "email": "monorepo-template-jest-preset@charlesstover.com",
+    "url": "https://github.com/CharlesStover/monorepo-template-dependencies/issues"
+  },
+  "files": [
+    "src",
+    "jest-preset.json"
+  ],
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/CharlesStover"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CharlesStover/monorepo-template-dependencies.git"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.0.0",
+    "@monorepo-template/jest-transformer": "workspace:^",
+    "babel-jest": "^27.0.0"
+  },
+  "peerDependencies": {
+    "@monorepo-template/jest-transformer": "workspace:^"
+  }
+}
