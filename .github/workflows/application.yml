@@ -311,10 +311,14 @@ on:
     paths:
       - '.github/workflows/application.yml'
       - 'packages/application/**/*'
+      - 'packages/jest-preset/**/*'
+      - 'packages/jest-transformer/**/*'
       - 'packages/module/**/*'
   push:
     branches: [main]
     paths:
       - '.github/workflows/application.yml'
       - 'packages/application/**/*'
+      - 'packages/jest-preset/**/*'
+      - 'packages/jest-transformer/**/*'
       - 'packages/module/**/*'
