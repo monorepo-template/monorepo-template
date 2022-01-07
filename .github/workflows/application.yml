@@ -250,6 +250,8 @@ jobs:
     needs: [build, coverage, cypress, eslint, jest]
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Download build
         uses: actions/download-artifact@v2
         with:
@@ -268,6 +270,8 @@ jobs:
     needs: [build, coverage, cypress, eslint, jest]
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Download build
         uses: actions/download-artifact@v2
         with:
