@@ -243,7 +243,9 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: application--coverage
-          path: packages/application/coverage
+          path: |
+            packages/application/.nyc_output
+            packages/application/coverage
 
   github-pages:
     if: ${{ github.event_name == 'push' }}
