@@ -278,8 +278,8 @@ jobs:
         env:
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           SENTRY_LOG_LEVEL: info
-          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
-          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+          SENTRY_ORG: charles-stover
+          SENTRY_PROJECT: monorepo-template-application
           SENTRY_VERSION: ${{ github.sha }}
         with:
           environment: production
