@@ -31,7 +31,7 @@
     "eslint": "^8.6.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "jest": "^27.4.7",
+    "jest": "26",
     "react": "^17.0.2",
     "react-app-polyfill": "^3.0.0",
     "react-app-rewired": "^2.1.11",
