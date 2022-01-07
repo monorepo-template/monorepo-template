@@ -47,12 +47,15 @@ To add a new application,
     }
     ```
 12. In the root `/README.md` file, add a workflow status badge for the new
-    application: `[![${Application name}](https://github.com/${repository-organization}/${repository-name}/actions/workflows/${application-name}.yml/badge.svg?branch=main&event=push)](https://github.com/${repository-organization}/${repository-name}/actions/workflows/${application-name}.yml)`.
+    application:
+    ```md
+    [![${Application name}](https://github.com/${repository-organization}/${repository-name}/actions/workflows/${application-name}.yml/badge.svg?branch=main&event=push)](https://github.com/${repository-organization}/${repository-name}/actions/workflows/${application-name}.yml)
+    ```
 13. In the root `/README.md` file, add the documentation for your application's
     scripts:
 
     ```md
-    ## Application
+    ## ${Application name}
 
     - To build the application, run `yarn ${application-name}:build`.
     - To report Cypress's and Jest's combined test coverage, run

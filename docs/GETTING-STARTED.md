@@ -8,13 +8,3 @@
    your project description.
 4. In this repository's root `README.md` file, change the title from
    `Monorepo template` to your project title.
-
-For each module, add Yarn scripts.
-
-For each module, add the `version`, `minzipped size`, `downloads`, and
-`GitHub Action: Module push` badges, then replace
-`CharlesStover/monorepo-template` with your repository and
-`@monorepo-template/module` with your module's package name.
-
-Under `Contributing`, change the `yarn` commands from `application:*` and
-`module:*` to match your workspace names.

@@ -21,9 +21,9 @@
 - To report Cypress's and Jest's combined test coverage, run
   `yarn application:coverage`. The combined report will be located in
   `/packages/application/coverage/`.
-- To end-to-end test your application, run `yarn:cypress:start` to first run the
-  development server with code coverage reporting enabled, then run
-  `yarn:cypress`.
+- To end-to-end test your application, run `yarn application:cypress:start` to
+  first run the development server with code coverage reporting enabled, then
+  run `yarn application:cypress`.
 - To lint your changes to the application, run `yarn application:eslint`.
 - To unit test your changes to the application, run `yarn application:jest`.
 - To unit test your changes to the application in watch mode, run
