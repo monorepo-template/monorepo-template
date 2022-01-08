@@ -2,12 +2,18 @@
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint", "prettier"],
 
+  "env": {
+    "node": true
+  },
+
   "extends": [
-    "@monorepo-template/eslint-config-fixable",
+    "@monorepo-template/eslint-config-typescript-fixable",
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:prettier/recommended",
+    "prettier"
   ],
 
   "overrides": [
@@ -92,6 +98,7 @@
     "@typescript-eslint/triple-slash-reference": "error",
     "@typescript-eslint/typedef": "error",
     "@typescript-eslint/unified-signatures": "error",
+    "prettier/prettier": "error",
 
     "@typescript-eslint/consistent-type-assertions": [
       "error",

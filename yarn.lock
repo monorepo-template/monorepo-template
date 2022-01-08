@@ -2619,7 +2619,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@charlesstover/monorepo-template@workspace:."
   dependencies:
-    "@monorepo-template/eslint-config-fixable": "workspace:^"
+    "@monorepo-template/eslint-config-typescript-fixable": "workspace:^"
     "@monorepo-template/test": ^1.0.1
     "@monorepo-template/tsconfig": "workspace:^"
     "@types/node": ^17.0.8
@@ -3351,16 +3351,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@monorepo-template/eslint-config-fixable@workspace:^, @monorepo-template/eslint-config-fixable@workspace:packages/eslint-config-fixable":
+"@monorepo-template/eslint-config-typescript-fixable@workspace:^, @monorepo-template/eslint-config-typescript-fixable@workspace:packages/eslint-config-typescript-fixable":
   version: 0.0.0-use.local
-  resolution: "@monorepo-template/eslint-config-fixable@workspace:packages/eslint-config-fixable"
-  dependencies:
-    "@typescript-eslint/eslint-plugin": ^5.9.0
-    eslint-config-prettier: ^8.3.0
-    eslint-plugin-prettier: ^4.0.0
-    prettier: ^2.5.1
-  peerDependencies:
-    prettier: ^2.0.0
+  resolution: "@monorepo-template/eslint-config-typescript-fixable@workspace:packages/eslint-config-typescript-fixable"
   languageName: unknown
   linkType: soft
 

@@ -1,11 +1,4 @@
 {
-  "extends": ["plugin:prettier/recommended"],
-  "plugins": ["@typescript-eslint", "prettier"],
-
-  "env": {
-    "node": true
-  },
-
   "overrides": [
     {
       "files": ["*.cjs", "*.js", "*.jsx", "*.mjs"],
