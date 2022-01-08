@@ -41,7 +41,6 @@
     "@typescript-eslint/comma-spacing": "error",
     "@typescript-eslint/consistent-indexed-object-style": "error",
     "@typescript-eslint/consistent-type-definitions": "error",
-    "@typescript-eslint/consistent-type-exports": "error",
     "@typescript-eslint/consistent-type-imports": "error",
     "@typescript-eslint/dot-notation": "error",
     "@typescript-eslint/explicit-member-accessibility": "error",
