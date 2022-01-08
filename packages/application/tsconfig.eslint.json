@@ -9,6 +9,7 @@
 
   "exclude": [
     "build",
+    "coverage",
     "cypress/coverage",
     "cypress/screenshots",
     "cypress/videos",
