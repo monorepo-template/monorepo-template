@@ -6,7 +6,7 @@
   "homepage": "https://www.npmjs.com/package/@monorepo-template/jest-transformer",
   "license": "MIT",
   "main": "./src/jest-transformer.cjs",
-  "type": "module",
+  "type": "commonjs",
   "bugs": {
     "email": "monorepo-template-jest-transformer@charlesstover.com",
     "url": "https://github.com/CharlesStover/monorepo-template-dependencies/issues"
