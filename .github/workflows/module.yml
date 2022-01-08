@@ -154,15 +154,9 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/module.yml'
-      - 'packages/jest-module-preset/**/*'
-      - 'packages/jest-preset/**/*'
-      - 'packages/jest-transformer/**/*'
       - 'packages/module/**/*'
   push:
     branches: [main]
     paths:
       - '.github/workflows/module.yml'
-      - 'packages/jest-module-preset/**/*'
-      - 'packages/jest-preset/**/*'
-      - 'packages/jest-transformer/**/*'
       - 'packages/module/**/*'

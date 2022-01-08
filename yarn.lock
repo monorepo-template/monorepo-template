@@ -88,29 +88,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:^7.0.0, @babel/core@npm:^7.16.0, @babel/core@npm:^7.7.2, @babel/core@npm:^7.8.0, @babel/core@npm:^7.8.4":
-  version: 7.16.7
-  resolution: "@babel/core@npm:7.16.7"
-  dependencies:
-    "@babel/code-frame": ^7.16.7
-    "@babel/generator": ^7.16.7
-    "@babel/helper-compilation-targets": ^7.16.7
-    "@babel/helper-module-transforms": ^7.16.7
-    "@babel/helpers": ^7.16.7
-    "@babel/parser": ^7.16.7
-    "@babel/template": ^7.16.7
-    "@babel/traverse": ^7.16.7
-    "@babel/types": ^7.16.7
-    convert-source-map: ^1.7.0
-    debug: ^4.1.0
-    gensync: ^1.0.0-beta.2
-    json5: ^2.1.2
-    semver: ^6.3.0
-    source-map: ^0.5.0
-  checksum: 3206e077e76db189726c4da19a5296eae11c6c1f5abea7013e74f18708bb91616914717ff8d8ca466cc0ba9d2d2147e9a84c3c357b9ad4cba601da14107838ed
-  languageName: node
-  linkType: hard
-
 "@babel/core@npm:^7.1.0, @babel/core@npm:^7.12.3, @babel/core@npm:^7.7.5":
   version: 7.15.8
   resolution: "@babel/core@npm:7.15.8"
@@ -131,6 +108,29 @@ __metadata:
     semver: ^6.3.0
     source-map: ^0.5.0
   checksum: 61e5050580a2808344f23161c971e917fe711a546e3afa4d022be4ec5325f8bdf559cc9afd962e39ecc3643d9cdcbbac7abc7b8dd05330020475317564c8d290
+  languageName: node
+  linkType: hard
+
+"@babel/core@npm:^7.16.0, @babel/core@npm:^7.7.2, @babel/core@npm:^7.8.0, @babel/core@npm:^7.8.4":
+  version: 7.16.7
+  resolution: "@babel/core@npm:7.16.7"
+  dependencies:
+    "@babel/code-frame": ^7.16.7
+    "@babel/generator": ^7.16.7
+    "@babel/helper-compilation-targets": ^7.16.7
+    "@babel/helper-module-transforms": ^7.16.7
+    "@babel/helpers": ^7.16.7
+    "@babel/parser": ^7.16.7
+    "@babel/template": ^7.16.7
+    "@babel/traverse": ^7.16.7
+    "@babel/types": ^7.16.7
+    convert-source-map: ^1.7.0
+    debug: ^4.1.0
+    gensync: ^1.0.0-beta.2
+    json5: ^2.1.2
+    semver: ^6.3.0
+    source-map: ^0.5.0
+  checksum: 3206e077e76db189726c4da19a5296eae11c6c1f5abea7013e74f18708bb91616914717ff8d8ca466cc0ba9d2d2147e9a84c3c357b9ad4cba601da14107838ed
   languageName: node
   linkType: hard
 
@@ -2619,9 +2619,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@charlesstover/monorepo-template@workspace:."
   dependencies:
-    "@monorepo-template/eslint-config-typescript-fixable": "workspace:^"
+    "@monorepo-template/eslint-config-typescript-fixable": ^0.1.0
     "@monorepo-template/test": ^1.0.1
-    "@monorepo-template/tsconfig": "workspace:^"
+    "@monorepo-template/tsconfig": ^0.1.0
     "@types/node": ^17.0.8
     "@typescript-eslint/eslint-plugin": ^5.9.0
     "@typescript-eslint/parser": ^5.9.0
@@ -3304,7 +3304,7 @@ __metadata:
     "@jest/globals": ^27.4.6
     "@monorepo-template/coverage": ^1.0.1
     "@monorepo-template/cypress-coverage-config-override": ^1.0.0
-    "@monorepo-template/jest-application-preset": "workspace:^"
+    "@monorepo-template/jest-application-preset": ^0.1.3
     "@monorepo-template/module": "workspace:^"
     "@testing-library/react": ^12.1.2
     "@testing-library/react-hooks": ^7.0.2
@@ -3351,48 +3351,52 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@monorepo-template/eslint-config-typescript-fixable@workspace:^, @monorepo-template/eslint-config-typescript-fixable@workspace:packages/eslint-config-typescript-fixable":
-  version: 0.0.0-use.local
-  resolution: "@monorepo-template/eslint-config-typescript-fixable@workspace:packages/eslint-config-typescript-fixable"
-  languageName: unknown
-  linkType: soft
+"@monorepo-template/eslint-config-typescript-fixable@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@monorepo-template/eslint-config-typescript-fixable@npm:0.1.0"
+  checksum: 5ed7183e97e46c275493764ac796ebf3c9403457a67ad40e682fa093bbe7ea3685fac0f0defae4b28e3e8e6cd4f2f644068c57d1f337cebd6671529eb11417ef
+  languageName: node
+  linkType: hard
 
-"@monorepo-template/jest-application-preset@workspace:^, @monorepo-template/jest-application-preset@workspace:packages/jest-application-preset":
-  version: 0.0.0-use.local
-  resolution: "@monorepo-template/jest-application-preset@workspace:packages/jest-application-preset"
+"@monorepo-template/jest-application-preset@npm:^0.1.3":
+  version: 0.1.3
+  resolution: "@monorepo-template/jest-application-preset@npm:0.1.3"
   dependencies:
-    "@monorepo-template/jest-preset": "workspace:^"
-  languageName: unknown
-  linkType: soft
+    "@monorepo-template/jest-preset": ^0.1.0
+  checksum: 4e92853c644b665aa148aad734d57bb213da781bb71bad0bef49b3be80e862af6eb4a736a628f8f511f1d9083373315239f6973d580d66c001b51e2c2c19896f
+  languageName: node
+  linkType: hard
 
-"@monorepo-template/jest-module-preset@workspace:^, @monorepo-template/jest-module-preset@workspace:packages/jest-module-preset":
-  version: 0.0.0-use.local
-  resolution: "@monorepo-template/jest-module-preset@workspace:packages/jest-module-preset"
+"@monorepo-template/jest-module-preset@npm:^0.1.3":
+  version: 0.1.3
+  resolution: "@monorepo-template/jest-module-preset@npm:0.1.3"
   dependencies:
-    "@monorepo-template/jest-preset": "workspace:^"
-  languageName: unknown
-  linkType: soft
+    "@monorepo-template/jest-preset": ^0.1.0
+  checksum: 9777c78f5c84f5939231cb1dcff1d7dd751cb15cd43760bbbca873ce2ad1c85fe14153e2dd81f985a9ed56bf5974455d9d2d83725583e87aedf7433a5a74c81b
+  languageName: node
+  linkType: hard
 
-"@monorepo-template/jest-preset@workspace:^, @monorepo-template/jest-preset@workspace:packages/jest-preset":
-  version: 0.0.0-use.local
-  resolution: "@monorepo-template/jest-preset@workspace:packages/jest-preset"
+"@monorepo-template/jest-preset@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@monorepo-template/jest-preset@npm:0.1.0"
   dependencies:
-    "@monorepo-template/jest-transformer": "workspace:^"
+    "@monorepo-template/jest-transformer": ^0.1.0
     identity-obj-proxy: ^3.0.0
-  languageName: unknown
-  linkType: soft
+  checksum: f9b6a6764f0825b1cec9501bb49836587efb866685c43d4cdd984003e383cb8dcc5c75b5f13d1f7f48d57abb6b3bf46348feab23273b72a63d7c2b7d78554d53
+  languageName: node
+  linkType: hard
 
-"@monorepo-template/jest-transformer@workspace:^, @monorepo-template/jest-transformer@workspace:packages/jest-transformer":
-  version: 0.0.0-use.local
-  resolution: "@monorepo-template/jest-transformer@workspace:packages/jest-transformer"
+"@monorepo-template/jest-transformer@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@monorepo-template/jest-transformer@npm:0.1.0"
   dependencies:
-    "@babel/core": ^7.0.0
     "@babel/preset-env": ^7.0.0
     "@babel/preset-react": ^7.0.0
     "@babel/preset-typescript": ^7.0.0
     babel-jest: ^27.0.0
-  languageName: unknown
-  linkType: soft
+  checksum: 3e49610dbedd91c335acbf21d5180a47e473b7f208715f80dec6fa43b51ecfa94bffbcabf916427130dedc963dc3636297aa8ab2f22217c0679e44aa16459567
+  languageName: node
+  linkType: hard
 
 "@monorepo-template/merge-coverage@npm:^1.0.1":
   version: 1.0.1
@@ -3412,7 +3416,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@monorepo-template/module@workspace:packages/module"
   dependencies:
-    "@monorepo-template/jest-module-preset": "workspace:^"
+    "@monorepo-template/jest-module-preset": ^0.1.3
     "@rollup/plugin-commonjs": ^21.0.1
     "@rollup/plugin-node-resolve": ^13.1.3
     "@testing-library/react": ^12.1.2
@@ -3449,11 +3453,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@monorepo-template/tsconfig@workspace:^, @monorepo-template/tsconfig@workspace:packages/tsconfig":
-  version: 0.0.0-use.local
-  resolution: "@monorepo-template/tsconfig@workspace:packages/tsconfig"
-  languageName: unknown
-  linkType: soft
+"@monorepo-template/tsconfig@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@monorepo-template/tsconfig@npm:0.1.0"
+  checksum: 688bcb42b90d403b35fc2ba50aebeda896a827788965876f9fd22b341e6f864d59f81f825a65ca1e5a86fa3f855d972b4342c7f5f98969ad03f9ac81d88ad275
+  languageName: node
+  linkType: hard
 
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5

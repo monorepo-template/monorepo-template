@@ -1,6 +1,6 @@
 {
   "extends": "../../tsconfig.eslint.json",
-  "include": [".eslintrc.cjs", "**/*"],
+  "include": [".eslintrc.cjs", "**/*", "**/*.json"],
 
   "compilerOptions": {
     "jsx": "react-jsx",
@@ -14,6 +14,10 @@
     "cypress/screenshots",
     "cypress/videos",
     "jest",
-    "node_modules"
+    "node_modules",
+    "public/**/*.html",
+    "public/**/*.ico",
+    "public/**/*.txt",
+    "**/*.md"
   ]
 }
