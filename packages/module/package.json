@@ -33,14 +33,14 @@
     "url": "https://github.com/CharlesStover/monorepo-template.git"
   },
   "scripts": {
-    "eslint": "eslint src",
+    "eslint": "eslint '**/*'",
     "jest": "jest",
     "jest:watch": "jest --coverage=false --watch",
     "rollup": "rollup --config",
     "rollup:watch": "rollup --config --watch"
   },
   "devDependencies": {
-    "@monorepo-template/jest-module-preset": "^0.1.0",
+    "@monorepo-template/jest-module-preset": "^0.1.3",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.1.3",
     "@testing-library/react": "^12.1.2",

@@ -1,7 +1,7 @@
 {
-  "exclude": ["dist", "jest", "node_modules"],
+  "exclude": ["dist", "jest", "node_modules", "**/*.md"],
   "extends": "../../tsconfig.eslint.json",
-  "include": [".eslintrc.cjs", "**/*"],
+  "include": [".eslintrc.cjs", "**/*", "**/*.json"],
   "compilerOptions": {
     "jsx": "react-jsx",
     "types": ["jest"]
