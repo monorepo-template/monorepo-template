@@ -2619,6 +2619,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@charlesstover/monorepo-template@workspace:."
   dependencies:
+    "@monorepo-template/eslint-config-typescript-fixable": "workspace:^"
     "@monorepo-template/test": ^1.0.1
     "@monorepo-template/tsconfig": "workspace:^"
     "@types/node": ^17.0.8
@@ -3349,6 +3350,12 @@ __metadata:
   checksum: 806c8419e8be79e6e947a5b742ca8b429a0146cd079b6de155cc6dadd7750911b887039e135a5c6f35bae66985fbc6a6ea81e8cabce6ed47bcca5ab6cbd88960
   languageName: node
   linkType: hard
+
+"@monorepo-template/eslint-config-typescript-fixable@workspace:^, @monorepo-template/eslint-config-typescript-fixable@workspace:packages/eslint-config-typescript-fixable":
+  version: 0.0.0-use.local
+  resolution: "@monorepo-template/eslint-config-typescript-fixable@workspace:packages/eslint-config-typescript-fixable"
+  languageName: unknown
+  linkType: soft
 
 "@monorepo-template/jest-application-preset@workspace:^, @monorepo-template/jest-application-preset@workspace:packages/jest-application-preset":
   version: 0.0.0-use.local
