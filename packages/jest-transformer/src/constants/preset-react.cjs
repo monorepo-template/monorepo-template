@@ -1,5 +1,5 @@
 const PRESET_REACT = [
-  '@babel/preset-react',
+  require.resolve('@babel/preset-react'),
   {
     runtime: 'automatic',
   },

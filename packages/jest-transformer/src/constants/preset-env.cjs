@@ -1,5 +1,5 @@
 const PRESET_ENV = [
-  '@babel/preset-env',
+  require.resolve('@babel/preset-env'),
   {
     targets: {
       node: 'current',
