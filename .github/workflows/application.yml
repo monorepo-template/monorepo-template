@@ -311,6 +311,7 @@ on:
     paths:
       - '.github/workflows/application.yml'
       - 'packages/application/**/*'
+      - 'packages/jest-application-preset/**/*'
       - 'packages/jest-preset/**/*'
       - 'packages/jest-transformer/**/*'
       - 'packages/module/**/*'
@@ -319,6 +320,7 @@ on:
     paths:
       - '.github/workflows/application.yml'
       - 'packages/application/**/*'
+      - 'packages/jest-application-preset/**/*'
       - 'packages/jest-preset/**/*'
       - 'packages/jest-transformer/**/*'
       - 'packages/module/**/*'
