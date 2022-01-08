@@ -1,7 +1,4 @@
 const { createTransformer } = require('babel-jest').default;
-const PRESET_ENV = require('./constants/preset-env.cjs');
-const PRESET_REACT = require('./constants/preset-react.cjs');
+const TRANSFORM_OPTIONS = require('./constants/transform-options.cjs');
 
-module.exports = createTransformer({
-  presets: [PRESET_ENV, PRESET_REACT, '@babel/preset-typescript'],
-});
+module.exports = createTransformer(TRANSFORM_OPTIONS);
