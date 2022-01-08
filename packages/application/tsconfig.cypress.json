@@ -1,11 +1,21 @@
 {
   "compileOnSave": false,
-  "exclude": ["build", "node_modules"],
   "extends": "./tsconfig.json",
 
   "compilerOptions": {
     "importHelpers": true,
     "inlineSourceMap": true,
-    "sourceMap": true
-  }
+    "sourceMap": true,
+    "types": ["cypress"]
+  },
+
+  "exclude": [
+    "build",
+    "coverage",
+    "cypress/coverage",
+    "cypress/screenshots",
+    "cypress/videos",
+    "jest",
+    "node_modules"
+  ]
 }

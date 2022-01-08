@@ -1,0 +1,28 @@
+{
+  "name": "@monorepo-template/tsconfig",
+  "version": "0.0.1",
+  "author": "Charles Stover <monorepo-template-tsconfig@charlesstover.com>",
+  "description": "Jest preset for monorepo templates",
+  "homepage": "https://www.npmjs.com/package/@monorepo-template/tsconfig",
+  "license": "MIT",
+  "main": "./tsconfig.json",
+  "module": "./tsconfig.json",
+  "bugs": {
+    "email": "monorepo-template-tsconfig@charlesstover.com",
+    "url": "https://github.com/CharlesStover/monorepo-template-dependencies/issues"
+  },
+  "files": [
+    "tsconfig.json"
+  ],
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/CharlesStover"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CharlesStover/monorepo-template-dependencies.git"
+  }
+}

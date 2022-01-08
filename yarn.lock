@@ -2620,6 +2620,7 @@ __metadata:
   resolution: "@charlesstover/monorepo-template@workspace:."
   dependencies:
     "@monorepo-template/test": ^1.0.1
+    "@monorepo-template/tsconfig": "workspace:^"
     "@types/node": ^17.0.8
     "@typescript-eslint/eslint-plugin": ^5.9.0
     "@typescript-eslint/parser": ^5.9.0
@@ -3440,6 +3441,12 @@ __metadata:
   checksum: 3cc70b3a57e59ff67e30c0cd31766ad225dcaaa4677b75f31c3d41d4d1fb150247025578449c55b4ca05d148e1d1481f114c1d85f84db661c71eada55ec453c5
   languageName: node
   linkType: hard
+
+"@monorepo-template/tsconfig@workspace:^, @monorepo-template/tsconfig@workspace:packages/tsconfig":
+  version: 0.0.0-use.local
+  resolution: "@monorepo-template/tsconfig@workspace:packages/tsconfig"
+  languageName: unknown
+  linkType: soft
 
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
