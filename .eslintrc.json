@@ -7,7 +7,8 @@
   },
 
   "extends": [
-    "@monorepo-template/eslint-config-typescript-fixable",
+    "@monorepo-template/typescript",
+    "@monorepo-template/typescript-fixable",
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
@@ -19,39 +20,32 @@
   "overrides": [
     {
       "files": ["*.cjs", "*.js", "*.jsx"],
-      "rules": {
-        "@typescript-eslint/no-require-imports": "off",
-        "@typescript-eslint/no-var-requires": "off"
-      }
+      "extends": "@monorepo-template/typescript/cjs"
     },
 
     {
       "files": ["*.cjs", "*.js", "*.jsx", "*.mjs"],
-      "rules": {
-        "@typescript-eslint/explicit-function-return-type": "off",
-        "@typescript-eslint/explicit-module-boundary-types": "off",
-        "@typescript-eslint/no-unsafe-argument": "off",
-        "@typescript-eslint/no-unsafe-assignment": "off",
-        "@typescript-eslint/no-unsafe-call": "off",
-        "@typescript-eslint/no-unsafe-member-access": "off",
-        "@typescript-eslint/no-unsafe-return": "off",
-        "@typescript-eslint/prefer-readonly-parameter-types": "off",
-        "@typescript-eslint/restrict-plus-operands": "off",
-        "@typescript-eslint/restrict-template-expressions": "off"
-      }
+      "extends": [
+        "@monorepo-template/typescript/js",
+        "@monorepo-template/typescript-fixable/js"
+      ]
     },
 
     {
       "files": ["*.json"],
-      "rules": {
-        "@typescript-eslint/naming-convention": "off",
-        "@typescript-eslint/no-unused-expressions": "off"
-      }
+      "extends": [
+        "@monorepo-template/typescript/json",
+        "@monorepo-template/typescript-fixable/json"
+      ]
     }
   ],
 
   "parserOptions": {
-    "project": "./tsconfig.eslint.json"
+    "extraFileExtensions": [".cjs", ".json", ".mjs"],
+    "project": "./tsconfig.eslint.json",
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
   },
 
   "rules": {
