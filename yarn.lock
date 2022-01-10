@@ -2619,7 +2619,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@charlesstover/monorepo-template@workspace:."
   dependencies:
-    "@monorepo-template/eslint-config-typescript-fixable": ^0.1.0
+    "@monorepo-template/eslint-config-typescript": ^0.1.0
+    "@monorepo-template/eslint-config-typescript-fixable": ^0.2.0
     "@monorepo-template/test": ^1.0.1
     "@monorepo-template/tsconfig": ^0.1.0
     "@types/node": ^17.0.8
@@ -3351,10 +3352,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@monorepo-template/eslint-config-typescript-fixable@npm:^0.1.0":
+"@monorepo-template/eslint-config-typescript-fixable@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "@monorepo-template/eslint-config-typescript-fixable@npm:0.2.0"
+  checksum: 850a23bc549c64fb3408160edb14882992add4a16ca7f87c1d956e392e808a9514ae0fc50090c238b04004587995c361bd85cb73189abf9e4fbdce428f203b7a
+  languageName: node
+  linkType: hard
+
+"@monorepo-template/eslint-config-typescript@npm:^0.1.0":
   version: 0.1.0
-  resolution: "@monorepo-template/eslint-config-typescript-fixable@npm:0.1.0"
-  checksum: 5ed7183e97e46c275493764ac796ebf3c9403457a67ad40e682fa093bbe7ea3685fac0f0defae4b28e3e8e6cd4f2f644068c57d1f337cebd6671529eb11417ef
+  resolution: "@monorepo-template/eslint-config-typescript@npm:0.1.0"
+  checksum: 0f8d26b63f448761939ff93d14b776c3900638d30b55f1d79356a21c86c4e971c4e439452671cc956f3f37c601e7068f49db0346b9945d3cd3257af4db15d69f
   languageName: node
   linkType: hard
 
