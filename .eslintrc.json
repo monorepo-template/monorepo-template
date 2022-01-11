@@ -9,6 +9,7 @@
   "extends": [
     "@monorepo-template/typescript",
     "@monorepo-template/typescript-fixable",
+    "@monorepo-template/typescript-strict",
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
@@ -49,59 +50,6 @@
   },
 
   "rules": {
-    "@typescript-eslint/adjacent-overload-signatures": "error",
-    "@typescript-eslint/ban-ts-comment": "error",
-    "@typescript-eslint/default-param-last": "error",
-    "@typescript-eslint/explicit-function-return-type": "error",
-    "@typescript-eslint/explicit-module-boundary-types": "error",
-    "@typescript-eslint/init-declarations": "error",
-    "@typescript-eslint/member-ordering": "error",
-    "@typescript-eslint/no-base-to-string": "error",
-    "@typescript-eslint/no-dupe-class-members": "error",
-    "@typescript-eslint/no-duplicate-imports": "error",
-    "@typescript-eslint/no-empty-function": "error",
-    "@typescript-eslint/no-extraneous-class": "error",
-    "@typescript-eslint/no-implicit-any-catch": "error",
-    "@typescript-eslint/no-invalid-this": "error",
-    "@typescript-eslint/no-loop-func": "error",
-    "@typescript-eslint/no-loss-of-precision": "error",
-    "@typescript-eslint/no-magic-numbers": "error",
-    "@typescript-eslint/no-misused-new": "error",
-    "@typescript-eslint/no-namespace": "error",
-    "@typescript-eslint/no-non-null-asserted-optional-chain": "error",
-    "@typescript-eslint/no-non-null-assertion": "error",
-    "@typescript-eslint/no-redeclare": "error",
-    "@typescript-eslint/no-require-imports": "error",
-    "@typescript-eslint/no-shadow": "error",
-    "@typescript-eslint/no-this-alias": "error",
-    "@typescript-eslint/no-throw-literal": "error",
-    "@typescript-eslint/no-type-alias": "error",
-    "@typescript-eslint/no-unsafe-argument": "error",
-    "@typescript-eslint/no-unused-expressions": "error",
-    "@typescript-eslint/no-unused-vars": "error",
-    "@typescript-eslint/no-use-before-define": "error",
-    "@typescript-eslint/no-useless-constructor": "error",
-    "@typescript-eslint/no-var-requires": "error",
-    "@typescript-eslint/prefer-enum-initializers": "error",
-    "@typescript-eslint/prefer-for-of": "error",
-    "@typescript-eslint/prefer-literal-enum-member": "error",
-    "@typescript-eslint/prefer-nullish-coalescing": "error",
-    "@typescript-eslint/prefer-optional-chain": "error",
-    "@typescript-eslint/prefer-readonly-parameter-types": "error",
-    "@typescript-eslint/require-array-sort-compare": "error",
-    "@typescript-eslint/switch-exhaustiveness-check": "error",
-    "@typescript-eslint/triple-slash-reference": "error",
-    "@typescript-eslint/typedef": "error",
-    "@typescript-eslint/unified-signatures": "error",
-    "prettier/prettier": "error",
-
-    "@typescript-eslint/consistent-type-assertions": [
-      "error",
-      {
-        "assertionStyle": "never"
-      }
-    ],
-
     "@typescript-eslint/naming-convention": [
       "error",
       {
@@ -127,20 +75,6 @@
         "leadingUnderscore": "forbid",
         "selector": ["enumMember", "typeLike"],
         "trailingUnderscore": "forbid"
-      }
-    ],
-
-    "@typescript-eslint/no-invalid-void-type": [
-      "error",
-      {
-        "allowAsThisParameter": true
-      }
-    ],
-
-    "sort-imports": [
-      "error",
-      {
-        "ignoreDeclarationSort": true
       }
     ]
   }

@@ -1,8 +1,5 @@
-const { exclude } = require('./tsconfig.eslint.json');
-
 module.exports = {
   extends: ['plugin:react/recommended'],
-  ignorePatterns: exclude,
   plugins: ['react', 'react-hooks'],
   root: false,
 
