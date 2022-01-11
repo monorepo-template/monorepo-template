@@ -1,4 +1,4 @@
 {
   "extends": "@monorepo-template/tsconfig",
-  "include": [".eslintrc.json", ".prettierrc.json", "**/*.ts", "**/*.tsx"]
+  "exclude": [".git/", ".yarn/cache/", ".yarn/sdks/", ".yarn/unplugged/"]
 }

@@ -1,6 +1,5 @@
 {
   "extends": "../../tsconfig.json",
-  "include": [".eslintrc.cjs", "**/*"],
 
   "compilerOptions": {
     "jsx": "react-jsx",
@@ -10,13 +9,13 @@
   },
 
   "exclude": [
-    "build",
-    "coverage",
-    "cypress/coverage",
-    "cypress/screenshots",
-    "cypress/videos",
-    "jest",
-    "node_modules",
+    "build/",
+    "coverage/",
+    "cypress/coverage/",
+    "cypress/screenshots/",
+    "cypress/videos/",
+    "jest/",
+    "node_modules/",
     "src/**/*.e2e.ts"
   ]
 }

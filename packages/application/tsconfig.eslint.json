@@ -8,15 +8,12 @@
   },
 
   "exclude": [
-    "build",
-    "coverage",
-    "cypress/coverage",
-    "cypress/screenshots",
-    "cypress/videos",
-    "jest",
-    "node_modules",
-    "public/**/*.html",
-    "public/**/*.ico",
-    "public/**/*.txt"
+    "build/",
+    "coverage/",
+    "cypress/coverage/",
+    "cypress/screenshots/",
+    "cypress/videos/",
+    "jest/",
+    "node_modules/"
   ]
 }
