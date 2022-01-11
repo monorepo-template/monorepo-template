@@ -1,5 +1,5 @@
 {
-  "exclude": ["dist", "jest", "node_modules", "**/*.md"],
+  "exclude": ["dist", "jest", "node_modules"],
   "extends": "../../tsconfig.eslint.json",
   "include": [".eslintrc.cjs", "**/*", "**/*.json"],
   "compilerOptions": {

@@ -17,7 +17,6 @@
     "node_modules",
     "public/**/*.html",
     "public/**/*.ico",
-    "public/**/*.txt",
-    "**/*.md"
+    "public/**/*.txt"
   ]
 }

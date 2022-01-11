@@ -2,6 +2,7 @@
 /jest/
 /src/
 /.env
+/.eslintignore
 /.eslintrc.json
 /.gitignore
 /.npmignore

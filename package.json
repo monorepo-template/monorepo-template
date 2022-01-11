@@ -37,6 +37,7 @@
   "devDependencies": {
     "@monorepo-template/eslint-config-typescript": "^0.1.4",
     "@monorepo-template/eslint-config-typescript-fixable": "^0.2.2",
+    "@monorepo-template/eslint-config-typescript-strict": "^0.1.0",
     "@monorepo-template/test": "^1.0.1",
     "@monorepo-template/tsconfig": "^0.1.1",
     "@types/node": "^17.0.8",
