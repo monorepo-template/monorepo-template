@@ -1,1 +1,11 @@
-/*.md
+/.nyc_output/
+/build/
+/coverage/
+/cypress/coverage/
+/cypress/screenshots/
+/cypress/videos/
+/jest/
+/**/*.html
+/**/*.ico
+/**/*.md
+/**/*.txt
