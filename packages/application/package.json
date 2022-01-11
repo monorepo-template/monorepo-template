@@ -8,6 +8,7 @@
     "cypress": "cypress run",
     "cypress:start": "react-app-rewired start",
     "eslint": "eslint '**/*'",
+    "eslint:fix": "eslint '**/*' --fix",
     "jest": "jest",
     "jest:watch": "jest --coverage=false --watch",
     "start": "react-scripts start"
