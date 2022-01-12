@@ -3,14 +3,14 @@
   "plugins": ["@typescript-eslint", "prettier"],
 
   "extends": [
-    "@monorepo-template/typescript",
-    "@monorepo-template/typescript-fixable",
-    "@monorepo-template/typescript-strict",
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:prettier/recommended",
+    "@monorepo-template/typescript",
+    "@monorepo-template/typescript-fixable",
+    "@monorepo-template/typescript-strict",
     "prettier"
   ],
 
@@ -43,35 +43,5 @@
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true
     }
-  },
-
-  "rules": {
-    "@typescript-eslint/naming-convention": [
-      "error",
-      {
-        "format": ["camelCase", "PascalCase"],
-        "leadingUnderscore": "allow",
-        "selector": "default",
-        "trailingUnderscore": "allow"
-      },
-      {
-        "format": ["camelCase", "PascalCase"],
-        "leadingUnderscore": "forbid",
-        "selector": "function",
-        "trailingUnderscore": "forbid"
-      },
-      {
-        "format": ["camelCase", "UPPER_CASE"],
-        "leadingUnderscore": "allow",
-        "selector": "variable",
-        "trailingUnderscore": "allow"
-      },
-      {
-        "format": ["camelCase", "PascalCase"],
-        "leadingUnderscore": "forbid",
-        "selector": ["enumMember", "typeLike"],
-        "trailingUnderscore": "forbid"
-      }
-    ]
   }
 }
