@@ -88,6 +88,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/core@npm:^7.0.0, @babel/core@npm:^7.16.0, @babel/core@npm:^7.7.2, @babel/core@npm:^7.8.0, @babel/core@npm:^7.8.4":
+  version: 7.16.7
+  resolution: "@babel/core@npm:7.16.7"
+  dependencies:
+    "@babel/code-frame": ^7.16.7
+    "@babel/generator": ^7.16.7
+    "@babel/helper-compilation-targets": ^7.16.7
+    "@babel/helper-module-transforms": ^7.16.7
+    "@babel/helpers": ^7.16.7
+    "@babel/parser": ^7.16.7
+    "@babel/template": ^7.16.7
+    "@babel/traverse": ^7.16.7
+    "@babel/types": ^7.16.7
+    convert-source-map: ^1.7.0
+    debug: ^4.1.0
+    gensync: ^1.0.0-beta.2
+    json5: ^2.1.2
+    semver: ^6.3.0
+    source-map: ^0.5.0
+  checksum: 3206e077e76db189726c4da19a5296eae11c6c1f5abea7013e74f18708bb91616914717ff8d8ca466cc0ba9d2d2147e9a84c3c357b9ad4cba601da14107838ed
+  languageName: node
+  linkType: hard
+
 "@babel/core@npm:^7.1.0, @babel/core@npm:^7.12.3, @babel/core@npm:^7.7.5":
   version: 7.15.8
   resolution: "@babel/core@npm:7.15.8"
@@ -108,29 +131,6 @@ __metadata:
     semver: ^6.3.0
     source-map: ^0.5.0
   checksum: 61e5050580a2808344f23161c971e917fe711a546e3afa4d022be4ec5325f8bdf559cc9afd962e39ecc3643d9cdcbbac7abc7b8dd05330020475317564c8d290
-  languageName: node
-  linkType: hard
-
-"@babel/core@npm:^7.16.0, @babel/core@npm:^7.7.2, @babel/core@npm:^7.8.0, @babel/core@npm:^7.8.4":
-  version: 7.16.7
-  resolution: "@babel/core@npm:7.16.7"
-  dependencies:
-    "@babel/code-frame": ^7.16.7
-    "@babel/generator": ^7.16.7
-    "@babel/helper-compilation-targets": ^7.16.7
-    "@babel/helper-module-transforms": ^7.16.7
-    "@babel/helpers": ^7.16.7
-    "@babel/parser": ^7.16.7
-    "@babel/template": ^7.16.7
-    "@babel/traverse": ^7.16.7
-    "@babel/types": ^7.16.7
-    convert-source-map: ^1.7.0
-    debug: ^4.1.0
-    gensync: ^1.0.0-beta.2
-    json5: ^2.1.2
-    semver: ^6.3.0
-    source-map: ^0.5.0
-  checksum: 3206e077e76db189726c4da19a5296eae11c6c1f5abea7013e74f18708bb91616914717ff8d8ca466cc0ba9d2d2147e9a84c3c357b9ad4cba601da14107838ed
   languageName: node
   linkType: hard
 
@@ -3428,14 +3428,15 @@ __metadata:
   linkType: hard
 
 "@monorepo-template/jest-transformer@npm:^0.1.0":
-  version: 0.1.0
-  resolution: "@monorepo-template/jest-transformer@npm:0.1.0"
+  version: 0.1.1
+  resolution: "@monorepo-template/jest-transformer@npm:0.1.1"
   dependencies:
+    "@babel/core": ^7.0.0
     "@babel/preset-env": ^7.0.0
     "@babel/preset-react": ^7.0.0
     "@babel/preset-typescript": ^7.0.0
     babel-jest: ^27.0.0
-  checksum: 3e49610dbedd91c335acbf21d5180a47e473b7f208715f80dec6fa43b51ecfa94bffbcabf916427130dedc963dc3636297aa8ab2f22217c0679e44aa16459567
+  checksum: 0ba8fcba2b085f533f947335a21fd21c63f68a653f71a29c66003175774bd3c17ec9c3dde91bb987031cce8b45cdf493cea273991f03a71b3ca0954e70ae2646
   languageName: node
   linkType: hard
 
@@ -3461,6 +3462,7 @@ __metadata:
     "@monorepo-template/eslint-config-react-strict": ^0.1.3
     "@monorepo-template/eslint-config-react-typescript": ^0.1.2
     "@monorepo-template/jest-module-preset": ^0.1.4
+    "@monorepo-template/rollup-config": ^0.1.2
     "@rollup/plugin-commonjs": ^21.0.1
     "@rollup/plugin-node-resolve": ^13.1.3
     "@testing-library/react": ^12.1.2
@@ -3486,6 +3488,20 @@ __metadata:
     react-dom: ^17.0.0
   languageName: unknown
   linkType: soft
+
+"@monorepo-template/rollup-config@npm:^0.1.2":
+  version: 0.1.2
+  resolution: "@monorepo-template/rollup-config@npm:0.1.2"
+  dependencies:
+    "@rollup/plugin-commonjs": ^21.0.1
+    "@rollup/plugin-node-resolve": ^13.1.3
+    rollup-plugin-typescript2: ^0.31.1
+  peerDependencies:
+    rollup: ^2.0.0
+    typescript: ^4.0.0
+  checksum: d5ff1ebcdd38d350b77693004be05a02bc64ca8f7c965efae07cc49b3ade40d2dad9798861b43f14c6e436f61611fada4a748383322d922d8b619aaacd81c54c
+  languageName: node
+  linkType: hard
 
 "@monorepo-template/test@npm:^1.0.1":
   version: 1.0.1
