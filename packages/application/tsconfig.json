@@ -1,13 +1,12 @@
 {
   "extends": "../../tsconfig.json",
-
+  "include": ["src"],
   "compilerOptions": {
     "jsx": "react-jsx",
     "sourceMap": true,
     "target": "ES5",
     "types": ["jest"]
   },
-
   "exclude": [
     "build/",
     "coverage/",

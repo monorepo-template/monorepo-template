@@ -15,6 +15,7 @@ module.exports = {
     '@monorepo-template/react-fixable',
     '@monorepo-template/react-strict',
     '@monorepo-template/react-typescript',
+    '@monorepo-template/react-typescript/react-scripts-4',
   ],
 
   overrides: [

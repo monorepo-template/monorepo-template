@@ -3308,7 +3308,7 @@ __metadata:
     "@monorepo-template/cypress-coverage-config-override": ^1.0.0
     "@monorepo-template/eslint-config-react-fixable": ^0.1.1
     "@monorepo-template/eslint-config-react-strict": ^0.1.3
-    "@monorepo-template/eslint-config-react-typescript": ^0.1.1
+    "@monorepo-template/eslint-config-react-typescript": ^0.1.2
     "@monorepo-template/jest-application-preset": ^0.1.4
     "@monorepo-template/module": "workspace:^"
     "@testing-library/react": ^12.1.2
@@ -3371,10 +3371,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@monorepo-template/eslint-config-react-typescript@npm:^0.1.1":
-  version: 0.1.1
-  resolution: "@monorepo-template/eslint-config-react-typescript@npm:0.1.1"
-  checksum: db7e14142f6821b34040247b35dabda6d2af5a6550c089ad0461a6c2ad9fa20e05f84a3acf35bc8458c11c07f525953615e7c77b62b1914659374077380d576f
+"@monorepo-template/eslint-config-react-typescript@npm:^0.1.2":
+  version: 0.1.2
+  resolution: "@monorepo-template/eslint-config-react-typescript@npm:0.1.2"
+  checksum: d94bfd649359752282b6850dbfe2b7c9e87cfd6be8eb70a9d3cf95f7354be9655c8d69a34e99a9b19f8ce76caa4385d76b79db0fa7f5ba5834352b36ef88658c
   languageName: node
   linkType: hard
 
@@ -3459,7 +3459,7 @@ __metadata:
   dependencies:
     "@monorepo-template/eslint-config-react-fixable": ^0.1.1
     "@monorepo-template/eslint-config-react-strict": ^0.1.3
-    "@monorepo-template/eslint-config-react-typescript": ^0.1.1
+    "@monorepo-template/eslint-config-react-typescript": ^0.1.2
     "@monorepo-template/jest-module-preset": ^0.1.4
     "@rollup/plugin-commonjs": ^21.0.1
     "@rollup/plugin-node-resolve": ^13.1.3
