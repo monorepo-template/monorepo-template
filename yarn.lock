@@ -3462,6 +3462,7 @@ __metadata:
     "@monorepo-template/eslint-config-react-strict": ^0.1.3
     "@monorepo-template/eslint-config-react-typescript": ^0.1.2
     "@monorepo-template/jest-module-preset": ^0.1.4
+    "@monorepo-template/nyc-config": ^0.1.0
     "@monorepo-template/rollup-config": ^0.1.2
     "@rollup/plugin-commonjs": ^21.0.1
     "@rollup/plugin-node-resolve": ^13.1.3
@@ -3488,6 +3489,13 @@ __metadata:
     react-dom: ^17.0.0
   languageName: unknown
   linkType: soft
+
+"@monorepo-template/nyc-config@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@monorepo-template/nyc-config@npm:0.1.0"
+  checksum: 94c2b69b8be5e2809baa6a1502c3e7bcf0ea167c9c2898cf9adcf38aab8a007c86adf11b92f60fe60a50269012178e816e05a667305bf17b97c8dd64357fcfaf
+  languageName: node
+  linkType: hard
 
 "@monorepo-template/rollup-config@npm:^0.1.2":
   version: 0.1.2
