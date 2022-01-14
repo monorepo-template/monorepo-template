@@ -306,7 +306,7 @@ jobs:
   #           "https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE_ID/purge_cache"
 
 on:
-  pull_request:
+  pull_request_target:
     branches: [main]
     paths:
       - '.github/workflows/application.yml'
