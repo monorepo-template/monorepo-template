@@ -143,13 +143,13 @@ jobs:
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: application--cypress-screenshots
+          name: application--cypress--screenshots
           path: packages/application/cypress/screenshots
       - name: Upload videos
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: application--cypress-videos
+          name: application--cypress--videos
           path: packages/application/cypress/videos
     strategy:
       fail-fast: false
