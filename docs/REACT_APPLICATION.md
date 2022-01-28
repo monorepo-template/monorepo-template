@@ -38,7 +38,7 @@ To add a new React application,
     {
       "${application-name}:build": "yarn workspace @${repository-organization}/${application-name} run build",
       "${application-name}:coverage": "yarn workspace @${repository-organization}/${application-name} run coverage",
-      "${application-name}:cypress": "yarn workspace @${repository-organization}/${application-name} run cypress",
+      "${application-name}:cypress:run": "yarn workspace @${repository-organization}/${application-name} run cypress",
       "${application-name}:cypress:start": "yarn workspace @${repository-organization}/${application-name} run cypress:start",
       "${application-name}:eslint": "yarn workspace @${repository-organization}/${application-name} run eslint",
       "${application-name}:jest": "yarn workspace @${repository-organization}/${application-name} run jest",
@@ -64,7 +64,7 @@ To add a new React application,
     - To end-to-end test your application, run
       `yarn ${application-name}:cypress:start` to first run the development
       server with code coverage reporting enabled, then run
-      `yarn ${application-name}:cypress`.
+      `yarn ${application-name}:cypress:run`.
     - To lint your changes to the application, run
       `yarn ${application-name}:eslint`.
     - To unit test your changes to the application, run

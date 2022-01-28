@@ -49,6 +49,8 @@ To add a new React module,
    ## ${Module name}
 
    - To lint your changes to the module, run `yarn ${module-name}:eslint`.
+   - To automatically fix lint errors in the module, run
+     `yarn ${module-name}:eslint:fix`.
    - To unit test your changes to the module, run `yarn ${module-name}:jest`.
    - To unit test your changes to the module in watch mode, run
      `yarn ${module-name}:jest:watch`.

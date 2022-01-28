@@ -14,7 +14,7 @@
   "scripts": {
     "react-application:build": "yarn workspace @monorepo-template/react-application run build",
     "react-application:coverage": "yarn workspace @monorepo-template/react-application run coverage",
-    "react-application:cypress": "yarn workspace @monorepo-template/react-application run cypress",
+    "react-application:cypress:run": "yarn workspace @monorepo-template/react-application run cypress:run",
     "react-application:cypress:start": "yarn workspace @monorepo-template/react-application run cypress:start",
     "react-application:eslint": "yarn workspace @monorepo-template/react-application run eslint",
     "react-application:eslint:fix": "yarn workspace @monorepo-template/react-application run eslint:fix",
