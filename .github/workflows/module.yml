@@ -86,42 +86,36 @@ jobs:
           name: module--dist
           path: packages/module/dist
 
-  # github:
-  #   if: ${{ github.event_name == 'push' }}
-  #   needs: [eslint, jest, rollup]
-  #   runs-on: ubuntu-latest
-  #   permissions:
-  #     contents: read
-  #     packages: write
-  #   steps:
-  #     - name: Checkout
-  #       uses: actions/checkout@v2
-  #     - name: Setup Node
-  #       uses: actions/setup-node@v2
-  #       with:
-  #         cache: yarn
-  #         check-latest: true
-  #         node-version: 'lts/*'
-  #         registry-url: 'https://npm.pkg.github.com/'
-  #         scope: '@${{ github.repository_owner }}'
-  #     - name: Install dependencies
-  #       run: yarn install --immutable
-  #     - name: Download build
-  #       uses: actions/download-artifact@v2
-  #       with:
-  #         name: module--dist
-  #         path: packages/module/dist
-  #     - name: Change scope
-  #       env:
-  #         REPOSITORY_OWNER: ${{ github.repository_owner }}
-  #       run: yarn module:change-scope
-  #     - name: Publish
-  #       working-directory: packages/module
-  #       env:
-  #         NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  #       run: >
-  #         yarn config set npmAuthToken $NPM_AUTH_TOKEN;
-  #         yarn npm publish --tolerate-republish;
+  github:
+    if: ${{ github.event_name == 'push' }}
+    needs: [eslint, jest, rollup]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          cache: yarn
+          check-latest: true
+          node-version: 'lts/*'
+          registry-url: 'https://npm.pkg.github.com/'
+          scope: '@${{ github.repository_owner }}'
+      - name: Download build
+        uses: actions/download-artifact@v2
+        with:
+          name: module--dist
+          path: packages/module/dist
+      - name: Publish
+        working-directory: packages/module
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: >
+          yarn config set npmAuthToken $NPM_AUTH_TOKEN;
+          yarn npm publish --tolerate-republish;
 
   npm:
     if: ${{ github.event_name == 'push' }}
@@ -143,11 +137,11 @@ jobs:
           path: packages/module/dist
       - name: Publish
         working-directory: packages/module
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
         run: >
           yarn config set npmAuthToken $NPM_AUTH_TOKEN;
           yarn npm publish --tolerate-republish;
-        env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
 on:
   pull_request:
