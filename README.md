@@ -6,9 +6,9 @@
 [![Cypress](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/4akrvv/main&label=Cypress&style=flat)](https://dashboard.cypress.io/projects/4akrvv/runs)
 
 [![React module](https://github.com/monorepo-template/monorepo-template/actions/workflows/react-module.yml/badge.svg?branch=main&event=push)](https://github.com/monorepo-template/monorepo-template/actions/workflows/react-module.yml)
-[![version](https://img.shields.io/npm/v/@monorepo-template/react-module.svg?label=module)](https://www.npmjs.com/package/@monorepo-template/react-module)
-[![minzipped size](https://img.shields.io/bundlephobia/minzip/@monorepo-template/react-module.svg)](https://www.npmjs.com/package/@monorepo-template/react-module)
 [![downloads](https://img.shields.io/npm/dt/@monorepo-template/react-module.svg)](https://www.npmjs.com/package/@monorepo-template/react-module)
+[![minzipped size](https://img.shields.io/bundlephobia/minzip/@monorepo-template/react-module.svg?label=minzipped%20size)](https://www.npmjs.com/package/@monorepo-template/react-module)
+[![version](https://img.shields.io/npm/v/@monorepo-template/react-module.svg?label=version)](https://www.npmjs.com/package/@monorepo-template/react-module)
 
 ## Documentation
 

@@ -34,9 +34,9 @@ To add a new React module,
    1. If you are publishing this module to NPM:
       ```md
       [![${Module name}](https://github.com/${repository-organization}/${repository-name}/actions/workflows/${module-name}.yml/badge.svg?branch=main&event=push)](https://github.com/${repository-organization}/${repository-name}/actions/workflows/${module-name}.yml)
-      [![version](https://img.shields.io/npm/v/@${repository-organization}/${module-name}.svg?label=${Module name})](https://www.npmjs.com/package/@${repository-organization}/${module-name})
-      [![minzipped size](https://img.shields.io/bundlephobia/minzip/@${repository-organization}/${module-name}.svg)](https://www.npmjs.com/package/@${repository-organization}/${module-name})
       [![downloads](https://img.shields.io/npm/dt/@${repository-organization}/${module-name}.svg)](https://www.npmjs.com/package/@${repository-organization}/${module-name})
+      [![minzipped size](https://img.shields.io/bundlephobia/minzip/@${repository-organization}/${module-name}.svg?label=minzipped%20size)](https://www.npmjs.com/package/@${repository-organization}/${module-name})
+      [![version](https://img.shields.io/npm/v/@${repository-organization}/${module-name}.svg?label=version)](https://www.npmjs.com/package/@${repository-organization}/${module-name})
       ```
    2. If you are not publishing this module to NPM:
       ```md
