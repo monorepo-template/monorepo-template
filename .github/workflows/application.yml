@@ -280,6 +280,7 @@ jobs:
           SENTRY_VERSION: ${{ github.sha }}
         with:
           environment: production
+          ignore_missing: true
           sourcemaps: build
           version: ${{ env.SENTRY_VERSION }}
 
