@@ -3490,44 +3490,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@monorepo-template/application@workspace:packages/application":
-  version: 0.0.0-use.local
-  resolution: "@monorepo-template/application@workspace:packages/application"
-  dependencies:
-    "@cypress/code-coverage": ^3.9.12
-    "@jest/globals": ^27.4.6
-    "@monorepo-template/coverage": ^1.0.1
-    "@monorepo-template/cypress-coverage-config-override": ^1.0.0
-    "@monorepo-template/eslint-config-react-fixable": ^0.1.2
-    "@monorepo-template/eslint-config-react-strict": ^0.1.4
-    "@monorepo-template/eslint-config-react-typescript": ^0.1.3
-    "@monorepo-template/jest-application-preset": ^0.1.4
-    "@monorepo-template/module": "workspace:^"
-    "@testing-library/react": ^12.1.2
-    "@testing-library/react-hooks": ^7.0.2
-    "@types/jest": ^27.4.0
-    "@types/node": ^17.0.8
-    "@types/react": ^17.0.38
-    "@types/react-dom": ^17.0.11
-    "@typescript-eslint/eslint-plugin": ^5.9.1
-    "@typescript-eslint/parser": ^5.9.1
-    cypress: ^9.2.1
-    eslint: ^8.6.0
-    eslint-plugin-jsx-a11y: ^6.5.1
-    eslint-plugin-react: ^7.28.0
-    eslint-plugin-react-hooks: ^4.3.0
-    jest: ^27.4.7
-    react: ^17.0.2
-    react-app-polyfill: ^3.0.0
-    react-app-rewired: ^2.1.11
-    react-dom: ^17.0.2
-    react-router-dom: ^6.2.1
-    react-scripts: 4
-    tslib: ^2.3.1
-    typescript: ^4.5.4
-  languageName: unknown
-  linkType: soft
-
 "@monorepo-template/coverage@npm:^1.0.1":
   version: 1.0.1
   resolution: "@monorepo-template/coverage@npm:1.0.1"
@@ -3646,14 +3608,86 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@monorepo-template/module@workspace:^, @monorepo-template/module@workspace:packages/module":
+"@monorepo-template/monorepo-template@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@monorepo-template/module@workspace:packages/module"
+  resolution: "@monorepo-template/monorepo-template@workspace:."
+  dependencies:
+    "@monorepo-template/eslint-config-typescript": ^0.1.4
+    "@monorepo-template/eslint-config-typescript-fixable": ^0.2.2
+    "@monorepo-template/eslint-config-typescript-strict": ^0.1.0
+    "@monorepo-template/test": ^1.0.3
+    "@monorepo-template/tsconfig": ^0.1.1
+    "@types/node": ^17.0.8
+    "@typescript-eslint/eslint-plugin": ^5.9.1
+    "@typescript-eslint/parser": ^5.9.1
+    "@yarnpkg/sdks": ^2.6.0-rc.2
+    eslint: ^8.6.0
+    eslint-config-prettier: ^8.3.0
+    eslint-plugin-prettier: ^4.0.0
+    prettier: ^2.5.1
+    typescript: ^4.5.4
+  languageName: unknown
+  linkType: soft
+
+"@monorepo-template/react-application@workspace:packages/react-application":
+  version: 0.0.0-use.local
+  resolution: "@monorepo-template/react-application@workspace:packages/react-application"
+  dependencies:
+    "@cypress/code-coverage": ^3.9.12
+    "@jest/globals": ^27.4.6
+    "@monorepo-template/coverage": ^1.0.1
+    "@monorepo-template/cypress-coverage-config-override": ^1.0.0
+    "@monorepo-template/eslint-config-react-fixable": ^0.1.2
+    "@monorepo-template/eslint-config-react-strict": ^0.1.4
+    "@monorepo-template/eslint-config-react-typescript": ^0.1.3
+    "@monorepo-template/jest-application-preset": ^0.1.4
+    "@monorepo-template/react-module": "workspace:^"
+    "@testing-library/react": ^12.1.2
+    "@testing-library/react-hooks": ^7.0.2
+    "@types/jest": ^27.4.0
+    "@types/node": ^17.0.8
+    "@types/react": ^17.0.38
+    "@types/react-dom": ^17.0.11
+    "@typescript-eslint/eslint-plugin": ^5.9.1
+    "@typescript-eslint/parser": ^5.9.1
+    cypress: ^9.2.1
+    eslint: ^8.6.0
+    eslint-plugin-jsx-a11y: ^6.5.1
+    eslint-plugin-react: ^7.28.0
+    eslint-plugin-react-hooks: ^4.3.0
+    jest: ^27.4.7
+    react: ^17.0.2
+    react-app-polyfill: ^3.0.0
+    react-app-rewired: ^2.1.11
+    react-dom: ^17.0.2
+    react-router-dom: ^6.2.1
+    react-scripts: 4
+    tslib: ^2.3.1
+    typescript: ^4.5.4
+  languageName: unknown
+  linkType: soft
+
+"@monorepo-template/react-module-tsconfig@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@monorepo-template/react-module-tsconfig@npm:1.0.0"
+  dependencies:
+    "@monorepo-template/tsconfig": ^1.0.0
+    "@types/node": ^17.0.13
+  peerDependencies:
+    "@types/jest": ^27.4.0
+  checksum: 64a8df4357bffd11ef482b17034cdf914beac03e030f3c8f1fb0c5f901cf8920aaca2f2c6651ab8091664e47cd093ba55f746406c43cd8f641e73fce9666a70e
+  languageName: node
+  linkType: hard
+
+"@monorepo-template/react-module@workspace:^, @monorepo-template/react-module@workspace:packages/react-module":
+  version: 0.0.0-use.local
+  resolution: "@monorepo-template/react-module@workspace:packages/react-module"
   dependencies:
     "@monorepo-template/eslint-config-react-fixable": ^0.1.2
     "@monorepo-template/eslint-config-react-strict": ^0.1.4
     "@monorepo-template/eslint-config-react-typescript": ^0.1.3
     "@monorepo-template/jest-module-preset": ^0.1.4
+    "@monorepo-template/react-module-tsconfig": ^1.0.0
     "@monorepo-template/rollup-config": ^0.1.2
     "@rollup/plugin-commonjs": ^21.0.1
     "@rollup/plugin-node-resolve": ^13.1.3
@@ -3678,27 +3712,6 @@ __metadata:
   peerDependencies:
     react: ^17.0.0
     react-dom: ^17.0.0
-  languageName: unknown
-  linkType: soft
-
-"@monorepo-template/monorepo-template@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@monorepo-template/monorepo-template@workspace:."
-  dependencies:
-    "@monorepo-template/eslint-config-typescript": ^0.1.4
-    "@monorepo-template/eslint-config-typescript-fixable": ^0.2.2
-    "@monorepo-template/eslint-config-typescript-strict": ^0.1.0
-    "@monorepo-template/test": ^1.0.3
-    "@monorepo-template/tsconfig": ^0.1.1
-    "@types/node": ^17.0.8
-    "@typescript-eslint/eslint-plugin": ^5.9.1
-    "@typescript-eslint/parser": ^5.9.1
-    "@yarnpkg/sdks": ^2.6.0-rc.2
-    eslint: ^8.6.0
-    eslint-config-prettier: ^8.3.0
-    eslint-plugin-prettier: ^4.0.0
-    prettier: ^2.5.1
-    typescript: ^4.5.4
   languageName: unknown
   linkType: soft
 
@@ -3732,6 +3745,15 @@ __metadata:
   version: 0.1.1
   resolution: "@monorepo-template/tsconfig@npm:0.1.1"
   checksum: 4856675899aee25afcd4831ea69354b8be4ab16c6f5656b679c3145653557c71748911b4448320c6443a4ab7ba8079e57cd49fe223641ca6b2dcd6492e4f6ada
+  languageName: node
+  linkType: hard
+
+"@monorepo-template/tsconfig@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@monorepo-template/tsconfig@npm:1.0.0"
+  peerDependencies:
+    "@types/node": ^17.0.0
+  checksum: 0a3b598567cfc4004f0e09d3a05e2dce765bb1e944baa09516747795c70c6efdad2e6514ab6b26857e62a35757a3493eafd373ecb1a579fdb7d615f011da0509
   languageName: node
   linkType: hard
 
@@ -4373,6 +4395,13 @@ __metadata:
   version: 14.17.32
   resolution: "@types/node@npm:14.17.32"
   checksum: c3ec45db5d8ca6ed80bcc2fe3cd9f15c1518d43cf048dd5444d1fcbe308d302a42721cb3f19548ac2e7b8b7db4f7f6cd4bf9ed58ab1d30a0bf61758350edd9d5
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^17.0.13":
+  version: 17.0.13
+  resolution: "@types/node@npm:17.0.13"
+  checksum: 8b87c850c1604c65e3474bd03d122914464b7970caed20f65f4a7706ab429353b896a3916be4d2581164eccda9e3dd95c338fbccf686ff85a824c40d15e8f3fa
   languageName: node
   linkType: hard
 

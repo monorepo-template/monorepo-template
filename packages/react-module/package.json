@@ -1,16 +1,16 @@
 {
-  "name": "@monorepo-template/module",
-  "version": "0.0.1",
-  "author": "Charles Stover <monorepo-template-module@charlesstover.com>",
-  "description": "monorepo template module",
-  "homepage": "https://www.npmjs.com/package/@monorepo-template/module",
+  "name": "@monorepo-template/react-module",
+  "version": "1.0.0",
+  "author": "Charles Stover <monorepo-template-react-module@charlesstover.com>",
+  "description": "example React module using the monorepo template",
+  "homepage": "https://www.npmjs.com/package/@monorepo-template/react-module",
   "license": "MIT",
   "main": "./dist/cjs/index.cjs",
   "module": "./dist/esm/index.js",
   "type": "module",
   "types": "./dist/types/index.d.ts",
   "bugs": {
-    "email": "monorepo-template-module@charlesstover.com",
+    "email": "monorepo-template-react-module@charlesstover.com",
     "url": "https://github.com/monorepo-template/monorepo-template/issues"
   },
   "directories": {
@@ -45,6 +45,7 @@
     "@monorepo-template/eslint-config-react-strict": "^0.1.4",
     "@monorepo-template/eslint-config-react-typescript": "^0.1.3",
     "@monorepo-template/jest-module-preset": "^0.1.4",
+    "@monorepo-template/react-module-tsconfig": "^1.0.0",
     "@monorepo-template/rollup-config": "^0.1.2",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.1.3",

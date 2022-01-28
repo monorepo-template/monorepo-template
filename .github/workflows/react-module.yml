@@ -1,4 +1,4 @@
-name: Module
+name: React module
 
 jobs:
   install:
@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Lint
-        run: yarn module:eslint
+        run: yarn react-module:eslint
 
   jest:
     needs: install
@@ -56,13 +56,13 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Unit test
-        run: yarn module:jest
+        run: yarn react-module:jest
       - name: Upload coverage
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: module--jest--coverage
-          path: packages/module/jest/coverage
+          name: react-module--jest--coverage
+          path: packages/react-module/jest/coverage
 
   rollup:
     needs: install
@@ -79,12 +79,12 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Build
-        run: yarn module:rollup
+        run: yarn react-module:rollup
       - name: Upload build
         uses: actions/upload-artifact@v2
         with:
-          name: module--dist
-          path: packages/module/dist
+          name: react-module--dist
+          path: packages/react-module/dist
 
   github:
     if: ${{ github.event_name == 'push' }}
@@ -107,10 +107,10 @@ jobs:
       - name: Download build
         uses: actions/download-artifact@v2
         with:
-          name: module--dist
-          path: packages/module/dist
+          name: react-module--dist
+          path: packages/react-module/dist
       - name: Publish
-        working-directory: packages/module
+        working-directory: packages/react-module
         env:
           NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: >
@@ -133,10 +133,10 @@ jobs:
       - name: Download build
         uses: actions/download-artifact@v2
         with:
-          name: module--dist
-          path: packages/module/dist
+          name: react-module--dist
+          path: packages/react-module/dist
       - name: Publish
-        working-directory: packages/module
+        working-directory: packages/react-module
         env:
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
         run: >
@@ -146,10 +146,10 @@ jobs:
 on:
   pull_request:
     paths:
-      - '.github/workflows/module.yml'
-      - 'packages/module/**/*'
+      - '.github/workflows/react-module.yml'
+      - 'packages/react-module/**/*'
   push:
     branches: [main]
     paths:
-      - '.github/workflows/module.yml'
-      - 'packages/module/**/*'
+      - '.github/workflows/react-module.yml'
+      - 'packages/react-module/**/*'

@@ -1,4 +1,4 @@
-import Module from '@monorepo-template/module';
+import Module from '@monorepo-template/react-module';
 import type { ReactElement } from 'react';
 import Nav from '../../components/nav';
 
