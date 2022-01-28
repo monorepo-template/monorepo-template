@@ -1,16 +1,16 @@
 {
-  "name": "@monorepo-template/module",
-  "version": "0.0.1",
-  "author": "Charles Stover <monorepo-template-module@charlesstover.com>",
-  "description": "monorepo template module",
-  "homepage": "https://www.npmjs.com/package/@monorepo-template/module",
+  "name": "@monorepo-template/react-module",
+  "version": "1.0.0",
+  "author": "Charles Stover <monorepo-template-react-module@charlesstover.com>",
+  "description": "example React module using the monorepo template",
+  "homepage": "https://www.npmjs.com/package/@monorepo-template/react-module",
   "license": "MIT",
   "main": "./dist/cjs/index.cjs",
   "module": "./dist/esm/index.js",
   "type": "module",
   "types": "./dist/types/index.d.ts",
   "bugs": {
-    "email": "monorepo-template-module@charlesstover.com",
+    "email": "monorepo-template-react-module@charlesstover.com",
     "url": "https://github.com/monorepo-template/monorepo-template/issues"
   },
   "directories": {

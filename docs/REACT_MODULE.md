@@ -1,8 +1,8 @@
-# Adding a module
+# Adding a React module
 
-To add a new module,
+To add a new React module,
 
-1. Create a copy of the `/packages/module` directory and name it
+1. Create a copy of the `/packages/react-module` directory and name it
    `/packages/${module-name}`.
 2. In `/packages/${module-name}/package.json`:
    1. Replace the `name` property's value with
@@ -14,7 +14,7 @@ To add a new module,
    6. Replace the `bugs.url` property's value with your module's bug tracker
       URL.
    7. Replace the `repository.url` property's value with your repository's URL.
-3. Create a copy of `/.github/workflows/module.yml` and name it
+3. Create a copy of `/.github/workflows/react-module.yml` and name it
    `/.github/workflows/${module-name}.yml`.
 4. If you are not publishing this module to NPM, remove
    `/.github/workflows/${module-name}.yml`'s `jobs.npm` entry.

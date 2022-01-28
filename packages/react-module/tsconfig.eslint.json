@@ -1,9 +1,9 @@
 {
   "exclude": ["dist/", "jest/", "node_modules/"],
-  "extends": "../../tsconfig.eslint.json",
+  "extends": "@monorepo-template/react-module-tsconfig",
   "include": [".eslintrc.cjs", "**/*", "**/*.json"],
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "types": ["jest"]
+    "declaration": false,
+    "declarationDir": null
   }
 }

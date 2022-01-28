@@ -1,4 +1,4 @@
-name: Application
+name: React application
 
 jobs:
   install-cypress:
@@ -43,9 +43,9 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Lint
-        run: yarn application:eslint
+        run: yarn react-application:eslint
 
-  module:
+  react-module:
     needs: install-yarn
     runs-on: ubuntu-latest
     steps:
@@ -59,16 +59,16 @@ jobs:
           node-version: 'lts/*'
       - name: Install dependencies
         run: yarn install --immutable
-      - name: Build module
-        run: yarn module:rollup
-      - name: Upload module
+      - name: Build react-module
+        run: yarn react-module:rollup
+      - name: Upload react-module
         uses: actions/upload-artifact@v2
         with:
-          name: module--dist
-          path: packages/module/dist
+          name: react-module--dist
+          path: packages/react-module/dist
 
   build:
-    needs: module
+    needs: react-module
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -81,32 +81,32 @@ jobs:
           node-version: 'lts/*'
       - name: Install dependencies
         run: yarn install --immutable
-      - name: Download module
+      - name: Download react-module
         uses: actions/download-artifact@v2
         with:
-          name: module--dist
-          path: packages/module/dist
+          name: react-module--dist
+          path: packages/react-module/dist
       - name: Build
-        run: yarn application:build
+        run: yarn react-application:build
         env:
           REACT_APP_VERSION: ${{ github.sha }}
       - name: Upload build
         uses: actions/upload-artifact@v2
         with:
-          name: application--build
-          path: packages/application/build
+          name: react-application--build
+          path: packages/react-application/build
 
   cypress:
-    needs: [install-cypress, module]
+    needs: [install-cypress, react-module]
     runs-on: ${{ matrix.os }}-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Download module
+      - name: Download react-module
         uses: actions/download-artifact@v2
         with:
-          name: module--dist
-          path: packages/module/dist
+          name: react-module--dist
+          path: packages/react-module/dist
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
@@ -127,9 +127,9 @@ jobs:
           command-prefix: yarn dlx
           group: ${{ matrix.os }}-${{ matrix.browser }}
           parallel: true
-          project: packages/application
+          project: packages/react-application
           record: true
-          start: yarn application:cypress:start
+          start: yarn react-application:cypress:start
           tag: ${{ github.event_name }}
           wait-on: 'http://localhost:3000/'
           wait-on-timeout: 120
@@ -137,20 +137,20 @@ jobs:
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: application--cypress--coverage
-          path: packages/application/cypress/coverage
+          name: react-application--cypress--coverage
+          path: packages/react-application/cypress/coverage
       - name: Upload screenshots
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: application--cypress--screenshots
-          path: packages/application/cypress/screenshots
+          name: react-application--cypress--screenshots
+          path: packages/react-application/cypress/screenshots
       - name: Upload videos
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: application--cypress--videos
-          path: packages/application/cypress/videos
+          name: react-application--cypress--videos
+          path: packages/react-application/cypress/videos
     strategy:
       fail-fast: false
       matrix:
@@ -164,7 +164,7 @@ jobs:
             os: ubuntu
 
   jest:
-    needs: module
+    needs: react-module
     runs-on: ubuntu-latest
     # services:
     #   datadog-agent:
@@ -178,11 +178,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Download module
+      - name: Download react-module
         uses: actions/download-artifact@v2
         with:
-          name: module--dist
-          path: packages/module/dist
+          name: react-module--dist
+          path: packages/react-module/dist
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
@@ -192,15 +192,15 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Unit test
-        run: yarn application:jest
+        run: yarn react-application:jest
         env:
           DD_ENV: ci
       - name: Upload coverage
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: application--jest--coverage
-          path: packages/application/jest/coverage
+          name: react-application--jest--coverage
+          path: packages/react-application/jest/coverage
 
   coverage:
     if: ${{ always() }}
@@ -220,23 +220,23 @@ jobs:
       - name: Download Cypress coverage
         uses: actions/download-artifact@v2
         with:
-          name: application--cypress--coverage
-          path: packages/application/cypress/coverage
+          name: react-application--cypress--coverage
+          path: packages/react-application/cypress/coverage
       - name: Download Jest coverage
         uses: actions/download-artifact@v2
         with:
-          name: application--jest--coverage
-          path: packages/application/jest/coverage
+          name: react-application--jest--coverage
+          path: packages/react-application/jest/coverage
       - name: Report coverage
-        run: yarn application:coverage
+        run: yarn react-application:coverage
       - name: Upload coverage
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: application--coverage
+          name: react-application--coverage
           path: |
-            packages/application/.nyc_output
-            packages/application/coverage
+            packages/react-application/.nyc_output
+            packages/react-application/coverage
 
   github-pages:
     if: ${{ github.event_name == 'push' }}
@@ -248,7 +248,7 @@ jobs:
       - name: Download build
         uses: actions/download-artifact@v2
         with:
-          name: application--build
+          name: react-application--build
           path: build
       - name: Deploy GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
@@ -268,7 +268,7 @@ jobs:
       - name: Download build
         uses: actions/download-artifact@v2
         with:
-          name: application--build
+          name: react-application--build
           path: build
       - name: Release Sentry version
         uses: getsentry/action-release@v1
@@ -309,12 +309,12 @@ jobs:
 on:
   pull_request:
     paths:
-      - '.github/workflows/application.yml'
-      - 'packages/application/**/*'
-      - 'packages/module/**/*'
+      - '.github/workflows/react-application.yml'
+      - 'packages/react-application/**/*'
+      - 'packages/react-module/**/*'
   push:
     branches: [main]
     paths:
-      - '.github/workflows/application.yml'
-      - 'packages/application/**/*'
-      - 'packages/module/**/*'
+      - '.github/workflows/react-application.yml'
+      - 'packages/react-application/**/*'
+      - 'packages/react-module/**/*'

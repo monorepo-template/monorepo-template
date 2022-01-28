@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo-template/application",
+  "name": "@monorepo-template/react-application",
   "version": "1.0.0",
   "homepage": ".",
   "scripts": {
@@ -22,7 +22,7 @@
     "@monorepo-template/eslint-config-react-strict": "^0.1.4",
     "@monorepo-template/eslint-config-react-typescript": "^0.1.3",
     "@monorepo-template/jest-application-preset": "^0.1.4",
-    "@monorepo-template/module": "workspace:^",
+    "@monorepo-template/react-module": "workspace:^",
     "@testing-library/react": "^12.1.2",
     "@testing-library/react-hooks": "^7.0.2",
     "@types/jest": "^27.4.0",
