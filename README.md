@@ -1,20 +1,20 @@
 # Monorepo template
 
-[![Application](https://github.com/CharlesStover/monorepo-template/actions/workflows/application.yml/badge.svg?branch=main&event=push)](https://github.com/CharlesStover/monorepo-template/actions/workflows/application.yml)
+[![Application](https://github.com/monorepo-template/monorepo-template/actions/workflows/application.yml/badge.svg?branch=main&event=push)](https://github.com/monorepo-template/monorepo-template/actions/workflows/application.yml)
 [![Cypress](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/4akrvv/main&label=Cypress&style=flat)](https://dashboard.cypress.io/projects/4akrvv/runs)
 
-[![Module](https://github.com/CharlesStover/monorepo-template/actions/workflows/module.yml/badge.svg?branch=main&event=push)](https://github.com/CharlesStover/monorepo-template/actions/workflows/module.yml)
+[![Module](https://github.com/monorepo-template/monorepo-template/actions/workflows/module.yml/badge.svg?branch=main&event=push)](https://github.com/monorepo-template/monorepo-template/actions/workflows/module.yml)
 [![version](https://img.shields.io/npm/v/@monorepo-template/module.svg?label=module)](https://www.npmjs.com/package/@monorepo-template/module)
 [![minzipped size](https://img.shields.io/bundlephobia/minzip/@monorepo-template/module.svg)](https://www.npmjs.com/package/@monorepo-template/module)
 [![downloads](https://img.shields.io/npm/dt/@monorepo-template/module.svg)](https://www.npmjs.com/package/@monorepo-template/module)
 
 ## Documentation
 
-- [Getting started](https://github.com/CharlesStover/monorepo-template/blob/main/docs/GETTING-STARTED.md)
-- [Adding an application](https://github.com/CharlesStover/monorepo-template/blob/main/docs/APPLICATION.md)
-- [Adding a module](https://github.com/CharlesStover/monorepo-template/blob/main/docs/MODULE.md)
-- [Debugging](https://github.com/CharlesStover/monorepo-template/blob/main/docs/DEBUGGING.md)
-- [Contributing](https://github.com/CharlesStover/monorepo-template/blob/main/docs/CONTRIBUTING.md)
+- [Getting started](https://github.com/monorepo-template/monorepo-template/blob/main/docs/GETTING-STARTED.md)
+- [Adding an application](https://github.com/monorepo-template/monorepo-template/blob/main/docs/APPLICATION.md)
+- [Adding a module](https://github.com/monorepo-template/monorepo-template/blob/main/docs/MODULE.md)
+- [Debugging](https://github.com/monorepo-template/monorepo-template/blob/main/docs/DEBUGGING.md)
+- [Contributing](https://github.com/monorepo-template/monorepo-template/blob/main/docs/CONTRIBUTING.md)
 
 ## Application
 

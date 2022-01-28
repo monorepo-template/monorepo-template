@@ -2828,27 +2828,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@charlesstover/monorepo-template@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@charlesstover/monorepo-template@workspace:."
-  dependencies:
-    "@monorepo-template/eslint-config-typescript": ^0.1.4
-    "@monorepo-template/eslint-config-typescript-fixable": ^0.2.2
-    "@monorepo-template/eslint-config-typescript-strict": ^0.1.0
-    "@monorepo-template/test": ^1.0.1
-    "@monorepo-template/tsconfig": ^0.1.1
-    "@types/node": ^17.0.8
-    "@typescript-eslint/eslint-plugin": ^5.9.1
-    "@typescript-eslint/parser": ^5.9.1
-    "@yarnpkg/sdks": ^2.6.0-rc.2
-    eslint: ^8.6.0
-    eslint-config-prettier: ^8.3.0
-    eslint-plugin-prettier: ^4.0.0
-    prettier: ^2.5.1
-    typescript: ^4.5.4
-  languageName: unknown
-  linkType: soft
-
 "@chevrotain/types@npm:^9.1.0":
   version: 9.1.0
   resolution: "@chevrotain/types@npm:9.1.0"
@@ -3519,9 +3498,9 @@ __metadata:
     "@jest/globals": ^27.4.6
     "@monorepo-template/coverage": ^1.0.1
     "@monorepo-template/cypress-coverage-config-override": ^1.0.0
-    "@monorepo-template/eslint-config-react-fixable": ^0.1.1
-    "@monorepo-template/eslint-config-react-strict": ^0.1.3
-    "@monorepo-template/eslint-config-react-typescript": ^0.1.2
+    "@monorepo-template/eslint-config-react-fixable": ^0.1.2
+    "@monorepo-template/eslint-config-react-strict": ^0.1.4
+    "@monorepo-template/eslint-config-react-typescript": ^0.1.3
     "@monorepo-template/jest-application-preset": ^0.1.4
     "@monorepo-template/module": "workspace:^"
     "@testing-library/react": ^12.1.2
@@ -3570,24 +3549,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@monorepo-template/eslint-config-react-fixable@npm:^0.1.1":
-  version: 0.1.1
-  resolution: "@monorepo-template/eslint-config-react-fixable@npm:0.1.1"
-  checksum: f95d8d414d4ecb7c1e7a1e6a65dd869953261581fab6a372144aceaa95fc48ca2296e6fae099c7e19942e9102e1a40a52e6c67da3137d938a3fe1f5c13035407
-  languageName: node
-  linkType: hard
-
-"@monorepo-template/eslint-config-react-strict@npm:^0.1.3":
-  version: 0.1.3
-  resolution: "@monorepo-template/eslint-config-react-strict@npm:0.1.3"
-  checksum: ed18454e0a9ccd7ab6d5f590205e841a2b1acd261e9363a9d1b042f581e3b056d2ba3c745176562ea4edd7214643a5bfcd99aeba1a37f6439c55c8bc063f651a
-  languageName: node
-  linkType: hard
-
-"@monorepo-template/eslint-config-react-typescript@npm:^0.1.2":
+"@monorepo-template/eslint-config-react-fixable@npm:^0.1.2":
   version: 0.1.2
-  resolution: "@monorepo-template/eslint-config-react-typescript@npm:0.1.2"
-  checksum: d94bfd649359752282b6850dbfe2b7c9e87cfd6be8eb70a9d3cf95f7354be9655c8d69a34e99a9b19f8ce76caa4385d76b79db0fa7f5ba5834352b36ef88658c
+  resolution: "@monorepo-template/eslint-config-react-fixable@npm:0.1.2"
+  checksum: 19134927879d6da15c17bb72fdb7c8b58e3a0b8f6adab597b6d0fe9650224f7868a683fe66b5ad4354bc28456912f540602122c1a307feb9dcfa74c304130bb6
+  languageName: node
+  linkType: hard
+
+"@monorepo-template/eslint-config-react-strict@npm:^0.1.4":
+  version: 0.1.4
+  resolution: "@monorepo-template/eslint-config-react-strict@npm:0.1.4"
+  checksum: 4dd99e6380faf8d66d1ec3beb22987f0bb44eb5c71c25c88155101052b9c13fea87faa62e00f8b8868c987dcebdd6f9e4f05afc2a8efd27de6c703e68fd18151
+  languageName: node
+  linkType: hard
+
+"@monorepo-template/eslint-config-react-typescript@npm:^0.1.3":
+  version: 0.1.3
+  resolution: "@monorepo-template/eslint-config-react-typescript@npm:0.1.3"
+  checksum: 1eca74b7bf262957bd45d29519174f67ef4181a917bf85ed72a0ff5626d348499dc06115f64345bc99b280ac81cf9562fa73291b8ee690db98dc762d5618cc89
   languageName: node
   linkType: hard
 
@@ -3671,9 +3650,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@monorepo-template/module@workspace:packages/module"
   dependencies:
-    "@monorepo-template/eslint-config-react-fixable": ^0.1.1
-    "@monorepo-template/eslint-config-react-strict": ^0.1.3
-    "@monorepo-template/eslint-config-react-typescript": ^0.1.2
+    "@monorepo-template/eslint-config-react-fixable": ^0.1.2
+    "@monorepo-template/eslint-config-react-strict": ^0.1.4
+    "@monorepo-template/eslint-config-react-typescript": ^0.1.3
     "@monorepo-template/jest-module-preset": ^0.1.4
     "@monorepo-template/rollup-config": ^0.1.2
     "@rollup/plugin-commonjs": ^21.0.1
@@ -3702,6 +3681,27 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@monorepo-template/monorepo-template@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@monorepo-template/monorepo-template@workspace:."
+  dependencies:
+    "@monorepo-template/eslint-config-typescript": ^0.1.4
+    "@monorepo-template/eslint-config-typescript-fixable": ^0.2.2
+    "@monorepo-template/eslint-config-typescript-strict": ^0.1.0
+    "@monorepo-template/test": ^1.0.3
+    "@monorepo-template/tsconfig": ^0.1.1
+    "@types/node": ^17.0.8
+    "@typescript-eslint/eslint-plugin": ^5.9.1
+    "@typescript-eslint/parser": ^5.9.1
+    "@yarnpkg/sdks": ^2.6.0-rc.2
+    eslint: ^8.6.0
+    eslint-config-prettier: ^8.3.0
+    eslint-plugin-prettier: ^4.0.0
+    prettier: ^2.5.1
+    typescript: ^4.5.4
+  languageName: unknown
+  linkType: soft
+
 "@monorepo-template/rollup-config@npm:^0.1.2":
   version: 0.1.2
   resolution: "@monorepo-template/rollup-config@npm:0.1.2"
@@ -3716,14 +3716,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@monorepo-template/test@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@monorepo-template/test@npm:1.0.1"
+"@monorepo-template/test@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "@monorepo-template/test@npm:1.0.3"
   dependencies:
+    ansi-styles: ^6.1.0
     js-yaml: ^4.1.0
   bin:
     monorepo-template-test: ./bin/test.mjs
-  checksum: 3cc70b3a57e59ff67e30c0cd31766ad225dcaaa4677b75f31c3d41d4d1fb150247025578449c55b4ca05d148e1d1481f114c1d85f84db661c71eada55ec453c5
+  checksum: 57e68788b40d96e38d821830e5a78999cd826e926af927f707213014fb81ea2806a26217592a6ead131daa7cb7140989a24ec8477e25d80865f5b6d02f06c965
   languageName: node
   linkType: hard
 
@@ -5538,6 +5539,13 @@ __metadata:
   version: 5.2.0
   resolution: "ansi-styles@npm:5.2.0"
   checksum: d7f4e97ce0623aea6bc0d90dcd28881ee04cba06c570b97fd3391bd7a268eedfd9d5e2dd4fdcbdd82b8105df5faf6f24aaedc08eaf3da898e702db5948f63469
+  languageName: node
+  linkType: hard
+
+"ansi-styles@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "ansi-styles@npm:6.1.0"
+  checksum: 7a7f8528c07a9d20c3a92bccd2b6bc3bb4d26e5cb775c02826921477377bd495d615d61f710d56216344b6238d1d11ef2b0348e146c5b128715578bfb3217229
   languageName: node
   linkType: hard
 

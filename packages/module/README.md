@@ -1,6 +1,6 @@
 # Module
 
-[![GitHub Action](https://github.com/CharlesStover/monorepo-template/actions/workflows/module.yml/badge.svg?branch=main&event=push)](https://github.com/CharlesStover/monorepo-template/actions/workflows/module.yml)
+[![GitHub Action](https://github.com/monorepo-template/monorepo-template/actions/workflows/module.yml/badge.svg?branch=main&event=push)](https://github.com/monorepo-template/monorepo-template/actions/workflows/module.yml)
 
 ## Contributing
 
