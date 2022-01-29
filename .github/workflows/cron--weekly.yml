@@ -1,4 +1,4 @@
-name: CodeQL
+name: Cron (weekly)
 
 jobs:
   analyze:
@@ -25,9 +25,5 @@ jobs:
         language: ['javascript']
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
   schedule:
     - cron: '15 20 * * 1'
