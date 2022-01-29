@@ -4,6 +4,7 @@
   "license": "MIT",
   "packageManager": "yarn@3.1.1",
   "private": true,
+  "type": "module",
   "funding": {
     "type": "individual",
     "url": "https://github.com/sponsors/CharlesStover"
@@ -22,6 +23,7 @@
     "react-application:jest:watch": "yarn workspace @monorepo-template/react-application run jest:watch",
     "react-application:start": "yarn workspace @monorepo-template/react-application run start",
     "eslint": "eslint '**/*' --ignore-pattern 'packages/**/*'",
+    "eslint:fix": "eslint '**/*' --fix --ignore-pattern 'packages/**/*'",
     "react-module:eslint": "yarn workspace @monorepo-template/react-module run eslint",
     "react-module:eslint:fix": "yarn workspace @monorepo-template/react-module run eslint:fix",
     "react-module:jest": "yarn workspace @monorepo-template/react-module run jest",
