@@ -15,8 +15,9 @@
 - [Getting started](https://github.com/monorepo-template/monorepo-template/blob/main/docs/GETTING_STARTED.md)
 - [Adding an React application](https://github.com/monorepo-template/monorepo-template/blob/main/docs/REACT_APPLICATION.md)
 - [Adding a React module](https://github.com/monorepo-template/monorepo-template/blob/main/docs/REACT_MODULE.md)
-- [Debugging](https://github.com/monorepo-template/monorepo-template/blob/main/docs/DEBUGGING.md)
 - [Contributing](https://github.com/monorepo-template/monorepo-template/blob/main/docs/CONTRIBUTING.md)
+- [Debugging](https://github.com/monorepo-template/monorepo-template/blob/main/docs/DEBUGGING.md)
+- [Dependencies](https://github.com/monorepo-template/dependencies#monorepo-template-dependencies)
 
 ## Packages
 
