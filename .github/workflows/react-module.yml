@@ -4,7 +4,7 @@ jobs:
   install:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v2
       - name: Setup Node
         uses: actions/setup-node@v2
@@ -19,7 +19,7 @@ jobs:
     needs: install
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v2
       - name: Setup Node
         uses: actions/setup-node@v2
@@ -45,7 +45,7 @@ jobs:
     #     ports:
     #       - 8126:8126
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v2
       - name: Setup Node
         uses: actions/setup-node@v2
@@ -68,7 +68,7 @@ jobs:
     needs: install
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v2
       - name: Setup Node
         uses: actions/setup-node@v2
@@ -94,7 +94,7 @@ jobs:
       contents: read
       packages: write
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v2
       - name: Setup Node
         uses: actions/setup-node@v2
@@ -122,7 +122,7 @@ jobs:
     needs: [eslint, jest, rollup]
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v2
       - name: Setup Node
         uses: actions/setup-node@v2
