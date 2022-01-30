@@ -3518,10 +3518,47 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@monorepo-template/eslint-config-react-fixable@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@monorepo-template/eslint-config-react-fixable@npm:1.0.0"
+  checksum: 7d0f1dcad944c3d3aa016834485e099609cfc46e7a1cb71c099d29e3161b5ea9269680927202f6ef9cf2d7f9d6321c0ae5f8acee5789a209c2b82ef1f998a794
+  languageName: node
+  linkType: hard
+
+"@monorepo-template/eslint-config-react-module@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@monorepo-template/eslint-config-react-module@npm:1.0.0"
+  dependencies:
+    "@monorepo-template/eslint-config-react-fixable": ^1.0.0
+    "@monorepo-template/eslint-config-react-strict": ^1.0.0
+    "@monorepo-template/eslint-config-react-typescript": ^1.0.0
+    "@monorepo-template/eslint-config-typescript": ^1.0.0
+    "@monorepo-template/eslint-config-typescript-fixable": ^1.0.0
+    "@monorepo-template/eslint-config-typescript-strict": ^1.0.0
+    eslint-config-prettier: ^8.3.0
+  peerDependencies:
+    "@typescript-eslint/eslint-plugin": ^5.10.0
+    eslint: ^8.7.0
+    eslint-plugin-jsx-a11y: ^6.5.0
+    eslint-plugin-prettier: ^4.0.0
+    eslint-plugin-react: ^7.28.0
+    eslint-plugin-react-hooks: ^4.3.0
+    prettier: "*"
+  checksum: c4525bda81619c6eaefe0d3cd066710f7161285cd0000fb0e72f6ba7692d9bcf5b3a5683c85eea2f027b76b6b7c6e80f1fc1842c5755cad764e35b4368caded3
+  languageName: node
+  linkType: hard
+
 "@monorepo-template/eslint-config-react-strict@npm:^0.1.4":
   version: 0.1.4
   resolution: "@monorepo-template/eslint-config-react-strict@npm:0.1.4"
   checksum: 4dd99e6380faf8d66d1ec3beb22987f0bb44eb5c71c25c88155101052b9c13fea87faa62e00f8b8868c987dcebdd6f9e4f05afc2a8efd27de6c703e68fd18151
+  languageName: node
+  linkType: hard
+
+"@monorepo-template/eslint-config-react-strict@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@monorepo-template/eslint-config-react-strict@npm:1.0.0"
+  checksum: 683b56b78d461cd3fba65d3164834028474fea255a030ac05bfe696f0a214bcca044a1aedc3ccf7027d474f0ff86317198d3d1337533ce3d4e994fd2e744e9ee
   languageName: node
   linkType: hard
 
@@ -3532,10 +3569,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@monorepo-template/eslint-config-react-typescript@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@monorepo-template/eslint-config-react-typescript@npm:1.0.0"
+  checksum: d5bc49a21a6a3f4186923b1c4aa9701a8644f4d31338ca06930d07bddead24e883fb0a7e7d166d914f1eb438ac45dbad6b414eef7eedd8d50210929db7879cd3
+  languageName: node
+  linkType: hard
+
 "@monorepo-template/eslint-config-typescript-fixable@npm:^0.2.2":
   version: 0.2.2
   resolution: "@monorepo-template/eslint-config-typescript-fixable@npm:0.2.2"
   checksum: 26cc933561c8b6b7de3a21101e35859dedc176638c0d155ae07611ee8162f8c73c6e6a6873617dcbb2a60e6c2b02d249f5237f30290d8fb79ad046db93e16907
+  languageName: node
+  linkType: hard
+
+"@monorepo-template/eslint-config-typescript-fixable@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@monorepo-template/eslint-config-typescript-fixable@npm:1.0.0"
+  checksum: bdcf257b8ef0e81793ae93e3f807b1f4674984144fca341ccd1c7fa867c4d7816a9ef6c3f1bd17d24e28981c34d2ce357ea3d6b111c849be8c6703cbee795068
   languageName: node
   linkType: hard
 
@@ -3546,10 +3597,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@monorepo-template/eslint-config-typescript-strict@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@monorepo-template/eslint-config-typescript-strict@npm:1.0.0"
+  checksum: 8f103b32c6b0514d02887370785c8cc643a748c205c6751445d74cabcec53d26edf76cdb6d6f18129d6e43c835868118c8646a1a8bc407c965917cfa2888354e
+  languageName: node
+  linkType: hard
+
 "@monorepo-template/eslint-config-typescript@npm:^0.1.4":
   version: 0.1.4
   resolution: "@monorepo-template/eslint-config-typescript@npm:0.1.4"
   checksum: 48e47d635bd0cd08ba7837d2742f1d9b8663c7d8ba4ebeb529748c1d12ae0460dc764ac614e2b62da08ba75f60567deb327964c988dc3b7edcb8eb00bc05ab45
+  languageName: node
+  linkType: hard
+
+"@monorepo-template/eslint-config-typescript@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@monorepo-template/eslint-config-typescript@npm:1.0.0"
+  checksum: 755a1e72a1874e38501cf6a394aeb2e90b6534d7a0823682298a22917c0d8fb73d4a325d3dd153054843411d212404d44db7c0a26c0795746b15102e5e73ca5a
   languageName: node
   linkType: hard
 
@@ -3667,6 +3732,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@monorepo-template/react-module-eslint-tsconfig@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@monorepo-template/react-module-eslint-tsconfig@npm:1.0.0"
+  dependencies:
+    "@monorepo-template/tsconfig": ^1.0.0
+    "@types/node": ^17.0.13
+  peerDependencies:
+    "@types/jest": ^27.4.0
+  checksum: fa0998af30ee14155f73d7f4af9ce29e403d4d772b104cc43aa99e8d75653dc355fd5fad6c8dbbd0546174a1de419094a077880052451d6dc88b167cbbec5b98
+  languageName: node
+  linkType: hard
+
 "@monorepo-template/react-module-tsconfig@npm:^1.0.0":
   version: 1.0.0
   resolution: "@monorepo-template/react-module-tsconfig@npm:1.0.0"
@@ -3683,10 +3760,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@monorepo-template/react-module@workspace:packages/react-module"
   dependencies:
-    "@monorepo-template/eslint-config-react-fixable": ^0.1.2
-    "@monorepo-template/eslint-config-react-strict": ^0.1.4
-    "@monorepo-template/eslint-config-react-typescript": ^0.1.3
+    "@monorepo-template/eslint-config-react-module": ^1.0.0
     "@monorepo-template/jest-module-preset": ^0.1.4
+    "@monorepo-template/react-module-eslint-tsconfig": ^1.0.0
     "@monorepo-template/react-module-tsconfig": ^1.0.0
     "@monorepo-template/rollup-config": ^0.1.2
     "@rollup/plugin-commonjs": ^21.0.1
