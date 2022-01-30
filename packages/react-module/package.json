@@ -24,9 +24,7 @@
     "url": "https://github.com/sponsors/CharlesStover"
   },
   "publishConfig": {
-    "access": "public",
-    "main": "./dist/cjs/index.cjs",
-    "module": "./dist/esm/index.js"
+    "access": "public"
   },
   "repository": {
     "type": "git",
