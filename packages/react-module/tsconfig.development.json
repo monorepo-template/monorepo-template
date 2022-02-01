@@ -1,6 +1,4 @@
 {
-  "extends": "@monorepo-template/react-module-tsconfig",
-  "compilerOptions": {
-    "jsx": "react-jsxdev"
-  }
+  "exclude": ["dist/", "jest/", "node_modules/"],
+  "extends": "@monorepo-template/react-module-tsconfig/development"
 }
