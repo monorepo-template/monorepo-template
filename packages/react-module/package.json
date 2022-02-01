@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "Charles Stover <monorepo-template-react-module@charlesstover.com>",
   "description": "example React module using the monorepo template",
-  "homepage": "https://www.npmjs.com/package/@monorepo-template/react-module",
+  "homepage": "https://github.com/monorepo-template/monorepo-template/tree/main/packages/react-module#readme",
   "license": "MIT",
   "main": "./dist/cjs/index.cjs",
   "module": "./dist/esm/index.js",
