@@ -13,6 +13,8 @@
     "access": "restricted"
   },
   "scripts": {
+    "eslint": "eslint '**/*' --ignore-pattern 'packages/**/*'",
+    "eslint:fix": "eslint '**/*' --fix --ignore-pattern 'packages/**/*'",
     "react-application:build": "yarn workspace @monorepo-template/react-application run build",
     "react-application:coverage": "yarn workspace @monorepo-template/react-application run coverage",
     "react-application:cypress:run": "yarn workspace @monorepo-template/react-application run cypress:run",
@@ -22,8 +24,6 @@
     "react-application:jest": "yarn workspace @monorepo-template/react-application run jest",
     "react-application:jest:watch": "yarn workspace @monorepo-template/react-application run jest:watch",
     "react-application:start": "yarn workspace @monorepo-template/react-application run start",
-    "eslint": "eslint '**/*' --ignore-pattern 'packages/**/*'",
-    "eslint:fix": "eslint '**/*' --fix --ignore-pattern 'packages/**/*'",
     "react-module:eslint": "yarn workspace @monorepo-template/react-module run eslint",
     "react-module:eslint:fix": "yarn workspace @monorepo-template/react-module run eslint:fix",
     "react-module:jest": "yarn workspace @monorepo-template/react-module run jest",
