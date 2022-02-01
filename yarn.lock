@@ -3682,15 +3682,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@monorepo-template/react-module-tsconfig@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "@monorepo-template/react-module-tsconfig@npm:1.0.3"
+"@monorepo-template/react-module-tsconfig@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "@monorepo-template/react-module-tsconfig@npm:1.0.4"
   dependencies:
     "@monorepo-template/tsconfig": ^1.0.0
     "@types/node": ^17.0.13
   peerDependencies:
     "@types/jest": "*"
-  checksum: e0b233316936396f09eb4634d583060b8a002c6afc733f1c7901d00b58187750f776b1430c758f57eee48464e8d99d18f617e787a8a10eac503b5f6e5b5508cd
+  checksum: bfa51ebda97b9017aab48be3600723adfb238d442bea656f207626ee79a45524fb6850763dbac8d6d504a8f63e579bbf990e8338fc79b8df7d0a2dbd6b65cc48
   languageName: node
   linkType: hard
 
@@ -3700,7 +3700,7 @@ __metadata:
   dependencies:
     "@monorepo-template/eslint-config-react-module": ^1.0.3
     "@monorepo-template/jest-module-preset": ^1.0.0
-    "@monorepo-template/react-module-tsconfig": ^1.0.3
+    "@monorepo-template/react-module-tsconfig": ^1.0.4
     "@monorepo-template/rollup-config": ^1.0.0
     "@rollup/plugin-commonjs": ^21.0.1
     "@rollup/plugin-node-resolve": ^13.1.3
