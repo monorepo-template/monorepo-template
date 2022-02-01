@@ -25,6 +25,7 @@ jobs:
         language: ['javascript']
 
   install:
+    name: Install
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -39,6 +40,7 @@ jobs:
         run: yarn install --immutable
 
   eslint:
+    name: ESLint
     needs: install
     runs-on: ubuntu-latest
     steps:
@@ -56,6 +58,7 @@ jobs:
         run: yarn eslint
 
   test:
+    name: Test
     needs: install
     runs-on: ubuntu-latest
     steps:

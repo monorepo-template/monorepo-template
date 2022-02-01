@@ -2,6 +2,7 @@ name: React application
 
 jobs:
   install-cypress:
+    name: Install Cypress
     runs-on: ${{ matrix.os }}-latest
     steps:
       - name: Checkout repository
@@ -15,6 +16,7 @@ jobs:
         os: [ubuntu, windows]
 
   install-yarn:
+    name: Install Yarn
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -29,6 +31,7 @@ jobs:
         run: yarn install --immutable
 
   eslint:
+    name: ESLint
     needs: install-yarn
     runs-on: ubuntu-latest
     steps:
@@ -46,6 +49,7 @@ jobs:
         run: yarn react-application:eslint
 
   react-module:
+    name: Build react-module
     needs: install-yarn
     runs-on: ubuntu-latest
     steps:
@@ -68,6 +72,7 @@ jobs:
           path: packages/react-module/dist
 
   build:
+    name: Build
     needs: react-module
     runs-on: ubuntu-latest
     steps:
@@ -97,6 +102,7 @@ jobs:
           path: packages/react-application/build
 
   cypress:
+    name: Cypress
     needs: [install-cypress, react-module]
     runs-on: ${{ matrix.os }}-latest
     steps:
@@ -164,6 +170,7 @@ jobs:
             os: ubuntu
 
   jest:
+    name: Jest
     needs: react-module
     runs-on: ubuntu-latest
     # services:
@@ -203,6 +210,7 @@ jobs:
           path: packages/react-application/jest/coverage
 
   coverage:
+    name: Coverage
     if: ${{ always() }}
     needs: [cypress, jest]
     runs-on: ubuntu-latest
@@ -239,6 +247,7 @@ jobs:
             packages/react-application/coverage
 
   github-pages:
+    name: GitHub Pages
     if: ${{ github.event_name == 'push' }}
     needs: [build, coverage, cypress, eslint, jest]
     runs-on: ubuntu-latest
@@ -259,6 +268,7 @@ jobs:
           single-commit: true
 
   sentry-release:
+    name: Sentry release
     if: ${{ github.event_name == 'push' }}
     needs: [build, coverage, cypress, eslint, jest]
     runs-on: ubuntu-latest
@@ -285,6 +295,7 @@ jobs:
           version: ${{ env.SENTRY_VERSION }}
 
   # cloudflare-purge:
+  #   name: Cloudflare purge
   #   if: ${{ github.event_name == 'push' }}
   #   needs: github-pages
   #   runs-on: ubuntu-latest
