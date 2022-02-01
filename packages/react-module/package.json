@@ -41,8 +41,7 @@
   "devDependencies": {
     "@monorepo-template/eslint-config-react-module": "^1.0.3",
     "@monorepo-template/jest-module-preset": "^1.0.0",
-    "@monorepo-template/react-module-eslint-tsconfig": "^1.0.0",
-    "@monorepo-template/react-module-tsconfig": "^1.0.0",
+    "@monorepo-template/react-module-tsconfig": "^1.0.3",
     "@monorepo-template/rollup-config": "^1.0.0",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.1.3",

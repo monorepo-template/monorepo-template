@@ -3682,27 +3682,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@monorepo-template/react-module-eslint-tsconfig@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@monorepo-template/react-module-eslint-tsconfig@npm:1.0.0"
+"@monorepo-template/react-module-tsconfig@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "@monorepo-template/react-module-tsconfig@npm:1.0.3"
   dependencies:
     "@monorepo-template/tsconfig": ^1.0.0
     "@types/node": ^17.0.13
   peerDependencies:
-    "@types/jest": ^27.4.0
-  checksum: fa0998af30ee14155f73d7f4af9ce29e403d4d772b104cc43aa99e8d75653dc355fd5fad6c8dbbd0546174a1de419094a077880052451d6dc88b167cbbec5b98
-  languageName: node
-  linkType: hard
-
-"@monorepo-template/react-module-tsconfig@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@monorepo-template/react-module-tsconfig@npm:1.0.0"
-  dependencies:
-    "@monorepo-template/tsconfig": ^1.0.0
-    "@types/node": ^17.0.13
-  peerDependencies:
-    "@types/jest": ^27.4.0
-  checksum: 64a8df4357bffd11ef482b17034cdf914beac03e030f3c8f1fb0c5f901cf8920aaca2f2c6651ab8091664e47cd093ba55f746406c43cd8f641e73fce9666a70e
+    "@types/jest": "*"
+  checksum: e0b233316936396f09eb4634d583060b8a002c6afc733f1c7901d00b58187750f776b1430c758f57eee48464e8d99d18f617e787a8a10eac503b5f6e5b5508cd
   languageName: node
   linkType: hard
 
@@ -3712,8 +3700,7 @@ __metadata:
   dependencies:
     "@monorepo-template/eslint-config-react-module": ^1.0.3
     "@monorepo-template/jest-module-preset": ^1.0.0
-    "@monorepo-template/react-module-eslint-tsconfig": ^1.0.0
-    "@monorepo-template/react-module-tsconfig": ^1.0.0
+    "@monorepo-template/react-module-tsconfig": ^1.0.3
     "@monorepo-template/rollup-config": ^1.0.0
     "@rollup/plugin-commonjs": ^21.0.1
     "@rollup/plugin-node-resolve": ^13.1.3

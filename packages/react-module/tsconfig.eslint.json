@@ -1,5 +1,5 @@
 {
   "exclude": ["dist/", "jest/", "node_modules/"],
-  "extends": "@monorepo-template/react-module-eslint-tsconfig",
+  "extends": "@monorepo-template/react-module-tsconfig/eslint",
   "include": [".eslintrc.cjs", "**/*", "**/*.json"]
 }
