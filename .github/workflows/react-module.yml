@@ -90,8 +90,8 @@ jobs:
           name: react-module--dist
           path: packages/react-module/dist
 
-  github:
-    name: Publish to GitHub
+  github-packages:
+    name: GitHub Packages
     if: ${{ github.event_name == 'push' }}
     needs: [eslint, jest, rollup]
     runs-on: ubuntu-latest
@@ -123,7 +123,7 @@ jobs:
           yarn npm publish --tolerate-republish;
 
   npm:
-    name: Publish to NPM
+    name: NPM
     if: ${{ github.event_name == 'push' }}
     needs: [eslint, jest, rollup]
     runs-on: ubuntu-latest
