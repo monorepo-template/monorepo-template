@@ -3709,6 +3709,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@monorepo-template/nyc-config@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "@monorepo-template/nyc-config@npm:1.0.2"
+  checksum: f1de3428c468ab38e968f518b442d92e9d79d5bbed491c7350a286b3ca6e6c459b765b7b760e525b2fc7a003c6357f3ea86f4d44d378b426f70ebadd17732321
+  languageName: node
+  linkType: hard
+
+"@monorepo-template/react-application-tsconfig@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@monorepo-template/react-application-tsconfig@npm:1.0.0"
+  dependencies:
+    "@monorepo-template/tsconfig": ^1.0.0
+    "@types/node": ^17.0.13
+  peerDependencies:
+    "@types/jest": "*"
+  checksum: 91849829b01297a8e503512ba4ade98c873238b2ad1bc09ba536904b72e8c5337f81ad43e50fdb16c6b9d120e2de46421616ff23a8248f2a69a9024e7ae997b3
+  languageName: node
+  linkType: hard
+
 "@monorepo-template/react-application@workspace:packages/react-application":
   version: 0.0.0-use.local
   resolution: "@monorepo-template/react-application@workspace:packages/react-application"
@@ -3719,6 +3738,8 @@ __metadata:
     "@monorepo-template/cypress-coverage-config-override": ^1.0.0
     "@monorepo-template/eslint-config-react-module": ^1.0.3
     "@monorepo-template/jest-application-preset": ^1.0.0
+    "@monorepo-template/nyc-config": ^1.0.2
+    "@monorepo-template/react-application-tsconfig": ^1.0.0
     "@monorepo-template/react-module": "workspace:^"
     "@testing-library/react": ^12.1.3
     "@testing-library/react-hooks": ^7.0.2
