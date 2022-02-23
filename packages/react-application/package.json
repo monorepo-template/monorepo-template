@@ -2,7 +2,7 @@
   "name": "@monorepo-template/react-application",
   "version": "1.0.0",
   "homepage": ".",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "build": "react-scripts build",
     "coverage": "monorepo-template-coverage",
