@@ -3717,9 +3717,7 @@ __metadata:
     "@jest/globals": ^27.5.1
     "@monorepo-template/coverage": ^1.0.1
     "@monorepo-template/cypress-coverage-config-override": ^1.0.0
-    "@monorepo-template/eslint-config-react-fixable": ^1.0.0
-    "@monorepo-template/eslint-config-react-strict": ^1.0.0
-    "@monorepo-template/eslint-config-react-typescript": ^1.0.0
+    "@monorepo-template/eslint-config-react-module": ^1.0.3
     "@monorepo-template/jest-application-preset": ^1.0.0
     "@monorepo-template/react-module": "workspace:^"
     "@testing-library/react": ^12.1.3
