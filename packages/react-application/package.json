@@ -1,8 +1,12 @@
 {
   "name": "@monorepo-template/react-application",
   "version": "1.0.0",
+  "config-overrides-path": "./config-overrides.cjs",
   "homepage": ".",
   "type": "module",
+  "nyc": {
+    "extends": "./nyc.config.cjs"
+  },
   "scripts": {
     "build": "react-scripts build",
     "coverage": "monorepo-template-coverage",
