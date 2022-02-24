@@ -3576,6 +3576,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@monorepo-template/cypress-coverage-plugin@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@monorepo-template/cypress-coverage-plugin@npm:1.0.0"
+  dependencies:
+    "@cypress/code-coverage": ^3.9.12
+    "@monorepo-template/cypress-nyc-config": ^1.0.0
+  checksum: e36d741e032b9bd6bbb89a973fb966f549cf5d9cf23d60b8c3a186429637b725837ee51349b994292017a11feaa19f44388d829cc74e43dc6ce3fe88259dc05b
+  languageName: node
+  linkType: hard
+
+"@monorepo-template/cypress-nyc-config@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@monorepo-template/cypress-nyc-config@npm:1.0.0"
+  checksum: 54086b89bb2cd4d106c98d5d4f511837a8e484d1a0dfe52226d81ef156a3dd0f68fb10f20c5b5a2e310546ca740dfb5656c0b1091569a1e5d998fa9ecf1511ec
+  languageName: node
+  linkType: hard
+
 "@monorepo-template/eslint-config-react-fixable@npm:^1.0.0":
   version: 1.0.0
   resolution: "@monorepo-template/eslint-config-react-fixable@npm:1.0.0"
@@ -3709,6 +3726,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@monorepo-template/react-application-tsconfig@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@monorepo-template/react-application-tsconfig@npm:1.0.0"
+  dependencies:
+    "@monorepo-template/tsconfig": ^1.0.0
+    "@types/node": ^17.0.13
+  peerDependencies:
+    "@types/jest": "*"
+  checksum: 91849829b01297a8e503512ba4ade98c873238b2ad1bc09ba536904b72e8c5337f81ad43e50fdb16c6b9d120e2de46421616ff23a8248f2a69a9024e7ae997b3
+  languageName: node
+  linkType: hard
+
 "@monorepo-template/react-application@workspace:packages/react-application":
   version: 0.0.0-use.local
   resolution: "@monorepo-template/react-application@workspace:packages/react-application"
@@ -3717,8 +3746,10 @@ __metadata:
     "@jest/globals": ^27.5.1
     "@monorepo-template/coverage": ^1.0.1
     "@monorepo-template/cypress-coverage-config-override": ^1.0.0
+    "@monorepo-template/cypress-coverage-plugin": ^1.0.0
     "@monorepo-template/eslint-config-react-module": ^1.0.3
     "@monorepo-template/jest-application-preset": ^1.0.0
+    "@monorepo-template/react-application-tsconfig": ^1.0.0
     "@monorepo-template/react-module": "workspace:^"
     "@testing-library/react": ^12.1.3
     "@testing-library/react-hooks": ^7.0.2

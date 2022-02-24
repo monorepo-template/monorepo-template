@@ -1,12 +1,6 @@
 {
-  "extends": "../../tsconfig.eslint.json",
+  "extends": "@monorepo-template/react-application-tsconfig/eslint",
   "include": [".eslintrc.cjs", "**/*", "**/*.json"],
-
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "types": ["jest"]
-  },
-
   "exclude": [
     "build/",
     "coverage/",

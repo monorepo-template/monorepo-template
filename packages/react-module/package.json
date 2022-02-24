@@ -16,9 +16,6 @@
   "directories": {
     "lib": "src"
   },
-  "files": [
-    "dist"
-  ],
   "funding": {
     "type": "individual",
     "url": "https://github.com/sponsors/CharlesStover"

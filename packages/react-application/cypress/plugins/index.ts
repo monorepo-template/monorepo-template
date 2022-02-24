@@ -1,15 +1,10 @@
 /// <reference types="cypress" />
-import cypressCodeCoverageTask from '@cypress/code-coverage/task';
-
-if (typeof process.env.NYC_REPORT_DIR === 'undefined') {
-  process.env.NYC_REPORT_DIR = 'cypress/coverage';
-}
+import cypressCoveragePlugin from '@monorepo-template/cypress-coverage-plugin';
 
 export default function cypressPlugins(
   on: Cypress.PluginEvents,
   // eslint-disable-next-line @typescript-eslint/prefer-readonly-parameter-types
   config: Cypress.PluginConfigOptions,
 ): Cypress.PluginConfigOptions {
-  cypressCodeCoverageTask(on, config);
-  return config;
+  return cypressCoveragePlugin(on, config);
 }
