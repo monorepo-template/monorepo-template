@@ -8,3 +8,5 @@
    your project description.
 4. In this repository's root `README.md` file, change the title from
    `Monorepo template` to your project title.
+5. In this repository's root `README.md` file, delete the monorepo template
+   description between the title and the `---`.
