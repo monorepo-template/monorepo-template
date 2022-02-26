@@ -1,5 +1,42 @@
 # Monorepo template
 
+The monorepo template is a GitHub repository template that preconfigures common
+front end dependencies for best practices and abstracts them in an extensible
+manner.
+
+| Problem                                          | Goal                                                     |
+| ------------------------------------------------ | -------------------------------------------------------- |
+| **Front end engineers...**                       | **Front end engineers...**                               |
+| ... spend too much time managing configurations. | ... should spend more time writing great applications.   |
+| ... only harness a subset of best practices.     | ... have best practices available at no additional cost. |
+| ... have difficulty integrating dependencies.    | ... have dependencies integrated seamlessly.             |
+
+The front end ecosystem should _just work_.
+
+## Features
+
+- **Cloudflare purge** for _cache busting_
+- **CodeQL** for _security analysis_
+- **Cypress** for _end-to-end testing_
+- **ESLint** for _linting_
+- **GitHub Packages** and **NPM** for _package publishing_
+- **GitHub Pages** for _static asset deployments_
+- **Jest** for _unit testing_
+- **Node** (latest) for _compatibility_
+- **NYC** for _code coverage reports_
+- **Prettier** for _code formatting_
+- **React Scripts** for _application development_
+- **Rollup** for _module bundling_
+- **Sentry release** for _source mapping_
+- **TypeScript** for _static typing_
+- **Visual Studio Code** for _code editing_
+- **Yarn** (latest) for _workspaces_
+
+All with _zero configuration_ and _completely extensible_ if deviation is
+desired.
+
+---
+
 [![Monorepo](https://github.com/monorepo-template/monorepo-template/actions/workflows/index.yml/badge.svg?branch=main&event=push)](https://github.com/monorepo-template/monorepo-template/actions/workflows/index.yml)
 
 [![React application](https://github.com/monorepo-template/monorepo-template/actions/workflows/react-application.yml/badge.svg?branch=main&event=push)](https://github.com/monorepo-template/monorepo-template/actions/workflows/react-application.yml)
