@@ -19,6 +19,7 @@ The front end ecosystem should _just work_.
 - **CodeQL** for _security analysis_
 - **Cypress** for _end-to-end testing_
 - **ESLint** for _linting_
+- **GitHub Actions** for _continuous integration_ and _continuous delivery_
 - **GitHub Packages** and **NPM** for _package publishing_
 - **GitHub Pages** for _static asset deployments_
 - **Jest** for _unit testing_
