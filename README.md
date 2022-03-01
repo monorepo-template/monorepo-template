@@ -40,13 +40,13 @@ desired.
 
 [![Monorepo](https://github.com/monorepo-template/monorepo-template/actions/workflows/index.yml/badge.svg?branch=main&event=push)](https://github.com/monorepo-template/monorepo-template/actions/workflows/index.yml)
 
-[![React application](https://github.com/monorepo-template/monorepo-template/actions/workflows/react-application.yml/badge.svg?branch=main&event=push)](https://github.com/monorepo-template/monorepo-template/actions/workflows/react-application.yml)
+[![React application](https://github.com/monorepo-template/monorepo-template/actions/workflows/example-react-application.yml/badge.svg?branch=main&event=push)](https://github.com/monorepo-template/monorepo-template/actions/workflows/example-react-application.yml)
 [![Cypress](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/4akrvv/main&label=Cypress&style=flat)](https://dashboard.cypress.io/projects/4akrvv/runs)
 
-[![React module](https://github.com/monorepo-template/monorepo-template/actions/workflows/react-module.yml/badge.svg?branch=main&event=push)](https://github.com/monorepo-template/monorepo-template/actions/workflows/react-module.yml)
-[![downloads](https://img.shields.io/npm/dt/@monorepo-template/react-module.svg)](https://www.npmjs.com/package/@monorepo-template/react-module)
-[![minzipped size](https://img.shields.io/bundlephobia/minzip/@monorepo-template/react-module.svg?label=minzipped%20size)](https://www.npmjs.com/package/@monorepo-template/react-module)
-[![version](https://img.shields.io/npm/v/@monorepo-template/react-module.svg?label=version)](https://www.npmjs.com/package/@monorepo-template/react-module)
+[![React module](https://github.com/monorepo-template/monorepo-template/actions/workflows/example-react-module.yml/badge.svg?branch=main&event=push)](https://github.com/monorepo-template/monorepo-template/actions/workflows/example-react-module.yml)
+[![downloads](https://img.shields.io/npm/dt/@monorepo-template/example-react-module.svg)](https://www.npmjs.com/package/@monorepo-template/example-react-module)
+[![minzipped size](https://img.shields.io/bundlephobia/minzip/@monorepo-template/example-react-module.svg?label=minzipped%20size)](https://www.npmjs.com/package/@monorepo-template/example-react-module)
+[![version](https://img.shields.io/npm/v/@monorepo-template/example-react-module.svg?label=version)](https://www.npmjs.com/package/@monorepo-template/example-react-module)
 
 ## Documentation
 
@@ -61,28 +61,31 @@ desired.
 
 ### React application
 
-- To build the application, run `yarn react-application:build`.
+- To build the application, run `yarn example-react-application:build`.
 - To report Cypress's and Jest's combined test coverage, run
-  `yarn react-application:coverage`. The combined report will be located in
-  `/packages/react-application/coverage/`.
+  `yarn example-react-application:coverage`. The combined report will be located
+  in `/packages/example-react-application/coverage/`.
 - To end-to-end test your application, run
-  `yarn react-application:cypress:start` to first run the development server
-  with code coverage reporting enabled, then run `yarn application:cypress:run`.
-- To lint your changes to the application, run `yarn react-application:eslint`.
+  `yarn example-react-application:cypress:start` to first run the development
+  server with code coverage reporting enabled, then run
+  `yarn example-react-application:cypress:run`.
+- To lint your changes to the application, run
+  `yarn example-react-application:eslint`.
 - To unit test your changes to the application, run
-  `yarn react-application:jest`.
+  `yarn example-react-application:jest`.
 - To unit test your changes to the application in watch mode, run
-  `yarn react-application:jest:watch`.
+  `yarn example-react-application:jest:watch`.
 - To start the application development server, run
-  `yarn react-application:start`.
+  `yarn example-react-application:start`.
 
 ### React module
 
-- To lint your changes to the module, run `yarn react-module:eslint`.
+- To lint your changes to the module, run `yarn example-react-module:eslint`.
 - To automatically fix lint errors in the module, run
-  `yarn react-module:eslint:fix`.
-- To unit test your changes to the module, run `yarn react-module:jest`.
+  `yarn example-react-module:eslint:fix`.
+- To unit test your changes to the module, run `yarn example-react-module:jest`.
 - To unit test your changes to the module in watch mode, run
-  `yarn react-module:jest:watch`.
-- To build the module, run `yarn react-module:rollup`.
-- To build the module in watch mode, run `yarn react-module:rollup:watch`.
+  `yarn example-react-module:jest:watch`.
+- To build the module, run `yarn example-react-module:rollup`.
+- To build the module in watch mode, run
+  `yarn example-react-module:rollup:watch`.

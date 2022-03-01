@@ -1,9 +1,9 @@
 {
-  "name": "@monorepo-template/react-module",
+  "name": "@monorepo-template/example-react-module",
   "version": "1.0.1",
   "author": "Charles Stover <monorepo-template-react-module@charlesstover.com>",
   "description": "example React module using the monorepo template",
-  "homepage": "https://github.com/monorepo-template/monorepo-template/tree/main/packages/react-module#readme",
+  "homepage": "https://github.com/monorepo-template/monorepo-template/tree/main/packages/example-react-module#readme",
   "license": "MIT",
   "main": "./dist/cjs/index.cjs",
   "module": "./dist/esm/index.js",

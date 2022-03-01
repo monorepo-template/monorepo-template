@@ -32,7 +32,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Lint
-        run: yarn react-module:eslint
+        run: yarn example-react-module:eslint
 
   jest:
     name: Jest
@@ -59,13 +59,13 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Unit test
-        run: yarn react-module:jest
+        run: yarn example-react-module:jest
       - name: Upload coverage
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: react-module--jest--coverage
-          path: packages/react-module/jest/coverage
+          name: example-react-module--jest--coverage
+          path: packages/example-react-module/jest/coverage
 
   rollup:
     name: Rollup
@@ -83,12 +83,12 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Build
-        run: yarn react-module:rollup
+        run: yarn example-react-module:rollup
       - name: Upload build
         uses: actions/upload-artifact@v2
         with:
-          name: react-module--dist
-          path: packages/react-module/dist
+          name: example-react-module--dist
+          path: packages/example-react-module/dist
 
   github-packages:
     name: GitHub Packages
@@ -112,10 +112,10 @@ jobs:
       - name: Download build
         uses: actions/download-artifact@v2
         with:
-          name: react-module--dist
-          path: packages/react-module/dist
+          name: example-react-module--dist
+          path: packages/example-react-module/dist
       - name: Publish
-        working-directory: packages/react-module
+        working-directory: packages/example-react-module
         env:
           NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: >
@@ -139,10 +139,10 @@ jobs:
       - name: Download build
         uses: actions/download-artifact@v2
         with:
-          name: react-module--dist
-          path: packages/react-module/dist
+          name: example-react-module--dist
+          path: packages/example-react-module/dist
       - name: Publish
-        working-directory: packages/react-module
+        working-directory: packages/example-react-module
         env:
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
         run: >
@@ -152,10 +152,10 @@ jobs:
 on:
   pull_request:
     paths:
-      - '.github/workflows/react-module.yml'
-      - 'packages/react-module/**/*'
+      - '.github/workflows/example-react-module.yml'
+      - 'packages/example-react-module/**/*'
   push:
     branches: [main]
     paths:
-      - '.github/workflows/react-module.yml'
-      - 'packages/react-module/**/*'
+      - '.github/workflows/example-react-module.yml'
+      - 'packages/example-react-module/**/*'
