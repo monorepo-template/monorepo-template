@@ -2,8 +2,8 @@
 
 To add a new React application,
 
-1. Create a copy of the `/packages/react-application` directory and name it
-   `/packages/${application-name}`.
+1. Create a copy of the `/packages/example-react-application` directory and name
+   it `/packages/${application-name}`.
 2. In `/packages/${application-name}/public/index.html`, replace the `title`
    with your application's title.
 3. In `/packages/${application-name}/public/manifest.json`, replace the `name`
@@ -12,8 +12,8 @@ To add a new React application,
    property with your application's Cypress project ID.
 5. In `/packages/${application-name}/package.json`, replace the `name` property
    with `@${repository-organization}/${application-name}`.
-6. Create a copy of `/.github/workflows/react-application.yml` and name it
-   `/.github/workflows/${application-name}.yml`.
+6. Create a copy of `/.github/workflows/example-react-application.yml` and name
+   it `/.github/workflows/${application-name}.yml`.
 7. In `/.github/workflows/${application-name}.yml`, replace the value of the
    `jobs['sentry-release'].steps[1].env.SENTRY_ORG` property with your Sentry
    organization slug.
@@ -25,11 +25,11 @@ To add a new React application,
    array, replace the preconfigured URLs with your application's URLs.
 10. In `/.github/workflows/${application-name}.yml`'s `on.pull_request.paths`
     and `on.push.paths` properties:
-    1. Replace `'.github/workflows/react-application.yml'` with
+    1. Replace `'.github/workflows/example-react-application.yml'` with
        `'.github/workflows/${application-name}.yml'`.
-    2. Replace `'packages/react-application/**/*'` with
+    2. Replace `'packages/example-react-application/**/*'` with
        `'packages/${application-name}/**/*'`.
-    3. Remove `'packages/react-module/**/*'`.
+    3. Remove `'packages/example-react-module/**/*'`.
     4. If your new application depends on any monorepo modules, add the paths to
        those modules in the format `'packages/${module-name}/**/*'`.
 11. In the root `/package.json` file's `scripts` property, add the following
