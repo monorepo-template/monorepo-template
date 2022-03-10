@@ -228,23 +228,23 @@ jobs:
       - name: Download Cypress coverage
         uses: actions/download-artifact@v2
         with:
-          name: example-react-application--cypress--coverage
-          path: packages/example-react-application/cypress/coverage
+          name: example-next-application--cypress--coverage
+          path: packages/example-next-application/cypress/coverage
       - name: Download Jest coverage
         uses: actions/download-artifact@v2
         with:
-          name: example-react-application--jest--coverage
-          path: packages/example-react-application/jest/coverage
+          name: example-next-application--jest--coverage
+          path: packages/example-next-application/jest/coverage
       - name: Report coverage
-        run: yarn example-react-application:coverage
+        run: yarn example-next-application:coverage
       - name: Upload coverage
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
           name: example-react-application--coverage
           path: |
-            packages/example-react-application/.nyc_output
-            packages/example-react-application/coverage
+            packages/example-next-application/.nyc_output
+            packages/example-next-application/coverage
 
   github-pages:
     name: GitHub Pages
@@ -257,7 +257,7 @@ jobs:
       - name: Download build
         uses: actions/download-artifact@v2
         with:
-          name: example-react-application--build
+          name: example-next-application--build
           path: build
       - name: Deploy GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
@@ -278,8 +278,8 @@ jobs:
       - name: Download build
         uses: actions/download-artifact@v2
         with:
-          name: example-react-application--build
-          path: packages/example-react-application/build
+          name: example-next-application--build
+          path: packages/example-next-application/build
       - name: Sentry release
         uses: getsentry/action-release@v1
         env:
@@ -289,7 +289,7 @@ jobs:
           SENTRY_PROJECT: monorepo-template-application
         with:
           environment: production
-          sourcemaps: packages/example-react-application/build
+          sourcemaps: packages/example-next-application/build
           url_prefix: ~/
           version: ${{ github.sha }}
 
