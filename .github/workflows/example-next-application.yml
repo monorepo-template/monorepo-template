@@ -319,12 +319,12 @@ jobs:
 on:
   pull_request:
     paths:
-      - '.github/workflows/example-react-application.yml'
-      - 'packages/example-react-application/**/*'
+      - '.github/workflows/example-next-application.yml'
+      - 'packages/example-next-application/**/*'
       - 'packages/example-react-module/**/*'
   push:
     branches: [main]
     paths:
-      - '.github/workflows/example-react-application.yml'
-      - 'packages/example-react-application/**/*'
+      - '.github/workflows/example-next-application.yml'
+      - 'packages/example-next-application/**/*'
       - 'packages/example-react-module/**/*'
