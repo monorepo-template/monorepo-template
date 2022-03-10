@@ -1,0 +1,25 @@
+{
+  "background_color": "#202020",
+  "display": "standalone",
+  "name": "Application",
+  "short_name": "Application",
+  "start_url": "/",
+  "theme_color": "#161616",
+  "icons": [
+    {
+      "sizes": "16x16",
+      "src": "/favicon.ico",
+      "type": "image/x-icon"
+    },
+    {
+      "sizes": "32x32",
+      "src": "/favicon.ico",
+      "type": "image/x-icon"
+    },
+    {
+      "sizes": "64x64",
+      "src": "/favicon.ico",
+      "type": "image/x-icon"
+    }
+  ]
+}
