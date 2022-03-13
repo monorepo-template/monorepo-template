@@ -3,6 +3,7 @@
   "include": ["**/*"],
   "compilerOptions": {
     "jsx": "preserve",
+    "skipLibCheck": true,
     "types": ["jest"]
   },
   "exclude": [
