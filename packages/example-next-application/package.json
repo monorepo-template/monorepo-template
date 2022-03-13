@@ -20,7 +20,7 @@
     "@cypress/code-coverage": "^3.9.12",
     "@jest/globals": "^27.5.1",
     "@monorepo-template/coverage": "^1.0.1",
-    "@monorepo-template/cypress-coverage-plugin": "^1.0.0",
+    "@monorepo-template/cypress-coverage-plugin": "^1.0.1",
     "@monorepo-template/eslint-config-react-module": "^1.0.3",
     "@monorepo-template/example-react-module": "workspace:^",
     "@monorepo-template/jest-application-preset": "^1.0.0",

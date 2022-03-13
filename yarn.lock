@@ -3576,13 +3576,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@monorepo-template/cypress-coverage-plugin@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@monorepo-template/cypress-coverage-plugin@npm:1.0.0"
+"@monorepo-template/cypress-coverage-plugin@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@monorepo-template/cypress-coverage-plugin@npm:1.0.1"
   dependencies:
-    "@cypress/code-coverage": ^3.9.12
     "@monorepo-template/cypress-nyc-config": ^1.0.0
-  checksum: e36d741e032b9bd6bbb89a973fb966f549cf5d9cf23d60b8c3a186429637b725837ee51349b994292017a11feaa19f44388d829cc74e43dc6ce3fe88259dc05b
+  peerDependencies:
+    "@cypress/code-coverage": ^3.9.12
+    cypress: ^9.5.0
+  checksum: 9f2417292ccf8039140d3fb252b40d14adc68229adcb540af71de4779c49b44a3648cd22c5cf5c4b37b04477296b62b1dcfcfded4d55bf78f370b292b0bb8b26
   languageName: node
   linkType: hard
 
@@ -3657,7 +3659,7 @@ __metadata:
     "@cypress/code-coverage": ^3.9.12
     "@jest/globals": ^27.5.1
     "@monorepo-template/coverage": ^1.0.1
-    "@monorepo-template/cypress-coverage-plugin": ^1.0.0
+    "@monorepo-template/cypress-coverage-plugin": ^1.0.1
     "@monorepo-template/eslint-config-react-module": ^1.0.3
     "@monorepo-template/example-react-module": "workspace:^"
     "@monorepo-template/jest-application-preset": ^1.0.0
@@ -3692,7 +3694,7 @@ __metadata:
     "@jest/globals": ^27.5.1
     "@monorepo-template/coverage": ^1.0.1
     "@monorepo-template/cypress-coverage-config-override": ^1.0.0
-    "@monorepo-template/cypress-coverage-plugin": ^1.0.0
+    "@monorepo-template/cypress-coverage-plugin": ^1.0.1
     "@monorepo-template/eslint-config-react-module": ^1.0.3
     "@monorepo-template/example-react-module": "workspace:^"
     "@monorepo-template/jest-application-preset": ^1.0.0
