@@ -143,20 +143,20 @@ jobs:
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: example-react-application--cypress--coverage
-          path: packages/example-react-application/cypress/coverage
+          name: example-next-application--cypress--coverage
+          path: packages/example-next-application/cypress/coverage
       - name: Upload screenshots
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: example-react-application--cypress--screenshots
-          path: packages/example-react-application/cypress/screenshots
+          name: example-next-application--cypress--screenshots
+          path: packages/example-next-application/cypress/screenshots
       - name: Upload videos
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: example-react-application--cypress--videos
-          path: packages/example-react-application/cypress/videos
+          name: example-next-application--cypress--videos
+          path: packages/example-next-application/cypress/videos
     strategy:
       fail-fast: false
       matrix:
@@ -241,7 +241,7 @@ jobs:
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
-          name: example-react-application--coverage
+          name: example-next-application--coverage
           path: |
             packages/example-next-application/.nyc_output
             packages/example-next-application/coverage
