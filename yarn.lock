@@ -3576,13 +3576,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@monorepo-template/cypress-coverage-plugin@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@monorepo-template/cypress-coverage-plugin@npm:1.0.0"
+"@monorepo-template/cypress-coverage-plugin@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@monorepo-template/cypress-coverage-plugin@npm:1.0.1"
   dependencies:
-    "@cypress/code-coverage": ^3.9.12
     "@monorepo-template/cypress-nyc-config": ^1.0.0
-  checksum: e36d741e032b9bd6bbb89a973fb966f549cf5d9cf23d60b8c3a186429637b725837ee51349b994292017a11feaa19f44388d829cc74e43dc6ce3fe88259dc05b
+  peerDependencies:
+    "@cypress/code-coverage": ^3.9.12
+    cypress: ^9.5.0
+  checksum: 9f2417292ccf8039140d3fb252b40d14adc68229adcb540af71de4779c49b44a3648cd22c5cf5c4b37b04477296b62b1dcfcfded4d55bf78f370b292b0bb8b26
   languageName: node
   linkType: hard
 
@@ -3650,15 +3652,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@monorepo-template/example-react-application@workspace:packages/example-react-application":
+"@monorepo-template/example-next-application@workspace:packages/example-next-application":
   version: 0.0.0-use.local
-  resolution: "@monorepo-template/example-react-application@workspace:packages/example-react-application"
+  resolution: "@monorepo-template/example-next-application@workspace:packages/example-next-application"
   dependencies:
     "@cypress/code-coverage": ^3.9.12
     "@jest/globals": ^27.5.1
     "@monorepo-template/coverage": ^1.0.1
-    "@monorepo-template/cypress-coverage-config-override": ^1.0.0
-    "@monorepo-template/cypress-coverage-plugin": ^1.0.0
+    "@monorepo-template/cypress-coverage-plugin": ^1.0.1
     "@monorepo-template/eslint-config-react-module": ^1.0.3
     "@monorepo-template/example-react-module": "workspace:^"
     "@monorepo-template/jest-application-preset": ^1.0.0
@@ -3667,7 +3668,43 @@ __metadata:
     "@testing-library/react-hooks": ^7.0.2
     "@types/jest": ^27.4.0
     "@types/node": ^17.0.19
-    "@types/react": ^17.0.39
+    "@types/react": ^17.0.40
+    "@types/react-dom": ^17.0.11
+    "@typescript-eslint/eslint-plugin": ^5.12.1
+    "@typescript-eslint/parser": ^5.12.1
+    babel-plugin-istanbul: ^6.1.1
+    cypress: ^9.5.0
+    eslint: ^8.9.0
+    eslint-plugin-jsx-a11y: ^6.5.1
+    eslint-plugin-react: ^7.28.0
+    eslint-plugin-react-hooks: ^4.3.0
+    jest: ^27.5.1
+    next: "patch:next@npm:12.1.0#../../.yarn/patches/next-npm-12.1.0-7f99f50e0f"
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    tslib: ^2.3.1
+    typescript: ^4.5.5
+  languageName: unknown
+  linkType: soft
+
+"@monorepo-template/example-react-application@workspace:packages/example-react-application":
+  version: 0.0.0-use.local
+  resolution: "@monorepo-template/example-react-application@workspace:packages/example-react-application"
+  dependencies:
+    "@cypress/code-coverage": ^3.9.12
+    "@jest/globals": ^27.5.1
+    "@monorepo-template/coverage": ^1.0.1
+    "@monorepo-template/cypress-coverage-config-override": ^1.0.0
+    "@monorepo-template/cypress-coverage-plugin": ^1.0.1
+    "@monorepo-template/eslint-config-react-module": ^1.0.3
+    "@monorepo-template/example-react-module": "workspace:^"
+    "@monorepo-template/jest-application-preset": ^1.0.0
+    "@monorepo-template/react-application-tsconfig": ^1.0.0
+    "@testing-library/react": ^12.1.3
+    "@testing-library/react-hooks": ^7.0.2
+    "@types/jest": ^27.4.0
+    "@types/node": ^17.0.19
+    "@types/react": ^17.0.40
     "@types/react-dom": ^17.0.11
     "@typescript-eslint/eslint-plugin": ^5.12.1
     "@typescript-eslint/parser": ^5.12.1
@@ -3702,7 +3739,7 @@ __metadata:
     "@testing-library/react-hooks": ^7.0.2
     "@types/jest": ^27.4.0
     "@types/node": ^17.0.19
-    "@types/react": ^17.0.39
+    "@types/react": ^17.0.40
     "@types/react-dom": ^17.0.11
     eslint: ^8.9.0
     eslint-plugin-jsx-a11y: ^6.5.1
@@ -3855,6 +3892,90 @@ __metadata:
   peerDependencies:
     "@types/node": ^17.0.0
   checksum: 0a3b598567cfc4004f0e09d3a05e2dce765bb1e944baa09516747795c70c6efdad2e6514ab6b26857e62a35757a3493eafd373ecb1a579fdb7d615f011da0509
+  languageName: node
+  linkType: hard
+
+"@next/env@npm:12.1.0":
+  version: 12.1.0
+  resolution: "@next/env@npm:12.1.0"
+  checksum: 31037e019846a2c3eeb106d64d54084e0b86d1b9b92fdb7332eeb39d94cb4a8e11ddab1a088088f7aea7b60a4cb57781815539676fddedf4305f19f8c8bf5b7f
+  languageName: node
+  linkType: hard
+
+"@next/swc-android-arm64@npm:12.1.0":
+  version: 12.1.0
+  resolution: "@next/swc-android-arm64@npm:12.1.0"
+  conditions: os=android & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@next/swc-darwin-arm64@npm:12.1.0":
+  version: 12.1.0
+  resolution: "@next/swc-darwin-arm64@npm:12.1.0"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@next/swc-darwin-x64@npm:12.1.0":
+  version: 12.1.0
+  resolution: "@next/swc-darwin-x64@npm:12.1.0"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@next/swc-linux-arm-gnueabihf@npm:12.1.0":
+  version: 12.1.0
+  resolution: "@next/swc-linux-arm-gnueabihf@npm:12.1.0"
+  conditions: os=linux & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@next/swc-linux-arm64-gnu@npm:12.1.0":
+  version: 12.1.0
+  resolution: "@next/swc-linux-arm64-gnu@npm:12.1.0"
+  conditions: os=linux & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@next/swc-linux-arm64-musl@npm:12.1.0":
+  version: 12.1.0
+  resolution: "@next/swc-linux-arm64-musl@npm:12.1.0"
+  conditions: os=linux & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@next/swc-linux-x64-gnu@npm:12.1.0":
+  version: 12.1.0
+  resolution: "@next/swc-linux-x64-gnu@npm:12.1.0"
+  conditions: os=linux & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@next/swc-linux-x64-musl@npm:12.1.0":
+  version: 12.1.0
+  resolution: "@next/swc-linux-x64-musl@npm:12.1.0"
+  conditions: os=linux & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@next/swc-win32-arm64-msvc@npm:12.1.0":
+  version: 12.1.0
+  resolution: "@next/swc-win32-arm64-msvc@npm:12.1.0"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@next/swc-win32-ia32-msvc@npm:12.1.0":
+  version: 12.1.0
+  resolution: "@next/swc-win32-ia32-msvc@npm:12.1.0"
+  conditions: os=win32 & cpu=ia32
+  languageName: node
+  linkType: hard
+
+"@next/swc-win32-x64-msvc@npm:12.1.0":
+  version: 12.1.0
+  resolution: "@next/swc-win32-x64-msvc@npm:12.1.0"
+  conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
@@ -4708,25 +4829,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:>=16.9.0":
-  version: 17.0.33
-  resolution: "@types/react@npm:17.0.33"
+"@types/react@npm:*, @types/react@npm:>=16.9.0, @types/react@npm:^17.0.40":
+  version: 17.0.40
+  resolution: "@types/react@npm:17.0.40"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 5f53f3dae034229ff1eccb5de1c16d046696e883f8eae81b86e95c532798e655015e4edff8a6c9ec8f1c0ef12bb60dec43622d06256ba33ba6069e67a74b8d4e
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:^17.0.39":
-  version: 17.0.39
-  resolution: "@types/react@npm:17.0.39"
-  dependencies:
-    "@types/prop-types": "*"
-    "@types/scheduler": "*"
-    csstype: ^3.0.2
-  checksum: bf04d3c2894559012710d595553e12b422d3b91cd8f4f7e122d8cb044ba9c2ba17f6e8a4e09581359cc5509ddc59cd8c8fabd6774f3505a40a45393f074d6e6e
+  checksum: 24d1b210b5bf3c7d49f9a7fe5490db02e005a1d989045a2d67528347557dd0bcb0d7bcf96088152697e97521ac4c9506d1357ee48a2b7d4e701c70d838dc7284
   languageName: node
   linkType: hard
 
@@ -6857,6 +6967,13 @@ __metadata:
   version: 1.0.30001303
   resolution: "caniuse-lite@npm:1.0.30001303"
   checksum: fe77fb680c94c875be2fb78c9507a69d3ed6be8894832d3ee8a7d24e4c5c7599bf217f030fcdfd761ea211065042679bf697a57eefe114058a3208561e2fd042
+  languageName: node
+  linkType: hard
+
+"caniuse-lite@npm:^1.0.30001283":
+  version: 1.0.30001314
+  resolution: "caniuse-lite@npm:1.0.30001314"
+  checksum: d82e1b8b287b1b2d2ed25c4495fe293276853dd9c77553c722929a6142fc49b3dd5ea21a95f6410d93319434a5bd071c304ea92e93debbcf292a9156cf08b35d
   languageName: node
   linkType: hard
 
@@ -12734,7 +12851,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.2.0":
+"nanoid@npm:^3.1.30, nanoid@npm:^3.2.0":
   version: 3.3.1
   resolution: "nanoid@npm:3.3.1"
   bin:
@@ -12761,6 +12878,130 @@ __metadata:
   version: 2.6.2
   resolution: "neo-async@npm:2.6.2"
   checksum: deac9f8d00eda7b2e5cd1b2549e26e10a0faa70adaa6fdadca701cc55f49ee9018e427f424bac0c790b7c7e2d3068db97f3093f1093975f2acb8f8818b936ed9
+  languageName: node
+  linkType: hard
+
+"next@npm:12.1.0":
+  version: 12.1.0
+  resolution: "next@npm:12.1.0"
+  dependencies:
+    "@next/env": 12.1.0
+    "@next/swc-android-arm64": 12.1.0
+    "@next/swc-darwin-arm64": 12.1.0
+    "@next/swc-darwin-x64": 12.1.0
+    "@next/swc-linux-arm-gnueabihf": 12.1.0
+    "@next/swc-linux-arm64-gnu": 12.1.0
+    "@next/swc-linux-arm64-musl": 12.1.0
+    "@next/swc-linux-x64-gnu": 12.1.0
+    "@next/swc-linux-x64-musl": 12.1.0
+    "@next/swc-win32-arm64-msvc": 12.1.0
+    "@next/swc-win32-ia32-msvc": 12.1.0
+    "@next/swc-win32-x64-msvc": 12.1.0
+    caniuse-lite: ^1.0.30001283
+    postcss: 8.4.5
+    styled-jsx: 5.0.0
+    use-subscription: 1.5.1
+  peerDependencies:
+    fibers: ">= 3.1.0"
+    node-sass: ^6.0.0 || ^7.0.0
+    react: ^17.0.2 || ^18.0.0-0
+    react-dom: ^17.0.2 || ^18.0.0-0
+    sass: ^1.3.0
+  dependenciesMeta:
+    "@next/swc-android-arm64":
+      optional: true
+    "@next/swc-darwin-arm64":
+      optional: true
+    "@next/swc-darwin-x64":
+      optional: true
+    "@next/swc-linux-arm-gnueabihf":
+      optional: true
+    "@next/swc-linux-arm64-gnu":
+      optional: true
+    "@next/swc-linux-arm64-musl":
+      optional: true
+    "@next/swc-linux-x64-gnu":
+      optional: true
+    "@next/swc-linux-x64-musl":
+      optional: true
+    "@next/swc-win32-arm64-msvc":
+      optional: true
+    "@next/swc-win32-ia32-msvc":
+      optional: true
+    "@next/swc-win32-x64-msvc":
+      optional: true
+  peerDependenciesMeta:
+    fibers:
+      optional: true
+    node-sass:
+      optional: true
+    sass:
+      optional: true
+  bin:
+    next: dist/bin/next
+  checksum: 36dbafd5e640c420446dc05077f858ae4a8aaf5f91feb3c6c16c1b3f50b9fb63f743ef282a3bf0c68645442bef8aee643492f6dc62388a17f87064cde064d181
+  languageName: node
+  linkType: hard
+
+"next@patch:next@npm:12.1.0#../../.yarn/patches/next-npm-12.1.0-7f99f50e0f::locator=%40monorepo-template%2Fexample-next-application%40workspace%3Apackages%2Fexample-next-application":
+  version: 12.1.0
+  resolution: "next@patch:next@npm%3A12.1.0#../../.yarn/patches/next-npm-12.1.0-7f99f50e0f::version=12.1.0&hash=eb8922&locator=%40monorepo-template%2Fexample-next-application%40workspace%3Apackages%2Fexample-next-application"
+  dependencies:
+    "@next/env": 12.1.0
+    "@next/swc-android-arm64": 12.1.0
+    "@next/swc-darwin-arm64": 12.1.0
+    "@next/swc-darwin-x64": 12.1.0
+    "@next/swc-linux-arm-gnueabihf": 12.1.0
+    "@next/swc-linux-arm64-gnu": 12.1.0
+    "@next/swc-linux-arm64-musl": 12.1.0
+    "@next/swc-linux-x64-gnu": 12.1.0
+    "@next/swc-linux-x64-musl": 12.1.0
+    "@next/swc-win32-arm64-msvc": 12.1.0
+    "@next/swc-win32-ia32-msvc": 12.1.0
+    "@next/swc-win32-x64-msvc": 12.1.0
+    caniuse-lite: ^1.0.30001283
+    postcss: 8.4.5
+    styled-jsx: 5.0.0
+    use-subscription: 1.5.1
+  peerDependencies:
+    fibers: ">= 3.1.0"
+    node-sass: ^6.0.0 || ^7.0.0
+    react: ^17.0.2 || ^18.0.0-0
+    react-dom: ^17.0.2 || ^18.0.0-0
+    sass: ^1.3.0
+  dependenciesMeta:
+    "@next/swc-android-arm64":
+      optional: true
+    "@next/swc-darwin-arm64":
+      optional: true
+    "@next/swc-darwin-x64":
+      optional: true
+    "@next/swc-linux-arm-gnueabihf":
+      optional: true
+    "@next/swc-linux-arm64-gnu":
+      optional: true
+    "@next/swc-linux-arm64-musl":
+      optional: true
+    "@next/swc-linux-x64-gnu":
+      optional: true
+    "@next/swc-linux-x64-musl":
+      optional: true
+    "@next/swc-win32-arm64-msvc":
+      optional: true
+    "@next/swc-win32-ia32-msvc":
+      optional: true
+    "@next/swc-win32-x64-msvc":
+      optional: true
+  peerDependenciesMeta:
+    fibers:
+      optional: true
+    node-sass:
+      optional: true
+    sass:
+      optional: true
+  bin:
+    next: dist/bin/next
+  checksum: bcf80156aba3703db1acc57c4f79ba5c6de90ddb6a379f9e95e20d4567080e8a2e8af574ca9deec28cec353b3c2ed6930be17bd374f9d94bd5d37cf7f3d9fbdd
   languageName: node
   linkType: hard
 
@@ -14394,6 +14635,17 @@ __metadata:
   version: 4.2.0
   resolution: "postcss-value-parser@npm:4.2.0"
   checksum: 819ffab0c9d51cf0acbabf8996dffbfafbafa57afc0e4c98db88b67f2094cb44488758f06e5da95d7036f19556a4a732525e84289a425f4f6fd8e412a9d7442f
+  languageName: node
+  linkType: hard
+
+"postcss@npm:8.4.5":
+  version: 8.4.5
+  resolution: "postcss@npm:8.4.5"
+  dependencies:
+    nanoid: ^3.1.30
+    picocolors: ^1.0.0
+    source-map-js: ^1.0.1
+  checksum: b78abdd89c10f7b48f4bdcd376104a19d6e9c7495ab521729bdb3df315af6c211360e9f06887ad3bc0ab0f61a04b91d68ea11462997c79cced58b9ccd66fac07
   languageName: node
   linkType: hard
 
@@ -16402,6 +16654,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"styled-jsx@npm:5.0.0":
+  version: 5.0.0
+  resolution: "styled-jsx@npm:5.0.0"
+  peerDependencies:
+    react: ">= 16.8.0 || 17.x.x || 18.x.x"
+  peerDependenciesMeta:
+    "@babel/core":
+      optional: true
+    babel-plugin-macros:
+      optional: true
+  checksum: 4958238ac8b8e90ac7d906aca3821e3ffb0c70c34c78b87d27f0f11c830c8237c8f4c0e7952dc51373d6fa097b16a023dcc7c9ededd402d8483b5ed2d8cefda9
+  languageName: node
+  linkType: hard
+
 "stylehacks@npm:^5.0.3":
   version: 5.0.3
   resolution: "stylehacks@npm:5.0.3"
@@ -17206,6 +17472,17 @@ __metadata:
     punycode: 1.3.2
     querystring: 0.2.0
   checksum: 50d100d3dd2d98b9fe3ada48cadb0b08aa6be6d3ac64112b867b56b19be4bfcba03c2a9a0d7922bfd7ac17d4834e88537749fe182430dfd9b68e520175900d90
+  languageName: node
+  linkType: hard
+
+"use-subscription@npm:1.5.1":
+  version: 1.5.1
+  resolution: "use-subscription@npm:1.5.1"
+  dependencies:
+    object-assign: ^4.1.1
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0
+  checksum: 96e64977a573244fd11350a3141b2cf57fb72dd9dd902f387c8a0a565d0a948bc81588bd7378c6ef6defc0d1119f37f73aac4a7a287c8443abd444bd4e7bbea8
   languageName: node
   linkType: hard
 

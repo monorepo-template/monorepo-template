@@ -1,0 +1,32 @@
+diff --git a/dist/server/base-server.d.ts b/dist/server/base-server.d.ts
+index 068e9b04761f1fe45a87209c6c37438c74432ec6..f0bf4db0410e53491b60ca2f6b82e3ed76282e90 100644
+--- a/dist/server/base-server.d.ts	
++++ b/dist/server/base-server.d.ts	
+@@ -187,7 +187,7 @@ export default abstract class Server {
+         fsRoutes: Route[];
+         redirects: Route[];
+         catchAllRoute: Route;
+-        catchAllMiddleware?: Route;
++        catchAllMiddleware?: Route | undefined;
+         pageChecker: PageChecker;
+         useFileSystemPublicRoutes: boolean;
+         dynamicRoutes: DynamicRoutes | undefined;
+diff --git a/dist/shared/lib/router/router.d.ts b/dist/shared/lib/router/router.d.ts
+index 4b9606f929eccfd36954f0fb5e03901ed490dce5..9e7aff4de1e298f4da2640ff9f42fb8254466e38 100644
+--- a/dist/shared/lib/router/router.d.ts	
++++ b/dist/shared/lib/router/router.d.ts	
+@@ -81,10 +81,10 @@ export declare type BaseRouter = {
+     query: ParsedUrlQuery;
+     asPath: string;
+     basePath: string;
+-    locale?: string;
+-    locales?: string[];
+-    defaultLocale?: string;
+-    domainLocales?: DomainLocale[];
++    locale?: string | undefined;
++    locales?: string[] | undefined;
++    defaultLocale?: string | undefined;
++    domainLocales?: DomainLocale[] | undefined;
+     isLocaleDomain: boolean;
+ };
+ export declare type NextRouter = BaseRouter & Pick<Router, 'push' | 'replace' | 'reload' | 'back' | 'prefetch' | 'beforePopState' | 'events' | 'isFallback' | 'isReady' | 'isPreview'>;

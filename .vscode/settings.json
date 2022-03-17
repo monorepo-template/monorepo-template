@@ -17,6 +17,7 @@
     ".yarn/unplugged": true,
     ".yarn/build-state.yml": true,
     ".yarn/install-state.gz": true,
+    "packages/*/.next": true,
     "packages/*/.nyc_output": true,
     "packages/*/build": true,
     "packages/*/coverage": true,
@@ -36,6 +37,7 @@
   "search.exclude": {
     ".git": true,
     ".yarn": true,
+    "packages/*/.next": true,
     "packages/*/.nyc_output": true,
     "packages/*/build": true,
     "packages/*/coverage": true,

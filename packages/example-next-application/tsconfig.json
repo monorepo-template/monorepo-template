@@ -1,0 +1,19 @@
+{
+  "extends": "@monorepo-template/react-application-tsconfig",
+  "include": ["**/*"],
+  "compilerOptions": {
+    "jsx": "preserve",
+    "skipLibCheck": true,
+    "types": ["jest"]
+  },
+  "exclude": [
+    "build/",
+    "coverage/",
+    "cypress/coverage/",
+    "cypress/screenshots/",
+    "cypress/videos/",
+    "jest/",
+    "node_modules/",
+    "src/**/*.e2e.ts"
+  ]
+}
