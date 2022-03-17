@@ -3672,6 +3672,8 @@ __metadata:
     "@types/react-dom": ^17.0.11
     "@typescript-eslint/eslint-plugin": ^5.12.1
     "@typescript-eslint/parser": ^5.12.1
+    babel-plugin-console-log: ^0.0.3
+    babel-plugin-istanbul: ^6.1.1
     cypress: ^9.5.0
     eslint: ^8.9.0
     eslint-plugin-jsx-a11y: ^6.5.1
@@ -6097,6 +6099,15 @@ __metadata:
   version: 1.0.4
   resolution: "babel-plugin-add-module-exports@npm:1.0.4"
   checksum: def017e6f34c956302b2fb2ce594d253b83229c3491444f89c2ee4a66e0882025a814676e27173687ca6d1fd4fbff860ce2f35ca4d66d1b333f6c78c8765e981
+  languageName: node
+  linkType: hard
+
+"babel-plugin-console-log@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "babel-plugin-console-log@npm:0.0.3"
+  dependencies:
+    lodash: ^4.17.2
+  checksum: 239c2ba8ff256b4b1ccc35573aaed45ad7a24a51e15b52a21f39ee509297a11961e77e68846c03bf28d1689efbfb35b4343ff60899e56ae7e67b7af53fc4281c
   languageName: node
   linkType: hard
 
@@ -12362,7 +12373,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.7.0":
+"lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.2, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.7.0":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
