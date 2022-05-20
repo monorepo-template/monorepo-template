@@ -1,3 +1,4 @@
+import configureYarnBerry from '@monorepo-template/webpack-configure-next-yarn-berry';
 import nextBabelConfig from './next.babel.mjs';
 
 const BABEL_LOADER_REGEXP = /next[/\\]dist[/\\]build[/\\]babel[/\\]loader/;
@@ -77,27 +78,6 @@ const configureNextBabel = (webpackConfig, options) => {
     module: {
       ...webpackConfig.module,
       rules: webpackConfig.module.rules.map(mapRuleToNextBabelRule),
-    },
-  };
-};
-
-const configureYarnBerry = (config, { defaultLoaders }) => {
-  const include = input =>
-    !input.includes('/.yarn/$$virtual/') &&
-    !input.includes('/.yarn/cache/') &&
-    !input.includes('/.yarn/unplugged/');
-  return {
-    ...config,
-    module: {
-      ...config.module,
-      rules: [
-        ...config.module.rules,
-        {
-          test: /\.(tsx|ts|js|mjs|jsx)$/,
-          include,
-          use: defaultLoaders.babel,
-        },
-      ],
     },
   };
 };

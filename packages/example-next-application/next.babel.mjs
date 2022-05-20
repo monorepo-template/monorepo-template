@@ -4,7 +4,7 @@ export default function nextBabelConfig({ dev }) {
   }
 
   return {
-    presets: ['next/babel'],
     plugins: ['babel-plugin-istanbul'],
+    presets: ['next/babel'],
   };
 }
