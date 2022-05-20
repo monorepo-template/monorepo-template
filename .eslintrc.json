@@ -30,6 +30,11 @@
     },
 
     {
+      "files": ["*.eslintrc.cjs"],
+      "extends": "@monorepo-template/typescript/eslint"
+    },
+
+    {
       "files": ["*.json"],
       "extends": [
         "@monorepo-template/typescript/json",
