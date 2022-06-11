@@ -212,7 +212,8 @@ jobs:
 
   coverage:
     name: Coverage
-    if: ${{ always() }}
+    # Disabled until Cypress 10 supports coverage reporting.
+    if: ${{ !always() }}
     needs: [cypress, jest]
     runs-on: ubuntu-latest
     steps:
