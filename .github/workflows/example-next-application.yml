@@ -139,6 +139,7 @@ jobs:
           browser: ${{ matrix.browser }}
           ci-build-id: ${{ github.run_id }}-${{ github.run_attempt }}
           command-prefix: yarn dlx
+          config-file: cypress.config.mjs
           group: ${{ matrix.os }}-${{ matrix.browser }}
           parallel: true
           project: packages/example-next-application
@@ -210,7 +211,8 @@ jobs:
 
   coverage:
     name: Coverage
-    if: ${{ always() }}
+    # Disabled until Cypress 10 supports coverage reporting.
+    if: ${{ !always() }}
     needs: [cypress, jest]
     runs-on: ubuntu-latest
     steps:

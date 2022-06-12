@@ -81,65 +81,65 @@ jobs:
           name: example-react-module--dist
           path: packages/example-react-module/dist
 
-  github-packages:
-    name: GitHub Packages
-    if: ${{ github.event_name == 'push' }}
-    needs: [eslint, jest, rollup]
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          cache: yarn
-          check-latest: true
-          node-version: 'lts/*'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@${{ github.repository_owner }}'
-      - name: Download build
-        uses: actions/download-artifact@v2
-        with:
-          name: example-react-module--dist
-          path: packages/example-react-module/dist
-      - name: Publish
-        working-directory: packages/example-react-module
-        env:
-          NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: >
-          yarn config set npmAuthToken $NPM_AUTH_TOKEN;
-          yarn config set npmScopes.${{ github.repository_owner }}.npmPublishRegistry 'https://npm.pkg.github.com';
-          yarn npm publish --tolerate-republish;
+  # github-packages:
+  #   name: GitHub Packages
+  #   if: ${{ github.event_name == 'push' }}
+  #   needs: [eslint, jest, rollup]
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     contents: read
+  #     packages: write
+  #   steps:
+  #     - name: Checkout repository
+  #       uses: actions/checkout@v3
+  #     - name: Setup Node
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         cache: yarn
+  #         check-latest: true
+  #         node-version: 'lts/*'
+  #         registry-url: 'https://npm.pkg.github.com'
+  #         scope: '@${{ github.repository_owner }}'
+  #     - name: Download build
+  #       uses: actions/download-artifact@v2
+  #       with:
+  #         name: example-react-module--dist
+  #         path: packages/example-react-module/dist
+  #     - name: Publish
+  #       working-directory: packages/example-react-module
+  #       env:
+  #         NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #       run: >
+  #         yarn config set npmAuthToken $NPM_AUTH_TOKEN;
+  #         yarn config set npmScopes.${{ github.repository_owner }}.npmPublishRegistry 'https://npm.pkg.github.com';
+  #         yarn npm publish --tolerate-republish;
 
-  npm:
-    name: NPM
-    if: ${{ github.event_name == 'push' }}
-    needs: [eslint, jest, rollup]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          cache: yarn
-          check-latest: true
-          node-version: 'lts/*'
-      - name: Download build
-        uses: actions/download-artifact@v2
-        with:
-          name: example-react-module--dist
-          path: packages/example-react-module/dist
-      - name: Publish
-        working-directory: packages/example-react-module
-        env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-        run: >
-          yarn config set npmAuthToken $NPM_AUTH_TOKEN;
-          yarn npm publish --tolerate-republish;
+  # npm:
+  #   name: NPM
+  #   if: ${{ github.event_name == 'push' }}
+  #   needs: [eslint, jest, rollup]
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout repository
+  #       uses: actions/checkout@v3
+  #     - name: Setup Node
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         cache: yarn
+  #         check-latest: true
+  #         node-version: 'lts/*'
+  #     - name: Download build
+  #       uses: actions/download-artifact@v2
+  #       with:
+  #         name: example-react-module--dist
+  #         path: packages/example-react-module/dist
+  #     - name: Publish
+  #       working-directory: packages/example-react-module
+  #       env:
+  #         NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+  #       run: >
+  #         yarn config set npmAuthToken $NPM_AUTH_TOKEN;
+  #         yarn npm publish --tolerate-republish;
 
 on:
   pull_request:
