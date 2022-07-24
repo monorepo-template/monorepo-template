@@ -1,20 +1,18 @@
 {
   "name": "@monorepo-template/example-react-module",
   "version": "1.0.0",
-  "author": "Charles Stover <monorepo-template-react-module@charlesstover.com>",
+  "author": "Charles Stover <monorepo-template-example-react-module@charlesstover.com>",
   "description": "example React module using the monorepo template",
   "homepage": "https://github.com/monorepo-template/monorepo-template/tree/main/packages/example-react-module#readme",
   "license": "MIT",
   "main": "./dist/cjs/index.cjs",
   "module": "./dist/esm/index.js",
+  "repository": "github:monorepo-template/monorepo-template",
   "type": "module",
   "types": "./dist/types/index.d.ts",
   "bugs": {
     "email": "monorepo-template-react-module@charlesstover.com",
     "url": "https://github.com/monorepo-template/monorepo-template/issues"
-  },
-  "directories": {
-    "lib": "src"
   },
   "funding": {
     "type": "individual",
@@ -22,10 +20,6 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/monorepo-template/monorepo-template.git"
   },
   "scripts": {
     "eslint": "eslint '**/*'",
@@ -52,8 +46,11 @@
     "@types/node": "^18.0.6",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
     "babel-jest": "^28.1.3",
     "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
@@ -62,15 +59,15 @@
     "jest-environment-jsdom": "^28.1.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-test-renderer": "^18.2.0",
     "rollup": "^2.77.0",
     "rollup-plugin-insert": "^1.3.2",
     "rollup-plugin-typescript2": "^0.32.1",
     "tslib": "^2.4.0",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "webpack": "^5.73.0"
   },
   "peerDependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
   }
 }

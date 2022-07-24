@@ -1,7 +1,8 @@
-/.nyc_output
+/.nyc_output/
 /build/
 /coverage/
 /cypress/coverage/
 /cypress/screenshots/
 /cypress/videos/
 /jest/
+/node_modules/

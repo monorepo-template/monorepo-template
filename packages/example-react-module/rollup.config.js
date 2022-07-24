@@ -1,3 +1,1 @@
-import RollupConfig from '@monorepo-template/rollup-config/new';
-
-export default new RollupConfig().disableJsxRuntime().toJSON();
+export { default } from '@monorepo-template/rollup-config';

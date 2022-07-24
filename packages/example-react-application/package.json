@@ -1,9 +1,17 @@
 {
   "name": "@monorepo-template/example-react-application",
   "version": "1.0.0",
+  "author": "Charles Stover <monorepo-template-example-react-application@charlesstover.com>",
   "config-overrides-path": "./config-overrides.cjs",
+  "description": "example React application using the monorepo template",
   "homepage": ".",
+  "license": "MIT",
+  "repository": "github:monorepo-template/monorepo-template",
   "type": "module",
+  "bugs": {
+    "email": "monorepo-template-example-react-application@charlesstover.com",
+    "url": "https://github.com/monorepo-template/monorepo-template/issues"
+  },
   "scripts": {
     "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
     "coverage": "monorepo-template-coverage",
@@ -13,6 +21,7 @@
     "eslint:fix": "eslint '**/*' --fix",
     "jest": "jest --runInBand",
     "jest:watch": "jest --coverage=false --runInBand --watch",
+    "serve": "serve --single build",
     "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start"
   },
   "devDependencies": {
@@ -38,9 +47,11 @@
     "@typescript-eslint/eslint-plugin": "^5.30.7",
     "@typescript-eslint/parser": "^5.30.7",
     "babel-jest": "^28.1.3",
+    "babel-loader": "^8.2.5",
     "babel-plugin-istanbul": "^6.1.1",
     "cypress": "^10.3.1",
     "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
@@ -48,16 +59,16 @@
     "istanbul-lib-coverage": "^3.2.0",
     "jest": "^28.1.3",
     "jest-environment-jsdom": "^28.1.3",
-    "make-dir": "^3.1.0",
     "nyc": "^15.1.0",
-    "p-map": "^5.5.0",
     "react": "^18.2.0",
     "react-app-polyfill": "^3.0.0",
     "react-app-rewired": "^2.2.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.1",
-    "tslib": "^2.4.0",
-    "typescript": "^4.7.4"
+    "sass": "^1.53.0",
+    "serve": "^14.0.1",
+    "typescript": "^4.7.4",
+    "webpack": "^5.73.0"
   }
 }
