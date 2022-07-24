@@ -1,3 +1,8 @@
+/**/*.html
+/**/*.ico
+/**/*.md
+/**/*.sh
+/**/*.txt
 /.nyc_output/
 /build/
 /coverage/
@@ -6,7 +11,3 @@
 /cypress/videos/
 /jest/
 /node_modules/
-/**/*.html
-/**/*.ico
-/**/*.md
-/**/*.txt

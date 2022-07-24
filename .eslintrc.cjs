@@ -50,7 +50,7 @@ module.exports = {
 
   parserOptions: {
     extraFileExtensions: ['.json'],
-    project: './tsconfig.eslint.json',
+    project: ['./tsconfig.eslint.json'],
     tsconfigRootDir: __dirname,
     ecmaFeatures: {
       experimentalObjectRestSpread: true,

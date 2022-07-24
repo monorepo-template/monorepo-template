@@ -1,8 +1,9 @@
-/.next
-/.nyc_output
+/.next/
+/.nyc_output/
 /build/
 /coverage/
 /cypress/coverage/
 /cypress/screenshots/
 /cypress/videos/
 /jest/
+/node_modules/
