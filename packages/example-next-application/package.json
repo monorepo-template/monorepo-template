@@ -29,7 +29,7 @@
     "@monorepo-template/eslint-config": "^1.0.1",
     "@monorepo-template/example-react-module": "workspace:^",
     "@monorepo-template/jest-application-preset": "^1.1.0",
-    "@monorepo-template/react-application-tsconfig": "^1.0.2",
+    "@monorepo-template/tsconfig": "^1.1.1",
     "@monorepo-template/webpack-configure-next-babel": "^0.1.1",
     "@monorepo-template/webpack-configure-next-yarn-berry": "^0.1.4",
     "@testing-library/react": "^13.3.0",

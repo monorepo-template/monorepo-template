@@ -3897,7 +3897,7 @@ __metadata:
     "@monorepo-template/eslint-config": ^1.0.1
     "@monorepo-template/example-react-module": "workspace:^"
     "@monorepo-template/jest-application-preset": ^1.1.0
-    "@monorepo-template/react-application-tsconfig": ^1.0.2
+    "@monorepo-template/tsconfig": ^1.1.1
     "@monorepo-template/webpack-configure-next-babel": ^0.1.1
     "@monorepo-template/webpack-configure-next-yarn-berry": ^0.1.4
     "@testing-library/react": ^13.3.0
@@ -4124,18 +4124,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@monorepo-template/react-application-tsconfig@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "@monorepo-template/react-application-tsconfig@npm:1.0.2"
-  dependencies:
-    "@monorepo-template/tsconfig": ^1.0.0
-  peerDependencies:
-    "@types/jest": "*"
-    "@types/node": "*"
-  checksum: 870eec4d1743b8fd5198aa99a6519137263ec0272b7e1d65f147541c87258560571af28c40bfb0c2fe835bba68ae3d170078aadbb3f6fe5b653ed6d04f8e73cd
-  languageName: node
-  linkType: hard
-
 "@monorepo-template/rollup-config@npm:^2.1.1":
   version: 2.1.1
   resolution: "@monorepo-template/rollup-config@npm:2.1.1"
@@ -4169,15 +4157,6 @@ __metadata:
   dependencies:
     ansi-styles: ^6.1.0
   checksum: d13e9bbe57caae91a89294bd0abd24210fec5888d1e93935717436c9d241b21a84f7ffaec15ae90eaaf9573a3d07165824a36e5521115357d9810fd7e3082c73
-  languageName: node
-  linkType: hard
-
-"@monorepo-template/tsconfig@npm:^1.0.0":
-  version: 1.0.1
-  resolution: "@monorepo-template/tsconfig@npm:1.0.1"
-  peerDependencies:
-    "@types/node": "*"
-  checksum: ed090a95de35c950e6a4fc1ab13b8aebc2cde1f21fe3f1fa7564c161c5fbdc35cf6bb80387d45a67cfd33abc7d184f639f5236303bef947ee8a8ea63b7fdca5c
   languageName: node
   linkType: hard
 
