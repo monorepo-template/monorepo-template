@@ -8,6 +8,7 @@
 /node_modules/
 /packages/*/node_modules/
 /*.iml
+/.attach_pid*
 /.eslintcache
 /.pnp.cjs
 /.pnp.data.json
@@ -15,4 +16,5 @@
 /.pnp.loader.mjs
 /.tsbuildinfo
 /yarn-error.log
+node_modules/
 .DS_Store

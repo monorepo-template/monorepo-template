@@ -1,4 +1,4 @@
 {
   "exclude": ["dist/", "jest/", "node_modules/"],
-  "extends": "@monorepo-template/react-module-tsconfig/development"
+  "extends": "@monorepo-template/tsconfig/react-module/development.json"
 }

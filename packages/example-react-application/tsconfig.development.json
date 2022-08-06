@@ -1,3 +1,3 @@
 {
-  "extends": "@monorepo-template/react-application-tsconfig/development"
+  "extends": "@monorepo-template/tsconfig/react-application/development.json"
 }
