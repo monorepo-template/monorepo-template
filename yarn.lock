@@ -3995,8 +3995,8 @@ __metadata:
     "@babel/preset-typescript": ^7.18.6
     "@monorepo-template/eslint-config": ^1.0.1
     "@monorepo-template/jest-module-preset": ^1.1.0
-    "@monorepo-template/react-module-tsconfig": ^1.0.8
     "@monorepo-template/rollup-config": ^2.1.1
+    "@monorepo-template/tsconfig": ^1.1.1
     "@rollup/plugin-commonjs": ^22.0.1
     "@rollup/plugin-node-resolve": ^13.3.0
     "@testing-library/react": ^13.3.0
@@ -4133,18 +4133,6 @@ __metadata:
     "@types/jest": "*"
     "@types/node": "*"
   checksum: 870eec4d1743b8fd5198aa99a6519137263ec0272b7e1d65f147541c87258560571af28c40bfb0c2fe835bba68ae3d170078aadbb3f6fe5b653ed6d04f8e73cd
-  languageName: node
-  linkType: hard
-
-"@monorepo-template/react-module-tsconfig@npm:^1.0.8":
-  version: 1.0.8
-  resolution: "@monorepo-template/react-module-tsconfig@npm:1.0.8"
-  dependencies:
-    "@monorepo-template/tsconfig": ^1.0.0
-  peerDependencies:
-    "@types/jest": "*"
-    "@types/node": "*"
-  checksum: 91084b5c46476001e8cc596f8e113d1dc7aa56ccde581c594d8810177d440aeb9bab5a9c8fe06aae651521298cc46491508b3fb93a45791eebe6740d11a4c44b
   languageName: node
   linkType: hard
 
