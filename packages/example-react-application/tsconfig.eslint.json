@@ -4,10 +4,9 @@
   "exclude": [
     "build/",
     "coverage/",
-    "cypress/coverage/",
-    "cypress/screenshots/",
-    "cypress/videos/",
+    "cypress/",
     "jest/",
-    "node_modules/"
+    "node_modules/",
+    "src/**/*.e2e.ts"
   ]
 }
