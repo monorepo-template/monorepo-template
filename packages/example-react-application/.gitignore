@@ -1,4 +1,5 @@
 /.nyc_output
+/.yarn/cache/webpack-dev-server/server.pem
 /build/
 /coverage/
 /cypress/coverage/
