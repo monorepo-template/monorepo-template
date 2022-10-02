@@ -1,4 +1,3 @@
-/// <reference types="cypress" />
 import cypressCoveragePlugin from '@monorepo-template/cypress-coverage-plugin';
 
 export default function cypressPlugins(

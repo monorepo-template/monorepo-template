@@ -46,7 +46,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Lint
-        run: yarn example-next-application:eslint
+        run: yarn packages/example-next-application run eslint
 
   example-react-module:
     name: Build example-react-module
@@ -64,7 +64,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Build example-react-module
-        run: yarn example-react-module:rollup
+        run: yarn packages/example-react-module run rollup
       - name: Upload example-react-module
         uses: actions/upload-artifact@v2
         with:
@@ -100,7 +100,7 @@ jobs:
           restore-keys: |
             nextjs-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}-
       - name: Build
-        run: yarn example-next-application:build
+        run: yarn packages/example-next-application run build
         env:
           REACT_APP_VERSION: ${{ github.sha }}
       - name: Upload build
@@ -144,7 +144,7 @@ jobs:
           parallel: true
           project: packages/example-next-application
           record: true
-          start: yarn example-next-application:cypress:start
+          start: yarn packages/example-next-application run cypress:start
           tag: ${{ github.event_name }}
           wait-on: 'http://localhost:3000/'
           wait-on-timeout: 120
@@ -199,7 +199,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Unit test
-        run: yarn example-next-application:jest
+        run: yarn packages/example-next-application run jest
         env:
           DD_ENV: ci
       - name: Upload coverage
@@ -237,7 +237,7 @@ jobs:
           name: example-next-application--jest--coverage
           path: packages/example-next-application/jest/coverage
       - name: Report coverage
-        run: yarn example-next-application:coverage
+        run: yarn packages/example-next-application run coverage
       - name: Upload coverage
         if: ${{ always() }}
         uses: actions/upload-artifact@v2

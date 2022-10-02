@@ -1,6 +1,6 @@
 {
   "extends": "@monorepo-template/tsconfig/react-application/eslint.json",
-  "include": [".eslintrc.cjs", "**/*", "**/*.json"],
+  "include": ["**/*", "**/.*", "**/*.json"],
   "exclude": [
     "build/",
     "coverage/",

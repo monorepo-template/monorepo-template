@@ -65,45 +65,48 @@ desired.
 
 - To build the application, run `yarn example-next-application:build`.
 - To end-to-end test your application, run
-  `yarn example-next-application:cypress:start` to first run the development
-  server with code coverage reporting enabled, then run
-  `yarn example-next-application:cypress:run`.
+  `yarn packages/example-next-application run cypress:start` to first run the
+  development server with code coverage reporting enabled, then run
+  `yarn packages/example-next-application run cypress:run`.
 - To lint your changes to the application, run
-  `yarn example-next-application:eslint`.
+  `yarn packages/example-next-application run eslint`.
 - To unit test your changes to the application, run
-  `yarn example-next-application:jest`.
+  `yarn packages/example-next-application run jest`.
 - To unit test your changes to the application in watch mode, run
-  `yarn example-next-application:jest:watch`.
+  `yarn packages/example-next-application run jest:watch`.
 - To start the application development server, run
-  `yarn example-next-application:start`.
+  `yarn packages/example-next-application run start`.
 
 ### React application
 
-- To build the application, run `yarn example-react-application:build`.
+- To build the application, run
+  `yarn packages/example-react-application run build`.
 - To report Cypress's and Jest's combined test coverage, run
-  `yarn example-react-application:coverage`. The combined report will be located
-  in `/packages/example-react-application/coverage/`.
+  `yarn packages/example-react-application run coverage`. The combined report
+  will be located in `/packages/example-react-application/coverage/`.
 - To end-to-end test your application, run
-  `yarn example-react-application:cypress:start` to first run the development
-  server with code coverage reporting enabled, then run
-  `yarn example-react-application:cypress:run`.
+  `yarn packages/example-react-application run cypress:start` to first run the
+  development server with code coverage reporting enabled, then run
+  `yarn packages/example-react-application run cypress:run`.
 - To lint your changes to the application, run
-  `yarn example-react-application:eslint`.
+  `yarn packages/example-react-application run eslint`.
 - To unit test your changes to the application, run
-  `yarn example-react-application:jest`.
+  `yarn packages/example-react-application run jest`.
 - To unit test your changes to the application in watch mode, run
-  `yarn example-react-application:jest:watch`.
+  `yarn packages/example-react-application run jest:watch`.
 - To start the application development server, run
-  `yarn example-react-application:start`.
+  `yarn packages/example-react-application run start`.
 
 ### React module
 
-- To lint your changes to the module, run `yarn example-react-module:eslint`.
+- To lint your changes to the module, run
+  `yarn packages/example-react-module run eslint`.
 - To automatically fix lint errors in the module, run
-  `yarn example-react-module:eslint:fix`.
-- To unit test your changes to the module, run `yarn example-react-module:jest`.
+  `yarn packages/example-react-module run eslint:fix`.
+- To unit test your changes to the module, run
+  `yarn packages/example-react-module run jest`.
 - To unit test your changes to the module in watch mode, run
-  `yarn example-react-module:jest:watch`.
-- To build the module, run `yarn example-react-module:rollup`.
+  `yarn packages/example-react-module run jest:watch`.
+- To build the module, run `yarn packages/example-react-module run rollup`.
 - To build the module in watch mode, run
-  `yarn example-react-module:rollup:watch`.
+  `yarn packages/example-react-module run rollup:watch`.

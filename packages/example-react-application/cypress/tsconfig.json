@@ -1,13 +1,5 @@
 {
   "extends": "@monorepo-template/tsconfig/react-application/cypress.json",
-  "exclude": [
-    "build",
-    "coverage",
-    "cypress/coverage",
-    "cypress/screenshots",
-    "cypress/videos",
-    "jest/cache",
-    "jest/coverage",
-    "node_modules"
-  ]
+  "exclude": ["coverage/", "screenshots/", "videos/"],
+  "include": ["**/*.ts"]
 }

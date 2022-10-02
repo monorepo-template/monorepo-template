@@ -32,7 +32,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Lint
-        run: yarn example-react-module:eslint
+        run: yarn packages/example-react-module run eslint
 
   jest:
     name: Jest
@@ -50,7 +50,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Unit test
-        run: yarn example-react-module:jest
+        run: yarn packages/example-react-module run jest
       - name: Upload coverage
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
@@ -74,7 +74,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Build
-        run: yarn example-react-module:rollup
+        run: yarn packages/example-react-module run rollup
       - name: Upload build
         uses: actions/upload-artifact@v2
         with:

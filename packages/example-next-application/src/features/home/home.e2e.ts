@@ -6,3 +6,5 @@ describe('App', (): void => {
     cy.contains('p', 'Hello world');
   });
 });
+
+export default null;
