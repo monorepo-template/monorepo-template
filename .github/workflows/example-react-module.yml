@@ -32,7 +32,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Lint
-        run: yarn example-react-module:eslint
+        run: yarn packages/example-react-module run eslint
 
   jest:
     name: Jest

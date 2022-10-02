@@ -32,50 +32,37 @@ To add a new React application,
     3. Remove `'packages/example-react-module/**/*'`.
     4. If your new application depends on any monorepo modules, add the paths to
        those modules in the format `'packages/${module-name}/**/*'`.
-11. In the root `/package.json` file's `scripts` property, add the following
-    entries:
-    ```json
-    {
-      "${application-name}:build": "yarn workspace @${repository-organization}/${application-name} run build",
-      "${application-name}:coverage": "yarn workspace @${repository-organization}/${application-name} run coverage",
-      "${application-name}:cypress:run": "yarn workspace @${repository-organization}/${application-name} run cypress",
-      "${application-name}:cypress:start": "yarn workspace @${repository-organization}/${application-name} run cypress:start",
-      "${application-name}:eslint": "yarn workspace @${repository-organization}/${application-name} run eslint",
-      "${application-name}:jest": "yarn workspace @${repository-organization}/${application-name} run jest",
-      "${application-name}:jest:watch": "yarn workspace @${repository-organization}/${application-name} run jest:watch",
-      "${application-name}:start": "yarn workspace @${repository-organization}/${application-name} run start"
-    }
-    ```
-12. In the root `/README.md` file, add a workflow status badge for the new
+11. In the root `/README.md` file, add a workflow status badge for the new
     application:
     ```md
     [![${Application name}](https://github.com/${repository-organization}/${repository-name}/actions/workflows/${application-name}.yml/badge.svg?branch=main&event=push)](https://github.com/${repository-organization}/${repository-name}/actions/workflows/${application-name}.yml)
     ```
-13. In the root `/README.md` file, add the documentation for your application's
+12. In the root `/README.md` file, add the documentation for your application's
     scripts:
 
     ```md
     ## ${Application name}
 
-    - To build the application, run `yarn ${application-name}:build`.
+    - To build the application, run
+      `yarn packages/${application-name} run build`.
     - To report Cypress's and Jest's combined test coverage, run
-      `yarn ${application-name}:coverage`. The combined report will be located
-      in `/packages/${application-name}/coverage/`.
+      `yarn packages/${application-name} run coverage`. The combined report
+      will be located in `/packages/${application-name}/coverage/`.
     - To end-to-end test your application, run
-      `yarn ${application-name}:cypress:start` to first run the development
-      server with code coverage reporting enabled, then run
-      `yarn ${application-name}:cypress:run`.
+      `yarn packages/${application-name} run cypress:start` to first run the
+      development server with code coverage reporting enabled, then run
+      `yarn packages/${application-name} run cypress:run`.
     - To lint your changes to the application, run
-      `yarn ${application-name}:eslint`.
+      `yarn packages/${application-name} run eslint`.
     - To unit test your changes to the application, run
-      `yarn ${application-name}:jest`.
+      `yarn packages/${application-name} run jest`.
     - To unit test your changes to the application in watch mode, run
-      `yarn ${application-name}:jest:watch`.
+      `yarn packages/${application-name} run jest:watch`.
     - To start the application development server, run
-      `yarn ${application-name}:start`.
+      `yarn packages/${application-name} run start`.
     ```
 
-14. If this was the first time an application was added to your repository, also
+13. If this was the first time an application was added to your repository, also
     follow these additional steps:
     1. If you are proxying your application through Cloudflare:
        1. If you only need one Cloudflare API token, add a

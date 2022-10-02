@@ -69,20 +69,21 @@ desired.
   development server with code coverage reporting enabled, then run
   `yarn packages/example-next-application run cypress:run`.
 - To lint your changes to the application, run
-  `yarn packages/example-next-application:eslint`.
+  `yarn packages/example-next-application run eslint`.
 - To unit test your changes to the application, run
-  `yarn packages/example-next-application:jest`.
+  `yarn packages/example-next-application run jest`.
 - To unit test your changes to the application in watch mode, run
-  `yarn packages/example-next-application:jest:watch`.
+  `yarn packages/example-next-application run jest:watch`.
 - To start the application development server, run
-  `yarn packages/example-next-application:start`.
+  `yarn packages/example-next-application run start`.
 
 ### React application
 
-- To build the application, run `yarn packages/example-react-application:build`.
+- To build the application, run
+  `yarn packages/example-react-application run build`.
 - To report Cypress's and Jest's combined test coverage, run
-  `yarn packages/example-react-application:coverage`. The combined report will
-  be located in `/packages/example-react-application/coverage/`.
+  `yarn packages/example-react-application run coverage`. The combined report
+  will be located in `/packages/example-react-application/coverage/`.
 - To end-to-end test your application, run
   `yarn packages/example-react-application run cypress:start` to first run the
   development server with code coverage reporting enabled, then run
