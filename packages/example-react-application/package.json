@@ -1,9 +1,17 @@
 {
   "name": "@monorepo-template/example-react-application",
   "version": "1.0.0",
+  "author": "Charles Stover <monorepo-template-example-react-application@charlesstover.com>",
   "config-overrides-path": "./config-overrides.cjs",
+  "description": "example React application using the monorepo template",
   "homepage": ".",
+  "license": "MIT",
+  "repository": "github:monorepo-template/monorepo-template",
   "type": "module",
+  "bugs": {
+    "email": "monorepo-template-example-react-application@charlesstover.com",
+    "url": "https://github.com/monorepo-template/monorepo-template/issues"
+  },
   "scripts": {
     "build": "DISABLE_ESLINT_PLUGIN=true react-app-rewired build",
     "coverage": "monorepo-template-coverage",
@@ -13,6 +21,7 @@
     "eslint:fix": "eslint '**/*' --fix",
     "jest": "jest --runInBand",
     "jest:watch": "jest --coverage=false --runInBand --watch",
+    "serve": "serve --single build",
     "start": "DISABLE_ESLINT_PLUGIN=true react-app-rewired start"
   },
   "devDependencies": {
@@ -58,6 +67,8 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.1",
     "react-scripts": "^5.0.1",
+    "sass": "^1.53.0",
+    "serve": "^14.0.1",
     "tslib": "^2.4.0",
     "typescript": "~4.7.0",
     "webpack": "^5.74.0"
