@@ -1,6 +1,7 @@
 /**/*.html
 /**/*.ico
 /**/*.md
+/**/*.sh
 /**/*.txt
 /.nyc_output/
 /build/

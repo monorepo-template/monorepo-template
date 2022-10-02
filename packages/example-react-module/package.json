@@ -7,14 +7,12 @@
   "license": "MIT",
   "main": "./dist/cjs/index.cjs",
   "module": "./dist/esm/index.js",
+  "repository": "github:monorepo-template/monorepo-template",
   "type": "module",
   "types": "./dist/types/index.d.ts",
   "bugs": {
-    "email": "monorepo-template-react-module@charlesstover.com",
+    "email": "monorepo-template-example-react-module@charlesstover.com",
     "url": "https://github.com/monorepo-template/monorepo-template/issues"
-  },
-  "directories": {
-    "lib": "src"
   },
   "funding": {
     "type": "individual",
@@ -22,10 +20,6 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/monorepo-template/monorepo-template.git"
   },
   "scripts": {
     "eslint": "eslint '**/*'",
@@ -71,7 +65,7 @@
     "typescript": "~4.7.0"
   },
   "peerDependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
   }
 }

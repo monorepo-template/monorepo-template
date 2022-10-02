@@ -1,7 +1,5 @@
 {
-  "editor.rulers": [
-    80
-  ],
+  "editor.rulers": [80],
   "editor.tabSize": 2,
   "eslint.nodePath": ".yarn/sdks",
   "eslint.packageManager": "yarn",
@@ -66,8 +64,7 @@
     "packages/*/dist/": true,
     "packages/*/jest/": true,
     ".attach_pid*": true,
-    "yarn.lock": true,
-    "**/.yarn": true
+    "yarn.lock": true
   },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"

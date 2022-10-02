@@ -1,9 +1,12 @@
+/**/.DS_Store
 /.storybook/
 /jest/
+/node_modules/
 /src/
+/*.iml
 /.env
 /.eslintignore
-/.eslintrc.json
+/.eslintrc.cjs
 /.gitignore
 /.npmignore
 /.tsbuildinfo
