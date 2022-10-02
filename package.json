@@ -30,7 +30,7 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@monorepo-template/eslint-config": "^1.0.2",
+    "@monorepo-template/eslint-config": "^1.0.3",
     "@monorepo-template/test": "^2.2.0",
     "@monorepo-template/tsconfig": "^1.1.2",
     "@types/node": "^18.7.23",

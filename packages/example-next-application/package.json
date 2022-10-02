@@ -26,7 +26,7 @@
     "@monorepo-template/compose-next-webpack": "^1.0.0",
     "@monorepo-template/coverage": "^1.2.1",
     "@monorepo-template/cypress-coverage-plugin": "^1.0.5",
-    "@monorepo-template/eslint-config": "^1.0.2",
+    "@monorepo-template/eslint-config": "^1.0.3",
     "@monorepo-template/example-react-module": "workspace:^",
     "@monorepo-template/jest-application-preset": "^1.1.2",
     "@monorepo-template/tsconfig": "^1.1.2",
