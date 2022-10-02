@@ -1,3 +1,5 @@
 import RollupConfig from '@monorepo-template/rollup-config/new';
 
-export default new RollupConfig().disableJsxRuntime().toJSON();
+export default new RollupConfig()
+  .setTSConfigPath('./tsconfig.rollup.json')
+  .toJSON();

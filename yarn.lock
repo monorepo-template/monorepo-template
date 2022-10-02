@@ -4072,7 +4072,7 @@ __metadata:
     react: ^18.2.0
     react-dom: ^18.2.0
     tslib: ^2.4.0
-    typescript: ^4.8.4
+    typescript: ~4.7.0
     webpack: ^5.74.0
   languageName: unknown
   linkType: soft
@@ -4124,7 +4124,7 @@ __metadata:
     react-router-dom: ^6.4.1
     react-scripts: ^5.0.1
     tslib: ^2.4.0
-    typescript: ^4.8.4
+    typescript: ~4.7.0
     webpack: ^5.74.0
   languageName: unknown
   linkType: soft
@@ -4140,8 +4140,9 @@ __metadata:
     "@monorepo-template/eslint-config": ^1.0.2
     "@monorepo-template/jest-module-preset": ^1.1.2
     "@monorepo-template/rollup-config": ^2.4.0
-    "@monorepo-template/tsconfig": ^1.1.2
+    "@monorepo-template/tsconfig": 1.1.1
     "@rollup/plugin-commonjs": ^22.0.2
+    "@rollup/plugin-json": ^4.1.0
     "@rollup/plugin-node-resolve": ^14.1.0
     "@testing-library/react": ^13.4.0
     "@testing-library/react-hooks": ^8.0.1
@@ -4164,7 +4165,7 @@ __metadata:
     rollup-plugin-insert: ^1.3.2
     rollup-plugin-typescript2: ^0.34.0
     tslib: ^2.4.0
-    typescript: ^4.8.4
+    typescript: ~4.7.0
   peerDependencies:
     react: ^18.0.0
     react-dom: ^18.0.0
@@ -4270,7 +4271,7 @@ __metadata:
     eslint-plugin-prettier: ^4.2.1
     eslint-plugin-react: ^7.31.8
     prettier: ^2.7.1
-    typescript: ^4.8.4
+    typescript: ~4.7.0
   languageName: unknown
   linkType: soft
 
@@ -4308,6 +4309,15 @@ __metadata:
   dependencies:
     ansi-styles: ^6.1.0
   checksum: 88cae36c8b117ee40badc4ff00651064810b01d469dd80e8f96413c927b69f4e621e88aaaf64f61a33c4dc033fb11d63f89dd38d589590b5e311df74a537e95f
+  languageName: node
+  linkType: hard
+
+"@monorepo-template/tsconfig@npm:1.1.1":
+  version: 1.1.1
+  resolution: "@monorepo-template/tsconfig@npm:1.1.1"
+  peerDependencies:
+    "@types/node": "*"
+  checksum: f432ce2e06ae156a614939af922db7dfc0c4defdd588086386a8153970bf3c5afd1bf35c4ceea5afe6478902fb16567f084cd50bd8843a2779e9767e27e5d87d
   languageName: node
   linkType: hard
 
@@ -4565,6 +4575,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rollup/plugin-json@npm:^4.1.0":
+  version: 4.1.0
+  resolution: "@rollup/plugin-json@npm:4.1.0"
+  dependencies:
+    "@rollup/pluginutils": ^3.0.8
+  peerDependencies:
+    rollup: ^1.20.0 || ^2.0.0
+  checksum: 867bc9339b4ccf0b9ff3b2617a95b3b8920115163f86c8e3b1f068a14ca25949472d3c05b09a5ac38ca0fe2185756e34617eaeb219d4a2b6e2307c501c7d4552
+  languageName: node
+  linkType: hard
+
 "@rollup/plugin-node-resolve@npm:^11.2.1":
   version: 11.2.1
   resolution: "@rollup/plugin-node-resolve@npm:11.2.1"
@@ -4609,7 +4630,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/pluginutils@npm:^3.1.0":
+"@rollup/pluginutils@npm:^3.0.8, @rollup/pluginutils@npm:^3.1.0":
   version: 3.1.0
   resolution: "@rollup/pluginutils@npm:3.1.0"
   dependencies:
@@ -17154,23 +17175,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.8.4":
-  version: 4.8.4
-  resolution: "typescript@npm:4.8.4"
+"typescript@npm:~4.7.0":
+  version: 4.7.4
+  resolution: "typescript@npm:4.7.4"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 3e4f061658e0c8f36c820802fa809e0fd812b85687a9a2f5430bc3d0368e37d1c9605c3ce9b39df9a05af2ece67b1d844f9f6ea8ff42819f13bcb80f85629af0
+  checksum: 5750181b1cd7e6482c4195825547e70f944114fb47e58e4aa7553e62f11b3f3173766aef9c281783edfd881f7b8299cf35e3ca8caebe73d8464528c907a164df
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.8.4#~builtin<compat/typescript>":
-  version: 4.8.4
-  resolution: "typescript@patch:typescript@npm%3A4.8.4#~builtin<compat/typescript>::version=4.8.4&hash=a1c5e5"
+"typescript@patch:typescript@~4.7.0#~builtin<compat/typescript>":
+  version: 4.7.4
+  resolution: "typescript@patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=a1c5e5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 563a0ef47abae6df27a9a3ab38f75fc681f633ccf1a3502b1108e252e187787893de689220f4544aaf95a371a4eb3141e4a337deb9895de5ac3c1ca76430e5f0
+  checksum: 9096d8f6c16cb80ef3bf96fcbbd055bf1c4a43bd14f3b7be45a9fbe7ada46ec977f604d5feed3263b4f2aa7d4c7477ce5f9cd87de0d6feedec69a983f3a4f93e
   languageName: node
   linkType: hard
 

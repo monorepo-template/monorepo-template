@@ -43,8 +43,9 @@
     "@monorepo-template/eslint-config": "^1.0.2",
     "@monorepo-template/jest-module-preset": "^1.1.2",
     "@monorepo-template/rollup-config": "^2.4.0",
-    "@monorepo-template/tsconfig": "^1.1.2",
+    "@monorepo-template/tsconfig": "1.1.1",
     "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^14.1.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/react-hooks": "^8.0.1",
@@ -67,7 +68,7 @@
     "rollup-plugin-insert": "^1.3.2",
     "rollup-plugin-typescript2": "^0.34.0",
     "tslib": "^2.4.0",
-    "typescript": "^4.8.4"
+    "typescript": "~4.7.0"
   },
   "peerDependencies": {
     "react": "^18.0.0",
