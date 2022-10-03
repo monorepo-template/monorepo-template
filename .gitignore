@@ -12,4 +12,5 @@
 /*.iml
 /.attach_pid*
 /.eslintcache
+/.tsbuildinfo
 /yarn-error.log
