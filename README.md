@@ -39,6 +39,7 @@ desired.
 ---
 
 [![Monorepo](https://github.com/monorepo-template/monorepo-template/actions/workflows/index.yml/badge.svg?branch=main&event=push)](https://github.com/monorepo-template/monorepo-template/actions/workflows/index.yml)
+[![Cron (weekly)](https://github.com/monorepo-template/monorepo-template/actions/workflows/cron--weekly.yml/badge.svg?branch=main&event=push)](https://github.com/monorepo-template/monorepo-template/actions/workflows/cron--weekly.yml)
 
 [![Next application](https://github.com/monorepo-template/monorepo-template/actions/workflows/example-next-application.yml/badge.svg?branch=main&event=push)](https://github.com/monorepo-template/monorepo-template/actions/workflows/example-next-application.yml)
 
@@ -63,7 +64,8 @@ desired.
 
 ### Next application
 
-- To build the application, run `yarn example-next-application:build`.
+- To build the application, run
+  `yarn packages/example-next-application run build`.
 - To end-to-end test your application, run
   `yarn packages/example-next-application run cypress:start` to first run the
   development server with code coverage reporting enabled, then run

@@ -1,5 +1,7 @@
 {
-  "editor.rulers": [80],
+  "editor.rulers": [
+    80
+  ],
   "editor.tabSize": 2,
   "eslint.nodePath": ".yarn/sdks",
   "eslint.packageManager": "yarn",
@@ -27,9 +29,9 @@
     "yarn.lock": true
   },
   "files.watcherExclude": {
-    "**/.yarn/": true,
     "**/node_modules/": true,
     "**/.pnp.*": true,
+    "**/.yarn": true,
     ".git/objects/": true,
     ".git/subtree-cache/": true,
     ".idea/": true,
@@ -52,6 +54,7 @@
     "**/.yarn/": true,
     "**/node_modules/": true,
     "**/.pnp.*": true,
+    "**/.yarn": true,
     ".git/": true,
     ".idea/": true,
     "packages/*/.next/": true,
