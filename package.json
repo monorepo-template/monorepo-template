@@ -25,7 +25,7 @@
     "eslint": "eslint '**/*'",
     "eslint:fix": "eslint '**/*' --fix",
     "prepack": "yarn workspaces foreach --parallel --topological-dev run prepack",
-    "prepublish": "yarn eslint && yarn test && yarn workspaces foreach --no-private --parallel --topological-dev run prepublish",
+    "prepublish": "yarn run eslint && yarn run test && yarn workspaces foreach --no-private --parallel --topological-dev run prepublish",
     "test": "monorepo-template-test",
     "up": "monorepo-template-up"
   },
@@ -47,6 +47,6 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.11",
     "prettier": "^2.8.1",
-    "typescript": "^4.9.4"
+    "typescript": "4.9.3"
   }
 }

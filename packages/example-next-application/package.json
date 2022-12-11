@@ -14,6 +14,8 @@
     "jest": "jest --runInBand",
     "jest:watch": "jest --coverage=false --runInBand --watch",
     "next:info": "next info",
+    "prepack": "yarn run build",
+    "prepublish": "yarn run eslint && yarn run jest",
     "start": "next start"
   },
   "devDependencies": {
@@ -60,7 +62,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tslib": "^2.4.1",
-    "typescript": "^4.9.4",
+    "typescript": "4.9.3",
     "webpack": "^5.75.0"
   }
 }
