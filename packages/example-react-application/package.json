@@ -73,6 +73,6 @@
     "serve": "^14.1.2",
     "tslib": "^2.4.1",
     "typescript": "4.9.3",
-    "webpack": "^5.75.0"
+    "webpack": "^5.76.0"
   }
 }
